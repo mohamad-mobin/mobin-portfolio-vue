@@ -1,10 +1,10 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
+import tailwindcss from '@tailwindcss/vite'
 
-export default defineConfig({
-  base: '/mobin-portfolio-vue/',
+export default defineConfig(({ mode }) => ({
+  base: '/', // برای Netlify و Dev هر دو '/'
   plugins: [
     vue(),
     tailwindcss(),
@@ -14,4 +14,4 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-})
+}))
