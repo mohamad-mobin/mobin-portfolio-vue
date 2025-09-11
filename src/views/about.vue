@@ -119,7 +119,7 @@
                 </p>
     </div>
     <div>
-        <div class="flex flex-wrap justify-center gap-5 p-5 text-center text-white max-w-7xl mx-auto">
+        <div class="flex flex-wrap justify-center gap-5 px-5 pt-5 pb-28 md:pb-5 text-center text-white max-w-7xl mx-auto">
          
                  <div class="flex flex-row gap-5 gap-y-8 md:mb-0">
                      
