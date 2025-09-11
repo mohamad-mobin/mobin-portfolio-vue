@@ -216,13 +216,23 @@ export default {
     },
     setup() {
         onMounted(() => {
-            window.scrollTo(0, 0);
-            initLenis()
-            AOS.init({
-                duration: 1000,
-                once: false,
-            })
-        })
+    // 1️⃣ Scroll lock
+    document.body.style.overflow = 'hidden';
+
+    // 2️⃣ فعال کردن Lenis بعد از یک ثانیه
+    setTimeout(() => {
+        document.body.style.overflow = 'visible';
+        document.body.style.overflowX = 'hidden';
+        initLenis();   // اینجا Lenis را init می‌کنیم
+    }, 700);
+
+    AOS.init({
+        duration: 1000,
+        once: false,
+    });
+
+    window.scrollTo(0, 0);
+});
 
         onBeforeUnmount(() => {
             destroyLenis()
@@ -238,7 +248,6 @@ export default {
     body{
         background-color: #131417;
         color: white;
-        overflow-x: hidden;
     }
 #myProjects{
     font-weight: 800;

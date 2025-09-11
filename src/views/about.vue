@@ -347,15 +347,25 @@ export default {
       copyEmailToClipboard(email);
     }
 
-    onMounted(() => {
-            window.scrollTo(0, 0);
-            initLenis()
-            new Rellax('.rellax');
-            AOS.init({
-                duration: 1000,
-                once: false,
-            })
-        })
+onMounted(() => {
+    // 1️⃣ Scroll lock
+    document.body.style.overflow = 'hidden';
+
+    // 2️⃣ فعال کردن Lenis بعد از یک ثانیه
+    setTimeout(() => {
+        document.body.style.overflow = 'visible';
+        document.body.style.overflowX = 'hidden';
+        initLenis();   // اینجا Lenis را init می‌کنیم
+    }, 700);
+
+    new Rellax('.rellax');
+    AOS.init({
+        duration: 1000,
+        once: false,
+    });
+
+    window.scrollTo(0, 0);
+});
 
         onBeforeUnmount(() => {
             destroyLenis()
@@ -370,13 +380,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
     body{
         background-color: #131417;
         color: white;
-    }
-    html,body{
-        overflow-x: hidden;
     }
     #myProjects{
     font-weight: 800;
@@ -397,18 +404,5 @@ export default {
             transform: translateY(-5px);
             z-index: 10;
             
-}
-
-@media (min-width: 768px) {
-    body{
-        overflow: hidden;
-        overflow-x: hidden;
-    }
-}
-@media (max-width: 768px) {
-    body{
-        overflow-y: visible;
-        overflow-x: hidden;
-    }
 }
 </style>

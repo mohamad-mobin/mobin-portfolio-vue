@@ -116,16 +116,25 @@ export default {
     },
     setup(){
         onMounted(() => {
-            window.scrollTo(0, 0);
-            AOS.init({
-                duration: 1000,
-                once: false,
-            })
-        })
+    // 1️⃣ Scroll lock
+    document.body.style.overflow = 'hidden';
+
+    setTimeout(() => {
+        document.body.style.overflow = 'visible';
+        document.body.style.overflowX = 'hidden';
+    }, 700);
+
+    AOS.init({
+        duration: 1000,
+        once: false,
+    });
+
+    window.scrollTo(0, 0);
+});
     }
 }
 </script>
-<style>
+<style scoped>
     @font-face {
         font-family: poppins;
         src: url(../assets/fonts/Poppins-Regular.ttf);
