@@ -59,15 +59,20 @@ onMounted(() => {
     posX += (mouseX - posX) / 9;
     posY += (mouseY - posY) / 9;
 
+  if(follower.value) {
     follower.value.style.left = posX - 20 + "px";
     follower.value.style.top = posY - 20 + "px";
+  }
+
+  if(cursor.value) {
     cursor.value.style.left = mouseX + "px";
     cursor.value.style.top = mouseY + "px";
+  }
 
-
+  if(redCircle.value) {
     redCircle.value.style.top = mouseY - 35  + "px";
     redCircle.value.style.left = mouseX - 35  + "px";
-
+  }
 
 
 
