@@ -352,8 +352,8 @@ export default {
             initLenis()
             new Rellax('.rellax');
             AOS.init({
-                duration: 1000, // مدت زمان انیمیشن
-                once: false,     // فقط یکبار اجرا بشه یا هر بار با اسکرول
+                duration: 1000,
+                once: false,
             })
         })
 

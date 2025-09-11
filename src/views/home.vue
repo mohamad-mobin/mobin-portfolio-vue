@@ -104,6 +104,7 @@
     </div>
 </template>
 <script>
+import { onMounted } from "vue"
 import loadingBar from '@/utils/loadingBar.vue';
 import Cursor from '../utils/cursor.vue'
 import AOS from 'aos'
@@ -114,9 +115,12 @@ export default {
         loadingBar
     },
     setup(){
-        AOS.init({
-            duration: 1000, // مدت زمان انیمیشن
-            once: false,     // فقط یکبار اجرا بشه یا هر بار با اسکرول
+        onMounted(() => {
+            window.scrollTo(0, 0);
+            AOS.init({
+                duration: 1000,
+                once: false,
+            })
         })
     }
 }
