@@ -218,11 +218,11 @@ export default {
         onMounted(() => {
             window.scrollTo(0, 0);
 
-            document.body.classList.add('overflow-hidden')
-            document.body.style.overflowX = 'hidden'
+            document.body.style.overflow = 'hidden'
+            // document.body.style.overflowX = 'hidden'
 
             setTimeout(() => {
-                document.body.classList.remove('overflow-hidden')
+                document.body.style.overflow = 'visible'
                 initLenis();
             }, 700);
 
@@ -256,53 +256,51 @@ export default {
     font-weight: 800;
 }
 
-/* Blurry Circles - Base styles for all screen sizes (desktop first approach) */
 .blurry-circle {
     position: absolute;
     border-radius: 50%;
-    filter: blur(150px); /* Base blur for larger screens */
-    opacity: 0.2; /* Base opacity, slightly less obtrusive */
-    z-index: -2; /* Ensures it's behind content */
-    pointer-events: none; /* Prevents circles from interfering with mouse events */
+    filter: blur(150px);
+    opacity: 0.2;
+    z-index: -2;
+    pointer-events: none;
 }
 
 /* Circle 1 */
 .circle-1 {
-    width: 450px; /* Larger for desktop */
+    width: 450px;
     height: 450px;
     top: 5%;
     left: -15%;
-    background-color: rgba(76, 175, 80, 0.7); /* A subtle green with some transparency */
-    transform: translateZ(0); /* Improve rendering performance */
+    background-color: rgba(76, 175, 80, 0.7);
+    transform: translateZ(0);
 }
 
 /* Circle 2 */
 .circle-2 {
-    width: 600px; /* Larger for desktop */
+    width: 600px;
     height: 600px;
     top: 40%;
     right: -20%;
-    background-color: rgba(255, 193, 7, 0.7); /* A subtle yellow/orange with transparency */
-    animation: moveCircle2 20s infinite alternate ease-in-out; /* Slower, smoother animation */
-    transform: translateZ(0); /* Improve rendering performance */
+    background-color: rgba(255, 193, 7, 0.7);
+    animation: moveCircle2 20s infinite alternate ease-in-out;
+    transform: translateZ(0);
 }
 
 /* Circle 3 */
 .circle-3 {
-    width: 350px; /* Larger for desktop */
+    width: 350px;
     height: 350px;
     bottom: -10%;
     left: 25%;
-    background-color: rgba(33, 150, 243, 0.7); /* A subtle blue with transparency */
-    animation: moveCircle3 25s infinite alternate ease-in-out; /* Slower, smoother animation */
-    transform: translateZ(0); /* Improve rendering performance */
+    background-color: rgba(33, 150, 243, 0.7);
+    animation: moveCircle3 25s infinite alternate ease-in-out;
+    transform: translateZ(0);
 }
 
-/* For Tablets and larger phones (e.g., 768px to 1024px) */
 @media (max-width: 1024px) {
     .blurry-circle {
-        filter: blur(100px); /* Slightly less blur */
-        opacity: 0.15; /* Slightly less opaque */
+        filter: blur(100px);
+        opacity: 0.15;
     }
     .circle-1 {
         width: 350px;
@@ -315,22 +313,21 @@ export default {
         height: 450px;
         top: 45%;
         right: -18%;
-        animation-duration: 18s; /* Slightly faster animation */
+        animation-duration: 18s;
     }
     .circle-3 {
         width: 280px;
         height: 280px;
         bottom: -8%;
         left: 22%;
-        animation-duration: 22s; /* Slightly faster animation */
+        animation-duration: 22s;
     }
 }
 
-/* For Mobile devices (up to 767px) */
 @media (max-width: 767px) {
     .blurry-circle {
-        filter: blur(70px); /* Even less blur for small screens */
-        opacity: 0.1; /* Even less opaque */
+        filter: blur(70px);
+        opacity: 0.1;
     }
     .circle-1 {
         width: 200px;
@@ -343,18 +340,17 @@ export default {
         height: 300px;
         top: 55%;
         right: -15%;
-        animation: none; /* Consider removing animation for very small screens */
+        animation: none;
     }
     .circle-3 {
         width: 180px;
         height: 180px;
         bottom: 0%;
         left: 15%;
-        animation: none; /* Consider removing animation for very small screens */
+        animation: none;
     }
 }
 
-/* For very small screens (e.g., 320px - 480px) */
 @media (max-width: 480px) {
     .blurry-circle {
         filter: blur(50px);
