@@ -121,7 +121,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
     @font-face {
         font-family: poppins;
         src: url(../assets/fonts/Poppins-Regular.ttf);
@@ -129,11 +129,6 @@ export default {
     body{
         background-color: #131417;
         color: white;
+        overflow-x: hidden;
     }
-    /* #ManImage{
-        transition: transform 0.5s ease-in-out;
-    }
-    #ManImage:hover{
-        transform: rotateX(45deg);
-    } */
 </style>

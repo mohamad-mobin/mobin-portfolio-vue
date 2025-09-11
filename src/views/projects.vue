@@ -231,7 +231,15 @@ export default {
 }
 </script>
 <style>
-
+@font-face {
+        font-family: poppins;
+        src: url(../assets/fonts/Poppins-Regular.ttf);
+    }
+    body{
+        background-color: #131417;
+        color: white;
+        overflow-x: hidden;
+    }
 #myProjects{
     font-weight: 800;
 
@@ -381,9 +389,6 @@ export default {
 }
 .blurry-circle{
     position: fixed;
-}
-body{
-  overflow-x: hidden;
 }
 body::selection{
     background-color: #FFB400;

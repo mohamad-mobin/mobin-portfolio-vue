@@ -371,6 +371,11 @@ export default {
 </script>
 
 <style scoped>
+    body{
+        background-color: #131417;
+        color: white;
+        overflow-x: hidden;
+    }
     .box-shadow-soft-3d {
             box-shadow: -2px -2px 4px rgba(50, 50, 50, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.5);
             transition: all 300ms;
@@ -388,11 +393,13 @@ export default {
 @media (min-width: 768px) {
     body{
         overflow: hidden;
+        overflow-x: hidden;
     }
 }
 @media (max-width: 768px) {
     body{
-        overflow: visible;
+        overflow-y: visible;
+        overflow-x: hidden;
     }
 }
 </style>
