@@ -374,8 +374,17 @@ export default {
     body{
         background-color: #131417;
         color: white;
+    }
+    html,body{
         overflow-x: hidden;
     }
+    #myProjects{
+    font-weight: 800;
+
+}
+#myWorks{
+    font-weight: 800;
+}
     .box-shadow-soft-3d {
             box-shadow: -2px -2px 4px rgba(50, 50, 50, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.5);
             transition: all 300ms;

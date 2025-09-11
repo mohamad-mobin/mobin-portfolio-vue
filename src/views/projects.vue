@@ -230,7 +230,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
 @font-face {
         font-family: poppins;
         src: url(../assets/fonts/Poppins-Regular.ttf);
@@ -289,22 +289,6 @@ export default {
     animation: moveCircle3 25s infinite alternate ease-in-out; /* Slower, smoother animation */
     transform: translateZ(0); /* Improve rendering performance */
 }
-
-/* Animations for circles */
-@keyframes moveCircle2 {
-    0% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(-80px, 120px) scale(1.05); } /* More movement, slight scale */
-    100% { transform: translate(0, 0) scale(1); }
-}
-
-@keyframes moveCircle3 {
-    0% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(100px, -90px) scale(0.95); } /* More movement, slight scale change */
-    100% { transform: translate(0, 0) scale(1); }
-}
-
-
-/* Media Queries for responsiveness */
 
 /* For Tablets and larger phones (e.g., 768px to 1024px) */
 @media (max-width: 1024px) {
