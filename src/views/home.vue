@@ -143,7 +143,4 @@ export default {
         background-color: #131417;
         color: white;
     }
-    html,body{
-        overflow-x: hidden;
-    }
 </style>
