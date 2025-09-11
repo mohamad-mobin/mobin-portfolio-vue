@@ -127,7 +127,7 @@ export default {
     }
 }
 </script>
-<style scoped>
+<style>
     @font-face {
         font-family: poppins;
         src: url(../assets/fonts/Poppins-Regular.ttf);
