@@ -119,7 +119,7 @@
                 </p>
     </div>
     <div>
-        <div class="flex flex-wrap justify-center gap-5 px-5 pt-5 pb-28 md:pb-5 text-center text-white max-w-7xl mx-auto">
+        <div class="flex flex-wrap justify-center gap-5 px-5 pt-5 pb-28 md:pb-5 text-center text-white max-w-7xl mx-auto z-50">
          
                  <div class="flex flex-row gap-5 gap-y-8 md:mb-0">
                      
@@ -230,7 +230,7 @@
     </div>
 
     <div
-      class="md:fixed hidden md:flex justify-end items-center md:w-52 md:h-screen h-20 w-full right-5 top-0 font-poppins"
+      class="md:fixed hidden md:flex justify-end items-center md:w-20 md:h-screen h-20 w-full right-5 top-0 font-poppins"
     >
     <ul class="flex md:flex-col justify-end items-end gap-y-4 font-poppins py-5 px-4 shadow-xl rounded-2xl bg-[#222121] text-white">
         <router-link :to="{ name:'home' }" id="homeIcon" class="flex justify-center items-center bg-[#2E2C29] hover:bg-[#FFB400] rounded-2xl duration-100 size-[50px] text-[20px] relative z-50 shadow-xs shadow-[#FFB400]">
