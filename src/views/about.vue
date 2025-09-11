@@ -286,7 +286,7 @@ import Cursor from '../utils/cursor.vue'
 import { initLenis, destroyLenis } from '@/library/lenis.js'
 import Rellax from 'rellax';
 import AOS from 'aos';
-import { onMounted, onBeforeUnmount } from "vue"
+import { onMounted, onBeforeUnmount, onBeforeMount } from "vue"
 
 import { ref } from 'vue';
 
@@ -347,16 +347,16 @@ export default {
       copyEmailToClipboard(email);
     }
 
-        onMounted(() => {
+        onBeforeMount(() => {
             window.scrollTo(0, 0);
+            document.body.style.overflow = 'hidden';
+        });
 
-            document.body.classList.add('overflow-hidden')
-            document.body.style.overflowX = 'hidden'
-
+        onMounted(() => {
             setTimeout(() => {
-                document.body.classList.remove('overflow-hidden')
                 initLenis();
-            }, 700);
+                document.body.style.overflow = 'visible'
+            }, 1000);
 
             AOS.init({
                 duration: 1000,
