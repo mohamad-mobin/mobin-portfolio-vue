@@ -118,13 +118,6 @@ export default {
         onMounted(() => {
             window.scrollTo(0, 0);
 
-            document.body.classList.add('overflow-hidden')
-            document.body.style.overflowX = 'hidden'
-
-            setTimeout(() => {
-                document.body.classList.remove('overflow-hidden')
-            }, 700);
-
             AOS.init({
                 duration: 1000,
                 once: false,
@@ -142,5 +135,8 @@ export default {
     body{
         background-color: #131417;
         color: white;
+    }
+    html,body{
+        overflow-x: hidden;
     }
 </style>
