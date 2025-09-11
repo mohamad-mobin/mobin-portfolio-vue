@@ -216,23 +216,22 @@ export default {
     },
     setup() {
         onMounted(() => {
-    // 1️⃣ Scroll lock
-    document.body.style.overflow = 'hidden';
+            window.scrollTo(0, 0);
 
-    // 2️⃣ فعال کردن Lenis بعد از یک ثانیه
-    setTimeout(() => {
-        document.body.style.overflow = 'visible';
-        document.body.style.overflowX = 'hidden';
-        initLenis();   // اینجا Lenis را init می‌کنیم
-    }, 700);
+            document.body.classList.add('overflow-hidden')
+            document.body.style.overflowX = 'hidden'
 
-    AOS.init({
-        duration: 1000,
-        once: false,
-    });
+            setTimeout(() => {
+                document.body.classList.remove('overflow-hidden')
+                initLenis();
+            }, 700);
 
-    window.scrollTo(0, 0);
-});
+            AOS.init({
+                duration: 1000,
+                once: false,
+            });
+
+        });
 
         onBeforeUnmount(() => {
             destroyLenis()
