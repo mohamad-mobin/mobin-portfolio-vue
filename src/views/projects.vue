@@ -222,7 +222,7 @@ export default {
 
         onMounted(() => {
             setTimeout(() => {
-                    initLenis();
+                    // initLenis();
                     document.body.style.overflow = 'visible'
             }, 800);
 
