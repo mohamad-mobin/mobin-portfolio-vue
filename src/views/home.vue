@@ -20,21 +20,21 @@
             
     
             <!-- about me content -->
-            <div data-aos="fade-up"
+            <div ref="target" data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
         data-aos-offset="0"
         data-aos-duration="1300" 
         class="flex flex-col h-full pt-4 md:pt-16 items-center md:justify-center md:fixed size-[50%] gap-x-10 left-[30%] top-[100px] md:top-[50px] w-full md:w-fit pb-36 overflow-visible">
     
-        <h1 class="text-left leading-tight">
-            <span id="mobin" class="uppercase font-black text-[#FFB400] text-3xl md:text-[30px] lg:text-[50px] relative /// before:absolute before:md:block before:hidden lg:before:w-10 before:h-1 before:bg-[#FFB400] before:rounded-2xl before:-left-10 before:bottom-6 before:w-7 lg:before:bottom-8 lg:before:-left-16">I'm Mobin Rezaee.</span>
-            <p class="uppercase text-left text-white text-[25px] lg:text-[39px] font-black">web developer</p>
+        <h1 class="text-left leading-tight group duration-300">
+            <p id="mobin" class="uppercase duration-300 group-hover:-translate-x-5 group-hover:scale-95 font-black text-[#FFB400] text-3xl md:text-[30px] lg:text-[50px] relative /// before:absolute before:md:block before:hidden lg:before:w-10 before:h-1 before:bg-[#FFB400] before:rounded-2xl before:-left-10 before:bottom-6 before:w-7 lg:before:bottom-8 lg:before:-left-16">I'm Mobin Rezaee.</p>
+            <p class="uppercase duration-300 group-hover:translate-x-10 text-left text-white text-[25px] lg:text-[39px] font-black">web developer</p>
         </h1>
     
-        <p class="py-3 leading-loose text-left md:text-center md:w-[60%] w-[70%] text-xs" style="font-family: poppins;">I'm a Iranian based web designer & front‑end developer focused on crafting clean & user‑friendly experiences, I am passionate about building excellent software that improves the lives of those around me.</p>
+        <p class="py-3 leading-loose hover:scale-105 duration-300 text-left md:text-center md:w-[60%] w-[70%] text-xs" style="font-family: poppins;">I'm a Iranian based web designer & front‑end developer focused on crafting clean & user‑friendly experiences, I am passionate about building excellent software that improves the lives of those around me.</p>
     
         <div class="flex flex-col md:flex-row w-[400px] md:w-fit h-[250px] md:h-[90px] gap-3 md:gap-x-5 items-center">
-            <router-link :to="{ name:'about' }" id="moreAboutMeBtn" class="text-center md:ml-10 mt-4 py-4 pl-7 pr-20 rounded-full overflow-hidden ring-1 ring-[#FFB400] self-center relative z-20 /// before:absolute before:size-0 before:rounded-full before:-z-10 before:duration-300 before:bg-[#FFB400] hover:before:size-[300px] before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 cursor-none" style="font-family: poppins;">
+            <router-link :to="{ name:'about' }" id="moreAboutMeBtn" class="text-center md:ml-10 mt-4 py-4 pl-7 pr-20 rounded-full overflow-hidden ring-1 ring-[#FFB400] self-center relative z-20 /// before:absolute before:size-0 before:rounded-full before:-z-10 before:duration-300 before:bg-[#FFB400] hover:before:size-[300px] before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 hover:scale-110 duration-300 cursor-none" style="font-family: poppins;">
                 ABOUT ME
                 <button class="bg-[#FFB400] p-[13px] rounded-full absolute top-[1px] right-[0px] overflow-hidden cursor-none">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
@@ -43,9 +43,9 @@
                 </button>
             </router-link>
     
-            <p class="text-2xl md:mx-2 or">or</p>
+            <p class="text-2xl md:mx-2 or hover:animate-spin">or</p>
     
-            <router-link :to="{ name:'projects' }" id="moreAboutMeBtn" class="text-center mt-4 py-4 pl-7 pr-20 rounded-full overflow-hidden ring-1 ring-[#FFB400] self-center relative z-20 /// before:absolute before:size-0 before:rounded-full before:duration-300 before:bg-[#FFB400] hover:before:size-[300px] before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:-z-10 animate-bounce cursor-none" style="font-family: poppins;">
+            <router-link :to="{ name:'projects' }" id="moreAboutMeBtn" class="text-center mt-4 py-4 pl-7 pr-20 rounded-full overflow-hidden ring-1 ring-[#FFB400] self-center relative z-20 /// before:absolute before:size-0 before:rounded-full before:duration-300 before:bg-[#FFB400] hover:before:size-[300px] before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:-z-10 animate-bounce hover:scale-110 duration-300 cursor-none" style="font-family: poppins;">
                 MY PROJECTS
                 <button class="bg-[#FFB400] p-[13px] rounded-full absolute top-[1px] right-[0px] overflow-hidden cursor-none">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
@@ -54,7 +54,7 @@
                 </button>
             </router-link>
         </div>
-    </div>
+            </div>
     
         </div>
     
@@ -106,29 +106,46 @@
     </div>
 </template>
 <script>
-import { onMounted } from "vue"
+import { onMounted, ref } from "vue"
 import loadingBar from '@/utils/loadingBar.vue';
 import Cursor from '../utils/cursor.vue'
 import AOS from 'aos'
 
 export default {
-    components:{
-        Cursor,
-        loadingBar
-    },
-    setup(){
-        onMounted(() => {
-            window.scrollTo(0, 0);
+  components:{
+    Cursor,
+    loadingBar
+  },
+  setup(){
+    const target = ref(null)
 
-            AOS.init({
-                duration: 1000,
-                once: false,
-            });
+    onMounted(() => {
+      window.scrollTo(0, 0)
 
-        });
+      AOS.init({
+        duration: 1000,
+        once: false,
+      })
+
+    //   if (target.value) {
+    //     setTimeout(() => {
+    //       target.value.removeAttribute("data-aos")
+    //       target.value.removeAttribute("data-aos-anchor-placement")
+    //       target.value.removeAttribute("data-aos-offset")
+    //       target.value.removeAttribute("data-aos-duration")
+
+    //       AOS.refresh()
+    //     }, 3000)
+    //   }
+    })
+
+    return {
+      target
     }
+  }
 }
 </script>
+
 <style>
     @font-face {
         font-family: poppins;
