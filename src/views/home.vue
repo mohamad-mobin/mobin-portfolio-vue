@@ -126,17 +126,6 @@ export default {
         duration: 1000,
         once: false,
       })
-
-    //   if (target.value) {
-    //     setTimeout(() => {
-    //       target.value.removeAttribute("data-aos")
-    //       target.value.removeAttribute("data-aos-anchor-placement")
-    //       target.value.removeAttribute("data-aos-offset")
-    //       target.value.removeAttribute("data-aos-duration")
-
-    //       AOS.refresh()
-    //     }, 3000)
-    //   }
     })
 
     return {
