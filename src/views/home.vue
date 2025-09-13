@@ -14,7 +14,7 @@
                  data-aos-anchor-placement="top-bottom"
                  data-aos-offset="0"
                  data-aos-duration="1300"
-                 class="rounded-3xl overflow-hidden md:fixed md:left-[5%] w-[200px] md:w-[30%] h-[200px] md:h-[90%] top-[5%] shadow-md ring-[1px] ring-[#3a3a3d] z-40" id="ManImage">
+                 class="rounded-3xl overflow-hidden md:fixed md:left-[5%] w-[300px] md:w-[30%] h-[400px] md:h-[90%] top-[5%] shadow-md ring-[1px] ring-[#3a3a3d] z-40" id="ManImage">
                      <img class="size-full object-cover shadow-md /// hover:scale-110 hover:rotate-3 hover:grayscale-100 duration-300" src="../assets/images/dark.jpg" draggable="false" alt="">
                  </div>
             
