@@ -10,7 +10,6 @@
     
         <div class="flex flex-col justify-center items-center">
             <!-- image -->
-             
                  <div data-aos="fade-up"
                  data-aos-anchor-placement="top-bottom"
                  data-aos-offset="0"

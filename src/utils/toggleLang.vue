@@ -2,7 +2,7 @@
 <template>
   <div 
     id="container" 
-    class="w-[90px] fixed right-2 top-2 z-50 h-10 bg-gradient-to-r from-gray-700 border border-white/20 shadow-md shadow-white/20 to-gray-800
+    class="w-[90px] hover:scale-110 fixed right-2 top-2 z-50 h-10 bg-gradient-to-r from-gray-700 border border-white/20 shadow-md shadow-white/20 to-gray-800
  rounded-3xl py-1 px-1 flex justify-between duration-300"
     @click="toggleLang"
   >
@@ -71,7 +71,7 @@
     <!-- Toggle Button -->
     <button 
       ref="btn" 
-      class="bg-white rounded-full cursor-none h-full w-8 z-40"
+      class="bg-white hover:bg-orange-300 duration-300 rounded-full cursor-none h-full w-8 z-40"
       :style="{ marginLeft: currentLang === 'fa' ? '50px' : '-50px' }"
     ></button>
 
