@@ -144,9 +144,7 @@ export default {
         src: url(../assets/fonts/Poppins-Regular.ttf);
     }
     body{
-        /* background-color: #131417; */
         background-image: url(../assets/images/abstract.jpg);
-        /* filter: brightness(0.7); */
         color: white;
     }
     body::before {
@@ -159,9 +157,6 @@ export default {
   pointer-events: none;
 }
     .wrapper{
-        overflow-x: hidden;
-    }
-    html,body{
         overflow-x: hidden;
     }
 </style>

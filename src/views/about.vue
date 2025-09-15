@@ -357,7 +357,8 @@ export default {
         onMounted(() => {
             setTimeout(() => {
                 initLenis();
-                document.body.style.overflow = 'visible'
+                document.body.style.overflowY = 'visible'
+                document.body.style.overflowX = 'hidden'
             }, 800);
 
             AOS.init({
