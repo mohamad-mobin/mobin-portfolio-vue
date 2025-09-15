@@ -152,6 +152,8 @@ export default {
     body::before {
   content: "";
   position: fixed;
+  height: 400vh;
+  width: 100vw;
   inset: 0;
   background: rgba(19, 20, 23, 0.991);
   pointer-events: none;
