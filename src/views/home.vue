@@ -32,7 +32,7 @@
             <p class="uppercase duration-300 group-hover:translate-x-10 text-left text-white text-[25px] lg:text-[39px] font-black">{{ $t('webDeveloper') }}</p>
         </h1>
     
-        <p class="py-3 leading-loose hover:scale-105 duration-300 text-left md:text-center md:w-[60%] w-[70%] text-xs" style="font-family: poppins;">{{ $t('imIranian') }}</p>
+        <p class="py-3 leading-loose hover:scale-105 duration-300 text-left md:text-center md:w-[60%] w-[70%] text-md" style="font-family: poppins;">{{ $t('imIranian') }}</p>
     
         <div class="flex flex-col md:flex-row w-[400px] md:w-fit h-[250px] md:h-[90px] gap-3 md:gap-x-5 items-center">
             <router-link :to="{ name:'about' }" id="moreAboutMeBtn" class="text-center md:ml-10 mt-4 py-4 pl-7 pr-20 rounded-full overflow-hidden ring-1 ring-[#FFB400] self-center relative z-20 /// before:absolute before:size-0 before:rounded-full before:-z-10 before:duration-300 before:bg-[#FFB400] hover:before:size-[300px] before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 hover:scale-110 duration-300 cursor-none" style="font-family: poppins;">
