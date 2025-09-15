@@ -114,27 +114,36 @@ const btn = ref(null)
 
 // بررسی localStorage هنگام بارگذاری کامپوننت
 onMounted(async () => {
+    const savedLang = localStorage.getItem('lang')
+
+    if (savedLang) {
+        // اگر کاربر قبلاً زبانی انتخاب کرده بود
+        currentLang.value = savedLang
+        locale.value = savedLang
+
+        if (!setLocaleMessage[savedLang]) {
+            const data = await fetchTranslations(savedLang)
+            setLocaleMessage(savedLang, data)
+        }
+    } else {
+        // اگر هیچ زبانی ذخیره نشده بود => پیشفرض en
+        localStorage.setItem('lang', 'en')
+        currentLang.value = 'en'
+        locale.value = 'en'
+
+        const data = await fetchTranslations('en')
+        setLocaleMessage('en', data)
+    }
+
     setTimeout(() => {
         btn.value.classList.add('duration-200')
     }, 100);
-    
-  const savedLang = localStorage.getItem('lang')
-  if (savedLang) {
-    currentLang.value = savedLang
-    locale.value = savedLang
-    // اگر ترجمه هنوز لود نشده، از سرور بگیریم
-    if (!setLocaleMessage[savedLang]) {
-      const data = await fetchTranslations(savedLang)
-      setLocaleMessage(savedLang, data)
-    }
-  }
 })
 
 // هنگام تغییر زبان
 async function toggleLang() {
   const newLang = currentLang.value === 'fa' ? 'en' : 'fa'
 
-  // اگر ترجمه قبلاً لود نشده، از سرور بگیر
   if (!setLocaleMessage[newLang]) {
     const data = await fetchTranslations(newLang)
     setLocaleMessage(newLang, data)
@@ -142,12 +151,10 @@ async function toggleLang() {
 
   locale.value = newLang
   currentLang.value = newLang
-
-  // ذخیره زبان در localStorage
   localStorage.setItem('lang', newLang)
 }
 
-// اگر بخوایم هر تغییر currentLang به صورت خودکار ذخیره بشه
+// ذخیره خودکار هر تغییر currentLang
 watch(currentLang, (newVal) => {
   localStorage.setItem('lang', newVal)
 })
