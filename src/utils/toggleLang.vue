@@ -71,7 +71,7 @@
     <!-- Toggle Button -->
     <button 
       ref="btn" 
-      class="bg-white hover:bg-orange-300 duration-300 rounded-full cursor-none h-full w-8 z-40"
+      class="bg-white hover:bg-orange-300 rounded-full cursor-none h-full w-8 z-40"
       :style="{ marginLeft: currentLang === 'fa' ? '50px' : '-50px' }"
     ></button>
 
