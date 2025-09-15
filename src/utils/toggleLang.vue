@@ -112,12 +112,10 @@ const { locale, setLocaleMessage } = useI18n()
 const currentLang = ref('fa')
 const btn = ref(null)
 
-// بررسی localStorage هنگام بارگذاری کامپوننت
 onMounted(async () => {
     const savedLang = localStorage.getItem('lang')
 
     if (savedLang) {
-        // اگر کاربر قبلاً زبانی انتخاب کرده بود
         currentLang.value = savedLang
         locale.value = savedLang
 
@@ -126,7 +124,6 @@ onMounted(async () => {
             setLocaleMessage(savedLang, data)
         }
     } else {
-        // اگر هیچ زبانی ذخیره نشده بود => پیشفرض en
         localStorage.setItem('lang', 'en')
         currentLang.value = 'en'
         locale.value = 'en'
@@ -140,7 +137,6 @@ onMounted(async () => {
     }, 100);
 })
 
-// هنگام تغییر زبان
 async function toggleLang() {
   const newLang = currentLang.value === 'fa' ? 'en' : 'fa'
 
@@ -154,7 +150,6 @@ async function toggleLang() {
   localStorage.setItem('lang', newLang)
 }
 
-// ذخیره خودکار هر تغییر currentLang
 watch(currentLang, (newVal) => {
   localStorage.setItem('lang', newVal)
 })

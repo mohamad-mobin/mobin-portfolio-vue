@@ -6,7 +6,7 @@
     
             <div class="container mx-auto pt-5 relative">
     
-            <div class="md:fixed absolute w-[400px] h-[300%] left-[30%] -top-[190%] rotate-45 md:-top-[10%] md:-left-[30%] md:w-[51%] md:h-[200%] md:-rotate-[12deg] -z-10  bg-[#FFB400]"></div>
+            <div class="md:fixed absolute w-[400px] h-[300%] left-[30%] -top-[190%] rotate-45 md:-top-[10%] md:-left-[30%] md:w-[51%] md:h-[200%] md:-rotate-[12deg] z-10  bg-[#FFB400]"></div>
     
         <div class="flex flex-col justify-center items-center">
             <!-- image -->
@@ -144,9 +144,18 @@ export default {
         src: url(../assets/fonts/Poppins-Regular.ttf);
     }
     body{
-        background-color: #131417;
+        /* background-color: #131417; */
+        background-image: url(../assets/images/abstract.jpg);
+        /* filter: brightness(0.7); */
         color: white;
     }
+    body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(19, 20, 23, 0.991);
+  pointer-events: none;
+}
     .wrapper{
         overflow-x: hidden;
     }
