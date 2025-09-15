@@ -1,6 +1,7 @@
 <template>
     <Cursor :propsImageStatus="imageStatus"/>
     <loadingBar/>
+    <toggleLang />
 
     
     <div class="blurry-circle circle-1 hidden sm:block"></div>
@@ -173,6 +174,8 @@ import shahrdariDescImage from '@/assets/images/shahrdari-logo.png'
 import bookmarkImage from '@/assets/images/bookmark.png'
 import bookmarkDescImage from '@/assets/images/bookmark-logo.png'
 
+import toggleLang from "@/utils/toggleLang.vue";
+
 export default {
     data() {
         return {
@@ -212,7 +215,8 @@ export default {
     },
     components:{
         Cursor,
-        loadingBar
+        loadingBar,
+        toggleLang
     },
     setup() {
         onBeforeMount(() => {

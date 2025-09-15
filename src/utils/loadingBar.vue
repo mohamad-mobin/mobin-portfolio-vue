@@ -1,5 +1,6 @@
 <template>
   <div
+    id="anim"
     ref="anim"
     class="bg-[#222222] absolute h-full w-full bottom-0 z-50 rounded-tr-[30px] rounded-tl-[30px] flex justify-center items-center overflow-hidden"
   >
@@ -93,5 +94,8 @@ export default {
 @font-face {
   font-family: poppins;
   src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+#anim{
+    z-index: 9999 !important;
 }
 </style>

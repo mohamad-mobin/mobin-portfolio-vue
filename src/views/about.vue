@@ -2,6 +2,7 @@
     <div class="wrapper">
         <loadingBar/>
         <Cursor :propsImageStatus="imageStatus" :propsCopyStatus="copyStatus"/>
+        <toggleLang/>
 
         <div class="container mx-auto pt-10">
             <div class="rellax" data-rellax-speed="3">
@@ -16,7 +17,7 @@
                 </div>
                 <div class="text-white font-poppins flex flex-col lg:flex-row justify-center items-center">
                   <!-- personal infos -->
-                <div data-aos="fade-left" data-aos-duration="2000" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-3xl w-full px-5">
+                <div data-aos="fade-left" data-aos-duration="2000" style="font-family: poppins,vazir;" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-3xl w-full px-5">
                       <div class="rounded-xl p-4 flex items-center space-x-3 box-shadow-soft-3d">
                       <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-orange-600/5">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-orange-400/50">
@@ -24,8 +25,8 @@
                           </svg>
                       </div>
                       <div class="flex flex-col text-left">
-                          <p class="text-gray-400 text-sm">Name:</p>
-                          <p class="text-white text-base font-semibold aboutText">Mobin Rezaee</p>
+                          <p class="text-gray-400 text-sm">{{ $t('picName') }}</p>
+                          <p class="text-white text-base aboutText">{{ $t('picNameValue') }}</p>
                       </div>
                   </div>
               
@@ -34,8 +35,8 @@
                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-blue-500"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" /></svg>
                           </div>
                           <div class="flex flex-col text-left">
-                              <p class="text-gray-400 text-sm">Nationality:</p>
-                              <p class="text-white text-base font-semibold aboutText">Iranian</p>
+                              <p class="text-gray-400 text-sm">{{ $t('picNationality') }}</p>
+                              <p class="text-white text-base aboutText">{{ $t('picNationalityValue') }}</p>
                           </div>
                       </div>
               
@@ -44,8 +45,8 @@
                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-blue-500"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" /></svg>
                           </div>
                           <div class="flex flex-col text-left">
-                              <p class="text-gray-400 text-sm">Age:</p>
-                              <p class="text-white text-base font-semibold aboutText">19 Years</p>
+                              <p class="text-gray-400 text-sm">{{ $t('picAge') }}</p>
+                              <p class="text-white text-base aboutText">{{ $t('picAgeValue') }}</p>
                           </div>
                       </div>
               
@@ -54,8 +55,8 @@
                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-red-500/50"><path fill-rule="evenodd" d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" clip-rule="evenodd" /></svg>
                           </div>
                           <div class="flex flex-col text-left">
-                              <p class="text-gray-400 text-sm">Address:</p>
-                              <p class="text-white text-base font-semibold aboutText">Kermanshah</p>
+                              <p class="text-gray-400 text-sm">{{ $t('picAddress') }}</p>
+                              <p class="text-white text-base aboutText">{{ $t('picAddressValue') }}</p>
                           </div>
                       </div>
               
@@ -64,8 +65,8 @@
                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-green-500"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
                           </div>
                           <div class="flex flex-col text-left">
-                              <p class="text-gray-400 text-sm">Freelance:</p>
-                              <p class="text-[#5BE85B] text-base font-semibold">Available</p>
+                              <p class="text-gray-400 text-sm">{{ $t('picFreelance') }}</p>
+                              <p class="text-[#5BE85B] text-base">{{ $t('picFreelanceValue') }}</p>
                           </div>
                       </div>
               
@@ -75,8 +76,8 @@
     
                           </div>
                           <div class="flex flex-col text-left">
-                              <p class="text-gray-400 text-sm">Education:</p>
-                              <p class="text-white text-base lg:text-sm whitespace-nowrap font-semibold aboutText">Software Engineering</p>
+                              <p class="text-gray-400 text-sm">{{ $t('picEducation') }}</p>
+                              <p class="text-white text-base lg:text-sm whitespace-nowrap aboutText">{{ $t('picEducationValue') }}</p>
                           </div>
                       </div>
               
@@ -87,8 +88,8 @@
                   <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-blue-600/10">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-blue-500"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"></path></svg>
                   </div>
-                  <div class="flex flex-col text-left flex-grow"> <p class="text-gray-400 text-sm">Email</p>
-                      <p class="text-white text-xs sm:text-base font-semibold break-words aboutText">mohammadmobinrezaee@gmail.com</p> </div>
+                  <div class="flex flex-col text-left flex-grow"> <p class="text-gray-400 text-sm">{{ $t('picEmail') }}</p>
+                      <p class="text-white text-xs sm:text-base break-words aboutText">mohammadmobinrezaee@gmail.com</p> </div>
               
                   <button class="absolute top-2 right-2 copySvg">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z"></path></svg>
@@ -100,8 +101,8 @@
                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-orange-600"><path stroke-linecap="round" stroke-linejoin="round" d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802" /></svg>
                           </div>
                           <div class="flex flex-col text-left">
-                              <p class="text-gray-400 text-sm">Languages</p>
-                              <p class="text-white text-base font-semibold aboutText">Persian, English</p>
+                              <p class="text-gray-400 text-sm">{{ $t('picLanguages') }}</p>
+                              <p class="text-white text-base aboutText">{{ $t('picLanguagesValue') }}</p>
                           </div>
                       </div>
               
@@ -119,7 +120,7 @@
                     </p>
         </div>
         <div>
-            <div class="flex flex-wrap justify-center gap-5 px-5 pt-5 pb-28 md:pb-5 text-center text-white max-w-7xl mx-auto z-50">
+            <div style="font-family: poppins;" class="flex flex-wrap justify-center gap-5 px-5 pt-5 pb-28 md:pb-5 text-center text-white max-w-7xl mx-auto z-50">
              
                      <div class="flex flex-row gap-5 gap-y-8 md:mb-0">
                          <div class="hover:scale-110 duration-300">
@@ -287,6 +288,7 @@ import { initLenis, destroyLenis } from '@/library/lenis.js'
 import Rellax from 'rellax';
 import AOS from 'aos';
 import { onMounted, onBeforeUnmount, onBeforeMount } from "vue"
+import toggleLang from '@/utils/toggleLang.vue';
 
 import { ref } from 'vue';
 
@@ -373,12 +375,21 @@ export default {
   },
   components:{
     Cursor,
-    loadingBar
+    loadingBar,
+    toggleLang
   }
 };
 </script>
 
 <style>
+@font-face {
+    font-family: vazir;
+    src: url(../assets/fonts/Vazir-Regular.ttf);
+}
+@font-face {
+    font-family: poppins;
+    src: url(../assets/fonts/Poppins-Regular.ttf);
+}
     body{
         background-color: #131417;
         color: white;
@@ -410,4 +421,5 @@ body::selection{
 .wrapper{
     overflow-x: hidden;
 }
+
 </style>

@@ -2,6 +2,7 @@
     <div class="wrapper">
         <loadingBar/>
         <Cursor />
+        <toggleLang/>
     
             <div class="container mx-auto pt-5 relative">
     
@@ -27,15 +28,15 @@
         class="flex flex-col h-full pt-4 md:pt-16 items-center md:justify-center md:fixed size-[50%] gap-x-10 left-[30%] top-[100px] md:top-[50px] w-full md:w-fit pb-36 overflow-visible">
     
         <h1 class="text-left leading-tight group duration-300">
-            <p id="mobin" class="uppercase duration-300 group-hover:-translate-x-5 group-hover:scale-95 font-black text-[#FFB400] text-3xl md:text-[30px] lg:text-[50px] relative /// before:absolute before:md:block before:hidden lg:before:w-10 before:h-1 before:bg-[#FFB400] before:rounded-2xl before:-left-10 before:bottom-6 before:w-7 lg:before:bottom-8 lg:before:-left-16">I'm Mobin Rezaee.</p>
-            <p class="uppercase duration-300 group-hover:translate-x-10 text-left text-white text-[25px] lg:text-[39px] font-black">web developer</p>
+            <p id="mobin" class="uppercase duration-300 group-hover:-translate-x-5 group-hover:scale-95 font-black text-[#FFB400] text-3xl md:text-[30px] lg:text-[50px] relative /// before:absolute before:md:block before:hidden lg:before:w-10 before:h-1 before:bg-[#FFB400] before:rounded-2xl before:-left-10 before:bottom-6 before:w-7 lg:before:bottom-8 lg:before:-left-16">{{ $t('imMobinRezaee') }}</p>
+            <p class="uppercase duration-300 group-hover:translate-x-10 text-left text-white text-[25px] lg:text-[39px] font-black">{{ $t('webDeveloper') }}</p>
         </h1>
     
-        <p class="py-3 leading-loose hover:scale-105 duration-300 text-left md:text-center md:w-[60%] w-[70%] text-xs" style="font-family: poppins;">I'm a Iranian based web designer & front‑end developer focused on crafting clean & user‑friendly experiences, I am passionate about building excellent software that improves the lives of those around me.</p>
+        <p class="py-3 leading-loose hover:scale-105 duration-300 text-left md:text-center md:w-[60%] w-[70%] text-xs" style="font-family: poppins;">{{ $t('imIranian') }}</p>
     
         <div class="flex flex-col md:flex-row w-[400px] md:w-fit h-[250px] md:h-[90px] gap-3 md:gap-x-5 items-center">
             <router-link :to="{ name:'about' }" id="moreAboutMeBtn" class="text-center md:ml-10 mt-4 py-4 pl-7 pr-20 rounded-full overflow-hidden ring-1 ring-[#FFB400] self-center relative z-20 /// before:absolute before:size-0 before:rounded-full before:-z-10 before:duration-300 before:bg-[#FFB400] hover:before:size-[300px] before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 hover:scale-110 duration-300 cursor-none" style="font-family: poppins;">
-                ABOUT ME
+                {{ $t('aboutMe') }}
                 <button class="bg-[#FFB400] p-[13px] rounded-full absolute top-[1px] right-[0px] overflow-hidden cursor-none">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -43,10 +44,10 @@
                 </button>
             </router-link>
     
-            <p class="text-2xl md:mx-2 or hover:animate-spin">or</p>
+            <p class="text-2xl md:mx-2 or hover:animate-spin">{{ $t('Or') }}</p>
     
             <router-link :to="{ name:'projects' }" id="moreAboutMeBtn" class="text-center mt-4 py-4 pl-7 pr-20 rounded-full overflow-hidden ring-1 ring-[#FFB400] self-center relative z-20 /// before:absolute before:size-0 before:rounded-full before:duration-300 before:bg-[#FFB400] hover:before:size-[300px] before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:-translate-y-1/2 before:-z-10 animate-bounce hover:scale-110 duration-300 cursor-none" style="font-family: poppins;">
-                MY PROJECTS
+                {{ $t('myProjects') }}
                 <button class="bg-[#FFB400] p-[13px] rounded-full absolute top-[1px] right-[0px] overflow-hidden cursor-none">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -62,7 +63,7 @@
             <div class="md:fixed hidden md:flex justify-end items-center md:w-52 md:h-screen relative h-20 w-full right-5 top-0">
                 <div class="md:flex hidden justify-center items-center w-24 h-16 absolute right-16 mt-44 my-10 z-40 diagonal-rotate">
             <div class="relative bg-[#FFB400] w-14 border-2 border-white/50 h-8 rounded-full flex justify-center items-center">
-                <span class="relative bottom-[1px] text-[11px] font-bold select-none text-black projectsHint" style="font-family: poppins;">Projects</span>
+                <span class="relative bottom-[1px] text-[11px] font-bold select-none text-black projectsHint" style="font-family: poppins;">{{ $t('bounce') }}</span>
                 
             </div>
                 <div class="absolute right-[6px] -rotate-[87deg] top-6 w-0 h-0 border-9 border-solid border-transparent border-t-[#FFB400]"></div>
@@ -84,7 +85,7 @@
         </div>
     <div class="flex justify-center items-center w-fit h-16 fixed bottom-5 left-[60%] my-10 z-40 md:hidden flashy-bounce">
             <div class="relative bg-[#FFB400] w-14 border-2 border-white/50 h-8 rounded-full flex justify-center items-center">
-                <span class="relative bottom-[1px] text-[11px] font-bold select-none text-black projectsHint" style="font-family: poppins;">Projects</span>
+                <span class="relative bottom-[1px] text-[11px] font-bold select-none text-black projectsHint" style="font-family: poppins;">{{ $t('bounce') }}</span>
                 
             </div>
                 <div class="absolute right-[17px] rotate-[60] -bottom-[1px] w-0 h-0 border-9 border-solid border-transparent border-t-[#FFB400]"></div>
@@ -108,13 +109,15 @@
 <script>
 import { onMounted, ref } from "vue"
 import loadingBar from '@/utils/loadingBar.vue';
+import toggleLang from "@/utils/toggleLang.vue";
 import Cursor from '../utils/cursor.vue'
 import AOS from 'aos'
 
 export default {
   components:{
     Cursor,
-    loadingBar
+    loadingBar,
+    toggleLang
   },
   setup(){
     const target = ref(null)
