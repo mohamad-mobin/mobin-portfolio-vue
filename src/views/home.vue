@@ -161,4 +161,7 @@ export default {
     .wrapper{
         overflow-x: hidden;
     }
+    html,body{
+        overflow-x: hidden;
+    }
 </style>
