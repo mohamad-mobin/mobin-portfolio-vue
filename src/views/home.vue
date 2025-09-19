@@ -146,15 +146,28 @@ export default {
         background-image: url(../assets/images/abstract.jpg);
         color: white;
     }
-    body::before {
-  content: "";
-  position: fixed;
-  height: 400vh;
-  width: 100vw;
-  inset: 0;
-  background: rgba(19, 20, 23, 0.991);
-  pointer-events: none;
-}
+    @media (min-width: 768px) {  
+        body::before {
+      content: "";
+      position: fixed;
+      height: 400vh;
+      width: 100vw;
+      inset: 0;
+      background: rgba(19, 20, 23, 0.991);
+      pointer-events: none;
+    }
+    }
+    @media (max-width: 768px) {
+        body::before {
+      content: "";
+      position: fixed;
+      height: 400vh;
+      width: 100vw;
+      inset: 0;
+      background: rgba(19, 20, 23, 0.900);
+      pointer-events: none;
+    }
+    }
     .wrapper{
         overflow-x: hidden;
     }
