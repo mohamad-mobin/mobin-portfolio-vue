@@ -1,0 +1,23 @@
+/* نوار اسکرول کلی */
+body::-webkit-scrollbar {
+  width: 12px; /* عرض نوار اسکرول عمودی */
+  height: 12px; /* ارتفاع نوار اسکرول افقی */
+}
+
+/* پس‌زمینه (مسیر) نوار اسکرول */
+body::-webkit-scrollbar-track {
+  background: #202020; /* رنگ زمینه (مسیر) نوار اسکرول */
+  border-radius: 10px;
+}
+
+/* دستگیره (Thumb) نوار اسکرول */
+body::-webkit-scrollbar-thumb {
+  background-color: #FFB400; /* رنگ زرد مورد نظر شما */
+  border-radius: 10px; /* گرد کردن لبه‌های دستگیره */
+  border: 3px solid #202020; /* اضافه کردن حاشیه برای کوچکتر دیده شدن دستگیره */
+}
+
+/* تغییر رنگ دستگیره هنگام هاور (اختیاری) */
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #e6a300; /* کمی تیره‌تر */
+}
