@@ -143,7 +143,7 @@ export default {
         src: url(../assets/fonts/Poppins-Regular.ttf);
     }
     body{
-        background-image: url(../assets/images/abstract.jpg);
+        background-image: url(../assets/images/topographic.jpg);
         color: white;
     }
     @media (min-width: 768px) {  
