@@ -29,6 +29,7 @@
             <p id="mobin" class="uppercase duration-300 group-hover:-translate-x-5 group-hover:scale-95 font-black text-[#FFB400] text-3xl md:text-[30px] lg:text-[50px] relative /// before:absolute before:md:block before:hidden lg:before:w-10 before:h-1 before:bg-[#FFB400] before:rounded-2xl before:-left-10 before:bottom-6 before:w-7 lg:before:bottom-8 lg:before:-left-16" style="font-family: sans-serif,vazir;">{{ $t('imMobinRezaee') }}</p>
             <p class="uppercase duration-300 group-hover:translate-x-10 text-left text-white text-[25px] lg:text-[39px] 
             font-black" style="font-family: sans-serif,vazir;">{{ $t('webDeveloper') }}</p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id molestiae autem, sed dolores non assumenda dolorum explicabo! Molestiae eius distinctio, consequatur nisi molestias perspiciatis iste error facilis fugit itaque blanditiis.
         </h1>
     
         <p class="py-3 leading-loose hover:scale-105 duration-300 text-left md:text-center md:w-[60%] w-[70%] text-md" style="font-family: poppins, vazir;">{{ $t('imIranian') }}</p>
