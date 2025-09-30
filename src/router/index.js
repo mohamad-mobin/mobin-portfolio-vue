@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 import home from '../views/home.vue'
 import about from '../views/about.vue'
@@ -11,7 +11,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory('/mobin-portfolio-vue/'),
+  history: createWebHashHistory('/mobin-portfolio-vue/'),
   routes,
   scrollBehavior() {
     return{
