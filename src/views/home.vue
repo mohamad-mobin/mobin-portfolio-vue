@@ -149,7 +149,7 @@ export default {
                 console.log(newClassValue);
                 
             }, 10);
-        }, 1000);
+        }, 800);
         
       }
       CinemaScreenHandler()
