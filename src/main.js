@@ -2,6 +2,7 @@ import './assets/main.css'
 import 'aos/dist/aos.css'
 import './assets/fonts.css'
 import './assets/scrollbar.css'
+import './assets/bounce.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'
