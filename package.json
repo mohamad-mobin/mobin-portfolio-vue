@@ -11,7 +11,8 @@
     "build": "vite build",
     "predeploy": "npm run build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -r https://github.com/mohamad-mobin/mobin-portfolio-vue.git"
+
   },
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
