@@ -14,6 +14,8 @@
                  data-aos-offset="0"
                  data-aos-duration="1300"
                  class="rounded-3xl overflow-hidden md:fixed md:left-[5%] w-[300px] md:w-[30%] h-[400px] md:h-[90%] top-[5%] shadow-md ring-[1px] ring-[#3a3a3d] z-40" id="ManImage">
+                    <img src="../assets/images/tv.jpg" class="absolute grayscale-75" ref="cinemaScreen"/>
+
                      <img class="size-full object-cover shadow-md /// hover:scale-110 hover:rotate-3 hover:grayscale-100 duration-300" src="../assets/images/dark.jpg" draggable="false" alt="">
                  </div>
             
@@ -120,6 +122,7 @@ export default {
   },
   setup(){
     const target = ref(null)
+    const cinemaScreen = ref(null)
 
     onMounted(() => {
       window.scrollTo(0, 0)
@@ -128,10 +131,33 @@ export default {
         duration: 1000,
         once: false,
       })
+
+      function CinemaScreenHandler (){
+        
+        cinemaScreen.value.style.width = '100%'
+        cinemaScreen.value.style.height = '100%'
+
+        let newClassValue = 100
+        setTimeout(() => {            
+            let interval = setInterval(() => {
+                newClassValue--
+                cinemaScreen.value.style.height = `${newClassValue}%`
+                
+                if(newClassValue <= 0){
+                    clearInterval(interval)
+                }
+                console.log(newClassValue);
+                
+            }, 10);
+        }, 1000);
+        
+      }
+      CinemaScreenHandler()
     })
 
     return {
-      target
+      target,
+      cinemaScreen
     }
   }
 }

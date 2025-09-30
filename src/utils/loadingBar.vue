@@ -2,7 +2,7 @@
   <div
     id="anim"
     ref="anim"
-    class="bg-[#222222] absolute h-full w-full bottom-0 z-50 rounded-tr-[30px] rounded-tl-[30px] flex justify-center items-center overflow-hidden"
+    class="bg-[#222222] absolute h-full w-full bottom-0 z-50 rounded-tr-[30px] rounded-tl-[30px] flex justify-center items-center overflow-hidden border-t border-[#ffb400]"
   >
     <p
       ref="loadingText"
@@ -42,8 +42,8 @@ export default {
       let sum = 100;
       anim.value.style.height = sum + "%";
 
-      const firstPhaseDuration = 500;
-      const secondPhaseDuration = 300;
+      const firstPhaseDuration = 500;  // کاهش ارتفاع اولیه
+      const secondPhaseDuration = 300; // کاهش ارتفاع ثانویه
       let startTime = null;
 
       function step(currentTime) {
@@ -53,15 +53,15 @@ export default {
 
         if (elapsedTime < firstPhaseDuration) {
           const progress = elapsedTime / firstPhaseDuration;
-          sum = 100 - 30 * progress;
-          if (sum < 70) sum = 70;
+          sum = 100 - 20 * progress; // کمتر بالا پایین بشه
+          if (sum < 80) sum = 80;
           anim.value.style.height = sum + "%";
           requestAnimationFrame(step);
         } else {
           const secondPhaseElapsedTime = elapsedTime - firstPhaseDuration;
           if (secondPhaseElapsedTime < secondPhaseDuration) {
             const progress = secondPhaseElapsedTime / secondPhaseDuration;
-            sum = 70 - 70 * progress;
+            sum = 80 - 80 * progress;
             if (sum < 0) sum = 0;
             anim.value.style.height = sum + "%";
             requestAnimationFrame(step);
@@ -69,6 +69,7 @@ export default {
             sum = 0;
             anim.value.style.height = "0%";
             anim.value.style.pointerEvents = "none";
+            anim.value.style.borderTop = "none"; // حذف border-top
             loadingText.value.style.display = "none";
           }
         }
@@ -95,7 +96,8 @@ export default {
   font-family: poppins;
   src: url(../assets/fonts/Poppins-Regular.ttf);
 }
-#anim{
-    z-index: 9999 !important;
+
+#anim {
+  z-index: 9999 !important;
 }
 </style>
