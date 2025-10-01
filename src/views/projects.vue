@@ -273,6 +273,9 @@ import vuetifyLogo from '@/assets/images/vuetify-logo.png'
 import nftImage from '@/assets/images/nftImage.png'
 import nftLogo from '@/assets/images/nftLogo.png'
 
+import juniper from '@/assets/images/juniper.png'
+import juniperLogo from '@/assets/images/juniperLogo.png'
+
 import toggleLang from "@/utils/toggleLang.vue";
 
 export default {
@@ -308,6 +311,9 @@ export default {
             vueProjects:[
                 {
                 name:'NFT marketplace', desc:'the nft marketplace site',hrefs:'https://mohamad-mobin.github.io/NFT-marketplace/#/', image:nftImage, descImage:nftLogo, star:5  
+                },
+                {
+                name:'Juniper', desc:'weather site',hrefs:'https://junipers.netlify.app/', image:juniper, descImage:juniperLogo, star:4
                 },
             ],
             imageStatus : false
