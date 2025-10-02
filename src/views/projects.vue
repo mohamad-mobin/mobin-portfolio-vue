@@ -27,7 +27,7 @@
     
     
     <div class="grid justify-center items-center md:grid-cols-2 lg:grid-cols-3 gap-y-20 pt-16">
-        <div v-for="(project, index) in vueProjects" :key="index" data-aos="fade-up"
+        <div v-for="(project, index) in vueProjects" :key="project.name" data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
         data-aos-offset="0"
         data-aos-duration="1300" class="bg-[#1E1F26] select-none w-72 h-56 rounded-2xl relative duration-300 group text-white ring-1 ring-[#3a3a3d] shadow">
@@ -79,7 +79,7 @@
     
     
     <div class="grid justify-center items-center md:grid-cols-2 lg:grid-cols-3 gap-y-20 pt-16">
-        <div v-for="(project, index) in bestProjects" :key="index" data-aos="fade-up"
+        <div v-for="(project, index) in bestProjects" :key="project.name" data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
         data-aos-offset="0"
         data-aos-duration="1300" class="bg-[#1E1F26] select-none w-72 h-56 rounded-2xl relative duration-300 group text-white ring-1 ring-[#3a3a3d] shadow">
@@ -132,7 +132,7 @@
     </div>
 
     <div class="grid justify-center items-center md:grid-cols-2 lg:grid-cols-3 gap-y-20 pt-16">
-        <div v-for="(project, index) in regularProjects" :key="index" data-aos="fade-up"
+        <div v-for="(project, index) in regularProjects" :key="project.name" data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
         data-aos-offset="0"
         data-aos-duration="1300" class="bg-[#1E1F26] select-none w-72 h-56 rounded-2xl relative duration-300 group text-white ring-1 ring-[#3a3a3d] shadow">
@@ -183,7 +183,7 @@
     </div>
 
     <div class="grid justify-center items-center md:grid-cols-2 lg:grid-cols-3 gap-y-20 pt-16">
-        <div v-for="(project, index) in vuetifyProjects" :key="index" data-aos="fade-up"
+        <div v-for="(project, index) in vuetifyProjects" :key="project.name" data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
         data-aos-offset="0"
         data-aos-duration="1300" class="bg-[#1E1F26] select-none w-72 h-56 rounded-2xl relative duration-300 group text-white ring-1 ring-[#3a3a3d] shadow">
