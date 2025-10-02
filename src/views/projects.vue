@@ -179,7 +179,7 @@
         </div>
     </div>
 
-    <div class="grid justify-center items-center md:grid-cols-2 lg:grid-cols-3 gap-y-20 pt-16">
+    <div class="grid justify-center items-center md:grid-cols-2 lg:grid-cols-3 gap-y-20 pt-16 pb-32">
         <div v-for="(project, index) in vuetifyProjects" :key="project.name" data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
         data-aos-offset="0"
@@ -288,8 +288,6 @@ import nftLogo from '@/assets/images/logos/nftLogo.webp'
 
 import juniper from '@/assets/images/banner-images/juniper.webp'
 import juniperLogo from '@/assets/images/logos/juniperLogo.webp'
-
-
 
 export default {
     data() {
