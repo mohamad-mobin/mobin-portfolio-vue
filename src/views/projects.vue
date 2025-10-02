@@ -262,32 +262,32 @@ import loadingBar from '@/utils/loadingBar.vue';
 import Cursor from '../utils/cursor.vue'
 import toggleLang from "@/utils/toggleLang.vue";
 
-import JoJoImage from '@/assets/images/jojo.webp'
-import JoJoDescImage from '@/assets/images/banner.webp'
+import JoJoImage from '@/assets/images/banner-images/jojo.webp'
+import JoJoDescImage from '@/assets/images/logos/banner.webp'
 
-import foodImage from '@/assets/images/food-delivery.webp'
-import foodDescImage from '@/assets/images/lgo.png'
+import foodImage from '@/assets/images/banner-images/food-delivery.webp'
+import foodDescImage from '@/assets/images/logos/lgo.png'
 
-import styleImage from '@/assets/images/style.webp'
-import styleDescImage from '@/assets/images/style-logo.png'
+import styleImage from '@/assets/images/banner-images/style.webp'
+import styleDescImage from '@/assets/images/logos/style-logo.png'
 
-import limooImage from '@/assets/images/limoo.webp'
-import limooDescImage from '@/assets/images/limoo-logo.png'
+import limooImage from '@/assets/images/banner-images/limoo.webp'
+import limooDescImage from '@/assets/images/logos/limoo-logo.png'
 
-import shahrdariImage from '@/assets/images/shahrdari.webp'
-import shahrdariDescImage from '@/assets/images/shahrdari-logo.png'
+import shahrdariImage from '@/assets/images/banner-images/shahrdari.webp'
+import shahrdariDescImage from '@/assets/images/logos/shahrdari-logo.png'
 
-import bookmarkImage from '@/assets/images/bookmark.webp'
-import bookmarkDescImage from '@/assets/images/bookmark-logo.png'
+import bookmarkImage from '@/assets/images/banner-images/bookmark.webp'
+import bookmarkDescImage from '@/assets/images/logos/bookmark-logo.png'
 
-import vuetifyImage from '@/assets/images/vuetify.webp'
-import vuetifyLogo from '@/assets/images/vuetify-logo.png'
+import vuetifyImage from '@/assets/images/banner-images/vuetify.webp'
+import vuetifyLogo from '@/assets/images/logos/vuetify-logo.png'
 
-import nftImage from '@/assets/images/nftImage.webp'
-import nftLogo from '@/assets/images/nftLogo.webp'
+import nftImage from '@/assets/images/banner-images/nftImage.webp'
+import nftLogo from '@/assets/images/logos/nftLogo.webp'
 
-import juniper from '@/assets/images/juniper.webp'
-import juniperLogo from '@/assets/images/juniperLogo.webp'
+import juniper from '@/assets/images/banner-images/juniper.webp'
+import juniperLogo from '@/assets/images/logos/juniperLogo.webp'
 
 
 
