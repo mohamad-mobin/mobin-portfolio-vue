@@ -1,7 +1,6 @@
 <template>
   <div ref="wrapper" class="relative w-full h-full overflow-hidden rounded-2xl">
     <img
-      v-if="isVisible"
       :src="lowQuality"
       class="w-full h-full object-cover filter blur-lg scale-105 transition-opacity duration-500"
       :class="{'opacity-0': loaded}"
@@ -20,6 +19,7 @@
     />
   </div>
 </template>
+
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
