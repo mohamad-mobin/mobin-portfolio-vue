@@ -27,7 +27,6 @@
     
     
     <div class="grid justify-center items-center md:grid-cols-2 lg:grid-cols-3 gap-y-20 pt-16">
-        
         <div v-for="(project, index) in vueProjects" :key="index" data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
         data-aos-offset="0"
