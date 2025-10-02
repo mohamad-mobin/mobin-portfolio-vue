@@ -1,6 +1,5 @@
 <template>
   <div ref="wrapper" class="relative w-full h-full overflow-hidden rounded-2xl">
-    <!-- عکس محو (فقط وقتی داخل ویوپورت بود) -->
     <img
       v-if="isVisible"
       :src="lowQuality"
@@ -10,7 +9,6 @@
       draggable="false"
     />
 
-    <!-- عکس اصلی (فقط وقتی داخل ویوپورت بود) -->
     <img
       v-if="isVisible"
       :src="src"
@@ -27,8 +25,8 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 const props = defineProps({
-  src: { type: String, required: true },        // عکس اصلی
-  lowQuality: { type: String, required: true }, // عکس کم‌کیفیت
+  src: { type: String, required: true },
+  lowQuality: { type: String, required: true },
   alt: { type: String, default: '' }
 })
 
@@ -42,7 +40,7 @@ onMounted(() => {
   observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
       isVisible.value = true
-      observer.disconnect() // فقط یکبار لود بشه
+      observer.disconnect()
     }
   })
 
