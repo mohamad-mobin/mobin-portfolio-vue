@@ -310,7 +310,7 @@ export default {
             ],
             vueProjects:[
                 {
-                name:'NFT marketplace', desc:'the nft marketplace site',hrefs:'https://mohamad-mobin.github.io/NFT-marketplace/#/', image:nftImage, descImage:nftLogo, star:5  
+                name:'NFT marketplace', desc:'the nft marketplace site',hrefs:'https://vue-nft-marketplace.netlify.app/', image:nftImage, descImage:nftLogo, star:5  
                 },
                 {
                 name:'Juniper', desc:'weather site',hrefs:'https://junipers.netlify.app/', image:juniper, descImage:juniperLogo, star:4
