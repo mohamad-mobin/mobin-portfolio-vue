@@ -33,11 +33,10 @@
         data-aos-duration="1300" class="bg-[#1E1F26] select-none w-72 h-56 rounded-2xl relative duration-300 group text-white ring-1 ring-[#3a3a3d] shadow">
             <div class="absolute -left-5 -top-10 duration-300">
                 <a class="block overflow-hidden w-72 h-48 rounded-2xl cursor-none" :href="project.hrefs">
-                    <BlurImage
+                    <img
                         draggable="false"
                         class=" size-full object-cover rounded-2xl ring-1 ring-[#3a3a3d] md:grayscale-100 group-hover:grayscale-0 duration-300 group-hover:scale-110 portofolio-item"
                         :src="project.image"
-                        :lowQuality="project.imageLow"
                         :alt="project.name"
                         @mouseenter="TrueImageStatus"
                         @mouseleave="FalseImageStatus"
@@ -85,11 +84,10 @@
         data-aos-duration="1300" class="bg-[#1E1F26] select-none w-72 h-56 rounded-2xl relative duration-300 group text-white ring-1 ring-[#3a3a3d] shadow">
             <div class="absolute -left-5 -top-10 duration-300">
                 <a class="block overflow-hidden w-72 h-48 rounded-2xl cursor-none" :href="project.hrefs">
-                    <BlurImage
+                    <img
                         draggable="false"
                         class=" size-full object-cover rounded-2xl ring-1 ring-[#3a3a3d] md:grayscale-100 group-hover:grayscale-0 duration-300 group-hover:scale-110 portofolio-item"
                         :src="project.image"
-                        :lowQuality="project.imageLow"
                         :alt="project.name"
                         @mouseenter="TrueImageStatus"
                         @mouseleave="FalseImageStatus"
@@ -138,11 +136,10 @@
         data-aos-duration="1300" class="bg-[#1E1F26] select-none w-72 h-56 rounded-2xl relative duration-300 group text-white ring-1 ring-[#3a3a3d] shadow">
             <div class="absolute -left-5 -top-10 duration-300">
                 <a class="block overflow-hidden w-72 h-48 rounded-2xl cursor-none" :href="project.hrefs">
-                    <BlurImage
+                    <img
                         draggable="false"
                         class=" size-full object-cover rounded-2xl ring-1 ring-[#3a3a3d] md:grayscale-100 group-hover:grayscale-0 duration-300 group-hover:scale-110 portofolio-item"
                         :src="project.image"
-                        :lowQuality="project.imageLow"
                         :alt="project.name"
                         @mouseenter="TrueImageStatus"
                         @mouseleave="FalseImageStatus"
@@ -189,11 +186,10 @@
         data-aos-duration="1300" class="bg-[#1E1F26] select-none w-72 h-56 rounded-2xl relative duration-300 group text-white ring-1 ring-[#3a3a3d] shadow">
             <div class="absolute -left-5 -top-10 duration-300">
                 <a class="block overflow-hidden w-72 h-48 rounded-2xl cursor-none" :href="project.hrefs">
-                    <BlurImage
+                    <img
                         draggable="false"
                         class=" size-full object-cover rounded-2xl ring-1 ring-[#3a3a3d] md:grayscale-100 group-hover:grayscale-0 duration-300 group-hover:scale-110 portofolio-item"
                         :src="project.image"
-                        :lowQuality="project.imageLow"
                         :alt="project.name"
                         @mouseenter="TrueImageStatus"
                         @mouseleave="FalseImageStatus"
@@ -264,43 +260,33 @@ import AOS from 'aos'
 
 import loadingBar from '@/utils/loadingBar.vue';
 import Cursor from '../utils/cursor.vue'
-import BlurImage from "../utils/blurImage.vue";
 import toggleLang from "@/utils/toggleLang.vue";
 
 import JoJoImage from '@/assets/images/jojo.webp'
-import JoJoImageLow from '@/assets/images/jojoLow.png'
 import JoJoDescImage from '@/assets/images/banner.webp'
 
 import foodImage from '@/assets/images/food-delivery.webp'
-import foodImageLow from '@/assets/images/foodImageLow.png'
 import foodDescImage from '@/assets/images/lgo.png'
 
 import styleImage from '@/assets/images/style.webp'
-import styleImageLow from '@/assets/images/styleImageLow.png'
 import styleDescImage from '@/assets/images/style-logo.png'
 
 import limooImage from '@/assets/images/limoo.webp'
-import limooImageLow from '@/assets/images/limooImageLow.png'
 import limooDescImage from '@/assets/images/limoo-logo.png'
 
 import shahrdariImage from '@/assets/images/shahrdari.webp'
-import shahrdariLow from '@/assets/images/shahrdariLow.png'
 import shahrdariDescImage from '@/assets/images/shahrdari-logo.png'
 
 import bookmarkImage from '@/assets/images/bookmark.webp'
-import bookmarkLow from '@/assets/images/bookmarkLow.png'
 import bookmarkDescImage from '@/assets/images/bookmark-logo.png'
 
 import vuetifyImage from '@/assets/images/vuetify.webp'
-import vuetifyLow from '@/assets/images/vuetifyLow.png'
 import vuetifyLogo from '@/assets/images/vuetify-logo.png'
 
 import nftImage from '@/assets/images/nftImage.webp'
-import nftImageLow from '@/assets/images/nftImageLow.png'
 import nftLogo from '@/assets/images/nftLogo.webp'
 
 import juniper from '@/assets/images/juniper.webp'
-import juniperLow from '@/assets/images/juniperLow.png'
 import juniperLogo from '@/assets/images/juniperLogo.webp'
 
 
@@ -314,7 +300,6 @@ export default {
                     desc: 'professional portfolio',
                     hrefs: 'https://mohamad-mobin.github.io/Jojo-Portfolio/public/index.html',
                     image: JoJoImage,
-                    imageLow: JoJoImageLow,
                     descImage: JoJoDescImage,
                     star: 5
                 },
@@ -323,7 +308,6 @@ export default {
                     desc: 'online mac donald',
                     hrefs: 'https://mohamad-mobin.github.io/foods-delivery/',
                     image: foodImage,
-                    imageLow: foodImageLow,
                     descImage: foodDescImage,
                     star: 5
                 },
@@ -332,7 +316,6 @@ export default {
                     desc: 'online clothes shop',
                     hrefs: 'https://mohamad-mobin.github.io/Style-Shop/public/index.html',
                     image: styleImage,
-                    imageLow: styleImageLow,
                     descImage: styleDescImage,
                     star: 5
                 },
@@ -344,7 +327,6 @@ export default {
                     desc:'iranian limoo site',
                     hrefs:'https://mohamad-mobin.github.io/limoo-site/public/index.html',
                     image:limooImage,
-                    imageLow:limooImageLow,
                     descImage:limooDescImage,
                     star:4
                 },
@@ -353,7 +335,6 @@ export default {
                     desc:'iranian shahrdari page',
                     hrefs:'https://mohamad-mobin.github.io/Shahrdari-Page/public/index.html',
                     image:shahrdariImage,
-                    imageLow:shahrdariLow,
                     descImage:shahrdariDescImage,
                     star:4
                 },
@@ -362,7 +343,6 @@ export default {
                     desc:'landing page',
                     hrefs:'https://mohamad-mobin.github.io/Bookmark-Page/public/index.html',
                     image:bookmarkImage,
-                    imageLow:bookmarkLow,
                     descImage:bookmarkDescImage,
                     star:5
                 },
@@ -374,7 +354,6 @@ export default {
                     desc:'my first vuetify site',
                     hrefs:'https://mohamad-mobin.github.io/admin-panel-vuetify/',
                     image:vuetifyImage,
-                    imageLow:vuetifyLow,
                     descImage:vuetifyLogo,
                     star:3
                 },
@@ -386,7 +365,6 @@ export default {
                     desc:'the nft marketplace site',
                     hrefs:'https://vue-nft-marketplace.netlify.app/',
                     image:nftImage,             // عکس اصلی
-                    imageLow:nftImageLow,       // نسخه blur کم حجم
                     descImage:nftLogo,
                     star:5  
                 },
@@ -395,7 +373,6 @@ export default {
                     desc:'weather site',
                     hrefs:'https://junipers.netlify.app/',
                     image:juniper,
-                    imageLow:juniperLow,
                     descImage:juniperLogo,
                     star:4
                 },
@@ -416,7 +393,6 @@ export default {
         Cursor,
         loadingBar,
         toggleLang,
-        BlurImage
     },
     setup() {
         onBeforeMount(() => {
