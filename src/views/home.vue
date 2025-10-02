@@ -27,7 +27,7 @@
                         color="#2c2c2c"
                         />
                         
-                        <img v-else class="size-full object-cover shadow-md /// hover:scale-110 hover:rotate-3 hover:grayscale-100 duration-300" src="../assets/images/dark.jpg" draggable="false" alt="">
+                        <img v-else class="size-full object-cover shadow-md /// hover:scale-110 hover:rotate-3 hover:grayscale-100 duration-300" src="../assets/images/dark.webp" draggable="false" alt="">
                     </div>
                  </div>
 

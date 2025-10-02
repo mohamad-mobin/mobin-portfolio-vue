@@ -267,39 +267,39 @@ import Cursor from '../utils/cursor.vue'
 import BlurImage from "../utils/blurImage.vue";
 import toggleLang from "@/utils/toggleLang.vue";
 
-import JoJoImage from '@/assets/images/jojo.png'
+import JoJoImage from '@/assets/images/jojo.webp'
 import JoJoImageLow from '@/assets/images/jojoLow.png'
 import JoJoDescImage from '@/assets/images/banner.png'
 
-import foodImage from '@/assets/images/food-delivery.png'
+import foodImage from '@/assets/images/food-delivery.webp'
 import foodImageLow from '@/assets/images/foodImageLow.png'
 import foodDescImage from '@/assets/images/lgo.png'
 
-import styleImage from '@/assets/images/style.png'
+import styleImage from '@/assets/images/style.webp'
 import styleImageLow from '@/assets/images/styleImageLow.png'
 import styleDescImage from '@/assets/images/style-logo.png'
 
-import limooImage from '@/assets/images/limoo.png'
+import limooImage from '@/assets/images/limoo.webp'
 import limooImageLow from '@/assets/images/limooImageLow.png'
 import limooDescImage from '@/assets/images/limoo-logo.png'
 
-import shahrdariImage from '@/assets/images/shahrdari.png'
+import shahrdariImage from '@/assets/images/shahrdari.webp'
 import shahrdariLow from '@/assets/images/shahrdariLow.png'
 import shahrdariDescImage from '@/assets/images/shahrdari-logo.png'
 
-import bookmarkImage from '@/assets/images/bookmark.png'
+import bookmarkImage from '@/assets/images/bookmark.webp'
 import bookmarkLow from '@/assets/images/bookmarkLow.png'
 import bookmarkDescImage from '@/assets/images/bookmark-logo.png'
 
-import vuetifyImage from '@/assets/images/vuetify.png'
+import vuetifyImage from '@/assets/images/vuetify.webp'
 import vuetifyLow from '@/assets/images/vuetifyLow.png'
 import vuetifyLogo from '@/assets/images/vuetify-logo.png'
 
-import nftImage from '@/assets/images/nftImage.png'
+import nftImage from '@/assets/images/nftImage.webp'
 import nftImageLow from '@/assets/images/nftImageLow.png'
 import nftLogo from '@/assets/images/nftLogo.png'
 
-import juniper from '@/assets/images/juniper.png'
+import juniper from '@/assets/images/juniper.webp'
 import juniperLow from '@/assets/images/juniperLow.png'
 import juniperLogo from '@/assets/images/juniperLogo.png'
 
