@@ -269,7 +269,7 @@ import toggleLang from "@/utils/toggleLang.vue";
 
 import JoJoImage from '@/assets/images/jojo.webp'
 import JoJoImageLow from '@/assets/images/jojoLow.png'
-import JoJoDescImage from '@/assets/images/banner.png'
+import JoJoDescImage from '@/assets/images/banner.webp'
 
 import foodImage from '@/assets/images/food-delivery.webp'
 import foodImageLow from '@/assets/images/foodImageLow.png'
@@ -297,11 +297,11 @@ import vuetifyLogo from '@/assets/images/vuetify-logo.png'
 
 import nftImage from '@/assets/images/nftImage.webp'
 import nftImageLow from '@/assets/images/nftImageLow.png'
-import nftLogo from '@/assets/images/nftLogo.png'
+import nftLogo from '@/assets/images/nftLogo.webp'
 
 import juniper from '@/assets/images/juniper.webp'
 import juniperLow from '@/assets/images/juniperLow.png'
-import juniperLogo from '@/assets/images/juniperLogo.png'
+import juniperLogo from '@/assets/images/juniperLogo.webp'
 
 
 
