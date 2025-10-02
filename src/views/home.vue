@@ -13,15 +13,25 @@
                  data-aos-anchor-placement="top-bottom"
                  data-aos-offset="0"
                  data-aos-duration="1300"
-                 class="rounded-3xl overflow-hidden md:fixed md:left-[5%] w-[300px] md:w-[30%] h-[400px] md:h-[90%] top-[5%] shadow-md ring-[1px] ring-[#3a3a3d] z-40" id="ManImage">
-                    <div class="absolute bg-[#3a3a3d] flex justify-center items-center overflow-hidden" ref="cinemaScreen">
+                 class="rounded-3xl overflow-hidden md:fixed md:left-[5%] w-[300px] md:w-[30%] h-[400px] md:h-[90%] top-[5%] shadow-md ring-[1px] ring-[#3a3a3d] z-40 relative" id="ManImage">
+                    <div class="absolute bg-[#3a3a3d] flex z-50 justify-center items-center overflow-hidden" ref="cinemaScreen">
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-32 animate-bounce text-[#FFB400]"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" /></svg>
 
                     </div>
-
-                     <img class="size-full object-cover shadow-md /// hover:scale-110 hover:rotate-3 hover:grayscale-100 duration-300" src="../assets/images/dark.jpg" draggable="false" alt="">
+                    <div class="size-full">
+                        <v-skeleton-loader
+                        v-if="!loaded"
+                        style="height: 100%"
+                        class="h-full w-full rounded-3xl custom-skeleton"
+                        color="#2c2c2c"
+                        />
+                        
+                        <img v-else class="size-full object-cover shadow-md /// hover:scale-110 hover:rotate-3 hover:grayscale-100 duration-300" src="../assets/images/dark.jpg" draggable="false" alt="">
+                    </div>
                  </div>
+
+
             
     
             <!-- about me content -->
@@ -124,6 +134,16 @@ export default {
     loadingBar,
     toggleLang
   },
+    data() {
+    return {
+      loaded: false
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      this.loaded = true
+    }, 2000)
+  },
   setup(){
     const target = ref(null)
     const cinemaScreen = ref(null)
@@ -201,4 +221,18 @@ export default {
     .wrapper{
         overflow-x: hidden;
     }
+    
+    .custom-skeleton::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(44,44,44,0.5) 25%, rgba(60,60,60,0.5) 50%, rgba(44,44,44,0.5) 75%);
+  animation: wave 1.5s infinite;
+}
+
+@keyframes wave {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
 </style>
