@@ -86,10 +86,15 @@
         data-aos-duration="1300" class="bg-[#1E1F26] select-none w-72 h-56 rounded-2xl relative duration-300 group text-white ring-1 ring-[#3a3a3d] shadow">
             <div class="absolute -left-5 -top-10 duration-300">
                 <a class="block overflow-hidden w-72 h-48 rounded-2xl cursor-none" :href="project.hrefs">
-                    <img draggable="false" class=" size-full object-cover rounded-2xl ring-1 ring-[#3a3a3d] md:grayscale-100 group-hover:grayscale-0 duration-300 group-hover:scale-110 portofolio-item" :src="project.image" alt=""
-                    @mouseenter="TrueImageStatus"
-                    @mouseleave="FalseImageStatus"
-                    >
+                    <BlurImage
+                        draggable="false"
+                        class=" size-full object-cover rounded-2xl ring-1 ring-[#3a3a3d] md:grayscale-100 group-hover:grayscale-0 duration-300 group-hover:scale-110 portofolio-item"
+                        :src="project.image"
+                        :lowQuality="project.imageLow"
+                        :alt="project.name"
+                        @mouseenter="TrueImageStatus"
+                        @mouseleave="FalseImageStatus"
+                    />
                 </a>
             <div class="flex items-center justify-between pt-1">
                 <div class="flex justify-start items-center group-hover:ml-7 duration-300">
@@ -134,10 +139,15 @@
         data-aos-duration="1300" class="bg-[#1E1F26] select-none w-72 h-56 rounded-2xl relative duration-300 group text-white ring-1 ring-[#3a3a3d] shadow">
             <div class="absolute -left-5 -top-10 duration-300">
                 <a class="block overflow-hidden w-72 h-48 rounded-2xl cursor-none" :href="project.hrefs">
-                    <img draggable="false" class=" size-full object-cover rounded-2xl ring-1 ring-[#3a3a3d] md:grayscale-100 group-hover:grayscale-0 duration-300 group-hover:scale-110 portofolio-item" :src="project.image" alt=""
-                    @mouseenter="TrueImageStatus"
-                    @mouseleave="FalseImageStatus"
-                    >
+                    <BlurImage
+                        draggable="false"
+                        class=" size-full object-cover rounded-2xl ring-1 ring-[#3a3a3d] md:grayscale-100 group-hover:grayscale-0 duration-300 group-hover:scale-110 portofolio-item"
+                        :src="project.image"
+                        :lowQuality="project.imageLow"
+                        :alt="project.name"
+                        @mouseenter="TrueImageStatus"
+                        @mouseleave="FalseImageStatus"
+                    />
                 </a>
             <div class="flex items-center justify-between pt-1">
                 <div class="flex justify-start items-center group-hover:ml-7 duration-300">
@@ -180,10 +190,15 @@
         data-aos-duration="1300" class="bg-[#1E1F26] select-none w-72 h-56 rounded-2xl relative duration-300 group text-white ring-1 ring-[#3a3a3d] shadow">
             <div class="absolute -left-5 -top-10 duration-300">
                 <a class="block overflow-hidden w-72 h-48 rounded-2xl cursor-none" :href="project.hrefs">
-                    <img draggable="false" class=" size-full object-cover rounded-2xl ring-1 ring-[#3a3a3d] md:grayscale-100 group-hover:grayscale-0 duration-300 group-hover:scale-110 portofolio-item" :src="project.image" alt=""
-                    @mouseenter="TrueImageStatus"
-                    @mouseleave="FalseImageStatus"
-                    >
+                    <BlurImage
+                        draggable="false"
+                        class=" size-full object-cover rounded-2xl ring-1 ring-[#3a3a3d] md:grayscale-100 group-hover:grayscale-0 duration-300 group-hover:scale-110 portofolio-item"
+                        :src="project.image"
+                        :lowQuality="project.imageLow"
+                        :alt="project.name"
+                        @mouseenter="TrueImageStatus"
+                        @mouseleave="FalseImageStatus"
+                    />
                 </a>
             <div class="flex items-center justify-between pt-1">
                 <div class="flex justify-start items-center group-hover:ml-7 duration-300">
@@ -253,27 +268,32 @@ import Cursor from '../utils/cursor.vue'
 import BlurImage from "../utils/blurImage.vue";
 import toggleLang from "@/utils/toggleLang.vue";
 
-// bestProjects 
 import JoJoImage from '@/assets/images/jojo.png'
+import JoJoImageLow from '@/assets/images/jojoLow.png'
 import JoJoDescImage from '@/assets/images/banner.png'
 
 import foodImage from '@/assets/images/food-delivery.png'
+import foodImageLow from '@/assets/images/foodImageLow.png'
 import foodDescImage from '@/assets/images/lgo.png'
 
 import styleImage from '@/assets/images/style.png'
+import styleImageLow from '@/assets/images/styleImageLow.png'
 import styleDescImage from '@/assets/images/style-logo.png'
 
-// regularProjects
 import limooImage from '@/assets/images/limoo.png'
+import limooImageLow from '@/assets/images/limooImageLow.png'
 import limooDescImage from '@/assets/images/limoo-logo.png'
 
 import shahrdariImage from '@/assets/images/shahrdari.png'
+import shahrdariLow from '@/assets/images/shahrdariLow.png'
 import shahrdariDescImage from '@/assets/images/shahrdari-logo.png'
 
 import bookmarkImage from '@/assets/images/bookmark.png'
+import bookmarkLow from '@/assets/images/bookmarkLow.png'
 import bookmarkDescImage from '@/assets/images/bookmark-logo.png'
 
 import vuetifyImage from '@/assets/images/vuetify.png'
+import vuetifyLow from '@/assets/images/vuetifyLow.png'
 import vuetifyLogo from '@/assets/images/vuetify-logo.png'
 
 import nftImage from '@/assets/images/nftImage.png'
@@ -285,36 +305,82 @@ import juniperLow from '@/assets/images/juniperLow.png'
 import juniperLogo from '@/assets/images/juniperLogo.png'
 
 
+
 export default {
     data() {
         return {
-            bestProjects:[
+            bestProjects: [
                 {
-                name:'JoJo Portfolio', desc:'professional portfolio',hrefs:'https://mohamad-mobin.github.io/Jojo-Portfolio/public/index.html', image:JoJoImage, descImage:JoJoDescImage, star:5
+                    name: 'JoJo Portfolio',
+                    desc: 'professional portfolio',
+                    hrefs: 'https://mohamad-mobin.github.io/Jojo-Portfolio/public/index.html',
+                    image: JoJoImage,
+                    imageLow: JoJoImageLow,
+                    descImage: JoJoDescImage,
+                    star: 5
                 },
                 {
-                name:'Food Delivery', desc:'online mac donald',hrefs:'https://mohamad-mobin.github.io/foods-delivery/', image:foodImage, descImage:foodDescImage, star:5
+                    name: 'Food Delivery',
+                    desc: 'online mac donald',
+                    hrefs: 'https://mohamad-mobin.github.io/foods-delivery/',
+                    image: foodImage,
+                    imageLow: foodImageLow,
+                    descImage: foodDescImage,
+                    star: 5
                 },
                 {
-                name:'Style Shop', desc:'online clothes shop',hrefs:'https://mohamad-mobin.github.io/Style-Shop/public/index.html', image:styleImage, descImage:styleDescImage, star:5
+                    name: 'Style Shop',
+                    desc: 'online clothes shop',
+                    hrefs: 'https://mohamad-mobin.github.io/Style-Shop/public/index.html',
+                    image: styleImage,
+                    imageLow: styleImageLow,
+                    descImage: styleDescImage,
+                    star: 5
                 },
             ],
+
             regularProjects:[
                 {
-                name:'Limoo Site', desc:'iranian limoo site',hrefs:'https://mohamad-mobin.github.io/limoo-site/public/index.html', image:limooImage, descImage:limooDescImage, star:4  
+                    name:'Limoo Site',
+                    desc:'iranian limoo site',
+                    hrefs:'https://mohamad-mobin.github.io/limoo-site/public/index.html',
+                    image:limooImage,
+                    imageLow:limooImageLow,
+                    descImage:limooDescImage,
+                    star:4
                 },
                 {
-                name:'Shahrdari Page', desc:'iranian shahrdari page',hrefs:'https://mohamad-mobin.github.io/Shahrdari-Page/public/index.html', image:shahrdariImage, descImage:shahrdariDescImage, star:4
+                    name:'Shahrdari Page',
+                    desc:'iranian shahrdari page',
+                    hrefs:'https://mohamad-mobin.github.io/Shahrdari-Page/public/index.html',
+                    image:shahrdariImage,
+                    imageLow:shahrdariLow,
+                    descImage:shahrdariDescImage,
+                    star:4
                 },
                 {
-                name:'Bookmark Page', desc:'landing page',hrefs:'https://mohamad-mobin.github.io/Bookmark-Page/public/index.html', image:bookmarkImage, descImage:bookmarkDescImage, star:5
+                    name:'Bookmark Page',
+                    desc:'landing page',
+                    hrefs:'https://mohamad-mobin.github.io/Bookmark-Page/public/index.html',
+                    image:bookmarkImage,
+                    imageLow:bookmarkLow,
+                    descImage:bookmarkDescImage,
+                    star:5
                 },
             ],
+
             vuetifyProjects:[
                 {
-                name:'Vuetify', desc:'my first vuetify site',hrefs:'https://mohamad-mobin.github.io/admin-panel-vuetify/', image:vuetifyImage, descImage:vuetifyLogo, star:3  
+                    name:'Vuetify',
+                    desc:'my first vuetify site',
+                    hrefs:'https://mohamad-mobin.github.io/admin-panel-vuetify/',
+                    image:vuetifyImage,
+                    imageLow:vuetifyLow,
+                    descImage:vuetifyLogo,
+                    star:3
                 },
             ],
+
             vueProjects:[
                 {
                     name:'NFT marketplace',
