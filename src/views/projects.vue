@@ -33,10 +33,15 @@
         data-aos-duration="1300" class="bg-[#1E1F26] select-none w-72 h-56 rounded-2xl relative duration-300 group text-white ring-1 ring-[#3a3a3d] shadow">
             <div class="absolute -left-5 -top-10 duration-300">
                 <a class="block overflow-hidden w-72 h-48 rounded-2xl cursor-none" :href="project.hrefs">
-                    <img draggable="false" class=" size-full object-cover rounded-2xl ring-1 ring-[#3a3a3d] md:grayscale-100 group-hover:grayscale-0 duration-300 group-hover:scale-110 portofolio-item" :src="project.image" alt=""
-                    @mouseenter="TrueImageStatus"
-                    @mouseleave="FalseImageStatus"
-                    >
+                    <BlurImage
+                        draggable="false"
+                        class=" size-full object-cover rounded-2xl ring-1 ring-[#3a3a3d] md:grayscale-100 group-hover:grayscale-0 duration-300 group-hover:scale-110 portofolio-item"
+                        :src="project.image"
+                        :lowQuality="project.imageLow"
+                        :alt="project.name"
+                        @mouseenter="TrueImageStatus"
+                        @mouseleave="FalseImageStatus"
+                    />
                 </a>
             <div class="flex items-center justify-between pt-1">
                 <div class="flex justify-start items-center group-hover:ml-7 duration-300">
@@ -245,6 +250,8 @@ import AOS from 'aos'
 
 import loadingBar from '@/utils/loadingBar.vue';
 import Cursor from '../utils/cursor.vue'
+import BlurImage from "../utils/blurImage.vue";
+import toggleLang from "@/utils/toggleLang.vue";
 
 // bestProjects 
 import JoJoImage from '@/assets/images/jojo.png'
@@ -270,12 +277,13 @@ import vuetifyImage from '@/assets/images/vuetify.png'
 import vuetifyLogo from '@/assets/images/vuetify-logo.png'
 
 import nftImage from '@/assets/images/nftImage.png'
+import nftImageLow from '@/assets/images/nftImageLow.png'
 import nftLogo from '@/assets/images/nftLogo.png'
 
 import juniper from '@/assets/images/juniper.png'
+import juniperLow from '@/assets/images/juniperLow.png'
 import juniperLogo from '@/assets/images/juniperLogo.png'
 
-import toggleLang from "@/utils/toggleLang.vue";
 
 export default {
     data() {
@@ -309,10 +317,22 @@ export default {
             ],
             vueProjects:[
                 {
-                name:'NFT marketplace', desc:'the nft marketplace site',hrefs:'https://vue-nft-marketplace.netlify.app/', image:nftImage, descImage:nftLogo, star:5  
+                    name:'NFT marketplace',
+                    desc:'the nft marketplace site',
+                    hrefs:'https://vue-nft-marketplace.netlify.app/',
+                    image:nftImage,             // عکس اصلی
+                    imageLow:nftImageLow,       // نسخه blur کم حجم
+                    descImage:nftLogo,
+                    star:5  
                 },
                 {
-                name:'Juniper', desc:'weather site',hrefs:'https://junipers.netlify.app/', image:juniper, descImage:juniperLogo, star:4
+                    name:'Juniper',
+                    desc:'weather site',
+                    hrefs:'https://junipers.netlify.app/',
+                    image:juniper,
+                    imageLow:juniperLow,
+                    descImage:juniperLogo,
+                    star:4
                 },
             ],
             imageStatus : false
@@ -330,7 +350,8 @@ export default {
     components:{
         Cursor,
         loadingBar,
-        toggleLang
+        toggleLang,
+        BlurImage
     },
     setup() {
         onBeforeMount(() => {
