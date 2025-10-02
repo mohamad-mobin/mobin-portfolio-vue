@@ -142,7 +142,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.loaded = true
-    }, 2000)
+    }, 3000)
   },
   setup(){
     const target = ref(null)
@@ -221,7 +221,7 @@ export default {
     .wrapper{
         overflow-x: hidden;
     }
-    
+
     .custom-skeleton::after {
   content: '';
   display: block;
