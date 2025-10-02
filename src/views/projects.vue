@@ -79,7 +79,6 @@
     
     
     <div class="grid justify-center items-center md:grid-cols-2 lg:grid-cols-3 gap-y-20 pt-16">
-        
         <div v-for="(project, index) in bestProjects" :key="index" data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
         data-aos-offset="0"
@@ -132,7 +131,7 @@
         </div>
     </div>
 
-    <div class="grid md:grid-cols-2 justify-center items-center lg:grid-cols-3 gap-y-20 pt-10">
+    <div class="grid justify-center items-center md:grid-cols-2 lg:grid-cols-3 gap-y-20 pt-16">
         <div v-for="(project, index) in regularProjects" :key="index" data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
         data-aos-offset="0"
@@ -183,7 +182,7 @@
         </div>
     </div>
 
-    <div class="grid md:grid-cols-2 justify-center items-center lg:grid-cols-3 gap-y-20 pt-10 pb-40 md:pb-32">
+    <div class="grid justify-center items-center md:grid-cols-2 lg:grid-cols-3 gap-y-20 pt-16">
         <div v-for="(project, index) in vuetifyProjects" :key="index" data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
         data-aos-offset="0"
