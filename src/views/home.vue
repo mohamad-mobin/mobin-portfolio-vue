@@ -4,13 +4,6 @@
         <Cursor />
         <toggleLang/>
     
-
-                <!-- testtttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt -->
-        <div class="fixed">
-            tst in laptop
-        </div>
-        <!-- testtttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt -->
-
             <div class="container mx-auto pt-5 relative">
             <div class="md:fixed absolute w-[400px] h-[300%] left-[30%] -top-[190%] rotate-45 md:-top-[10%] md:-left-[30%] md:w-[51%] md:h-[200%] md:-rotate-[12deg] z-10  bg-[#FFB400]"></div>
     
