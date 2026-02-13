@@ -7,7 +7,7 @@
 
                 <!-- testtttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt -->
         <div class="fixed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem architecto eaque soluta accusamus atque itaque debitis quia aut, dolorum odit rerum reprehenderit nihil, fugit assumenda nostrum nam, corporis quibusdam. Dolorum.
+            tst in laptop
         </div>
         <!-- testtttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt -->
 
