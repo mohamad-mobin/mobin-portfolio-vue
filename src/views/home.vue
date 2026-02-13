@@ -3,6 +3,10 @@
         <loadingBar/>
         <Cursor />
         <toggleLang/>
+
+        <div class="bg-red-500 fixed">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quam ea, est exercitationem incidunt ipsam illo optio laborum repudiandae nam quos in accusantium accusamus autem magni recusandae sunt! Id, officiis!
+        </div>
     
             <div class="container mx-auto pt-5 relative">
             <div class="md:fixed absolute w-[400px] h-[300%] left-[30%] -top-[190%] rotate-45 md:-top-[10%] md:-left-[30%] md:w-[51%] md:h-[200%] md:-rotate-[12deg] z-10  bg-[#FFB400]"></div>
