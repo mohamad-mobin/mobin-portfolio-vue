@@ -144,54 +144,146 @@
         <div>
             <div style="font-family: poppins;" class="flex flex-wrap justify-center gap-5 px-5 pt-5 text-center text-white max-w-7xl mx-auto z-50">
              
+                <!-- html | css -->
                 <div class="flex gap-5">
+                    <!-- html -->
                         <div class="hover:scale-110 duration-300">
-                             <div data-aos="flip-left"
-                                 class="skill-card group relative overflow-hidden
-                                         bg-[#131414] border-1 border-[#3a3a3d]
-                                         sm:w-[200px] sm:h-[200px] w-[170px] h-[170px]
-                                         sm:p-6 p-4 rounded-3xl flex flex-col justify-center items-center
-                                         transition-all duration-300 hover:border-orange-700 hover:shadow-lg hover:shadow-orange-900/50 toolsBox">
-                         
-                                 <p class="font-semibold pb-3 text-lg">HTML</p>
-                
-                                 <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                 <img class="absolute size-7 bottom-2 right-2" src="../assets/images/tools-image/html.png" alt="">
-                             </div>
-                         </div>
+                            <div data-aos="flip-left"
+                                class="skill-card group relative overflow-hidden
+                                        bg-[#131414] border-1 border-[#3a3a3d]
+                                        sm:w-[200px] sm:h-[200px] w-[170px] h-[170px]
+                                        sm:p-6 p-4 rounded-3xl flex flex-col justify-center items-center
+                                        transition-all duration-300 hover:border-orange-700 hover:shadow-lg hover:shadow-orange-900/50 toolsBox">
+                                                    
+                                <p class="font-semibold pb-3 text-lg">HTML</p>
+                                            
+                                <div class="flex flex-col items-center justify-center space-y-2">
+                                    <div class="relative items-center justify-center flex w-24 h-24 sm:w-28 sm:h-28">
+                                        <svg class="transform -rotate-90 w-full h-full" viewBox="0 0 100 100">
+                                        <circle
+                                            cx="50"
+                                            cy="50"
+                                            r="40"
+                                            class="text-[#131414]"
+                                            stroke-width="12"
+                                            stroke="currentColor"
+                                            fill="transparent"
+                                        />
+                                        <circle
+                                            cx="50"
+                                            cy="50"
+                                            r="40"
+                                            class="text-[#FFB400] transition-all duration-500 ease-out"
+                                            stroke-width="12"
+                                            stroke-dasharray="251.2"
+                                            stroke-dashoffset="0"
+                                            stroke-linecap="round"
+                                            stroke="currentColor"
+                                            fill="transparent"
+                                        />
+                                        </svg>
+                                        <span class="absolute text-xl font-bold text-white">100%</span>
+                                    </div>
+                                </div>
 
-                         <div class="hover:scale-110 duration-300">
-                             <div data-aos="flip-left"
-                                 class="skill-card group relative overflow-hidden
-                                         bg-[#131414] border-1 border-[#3a3a3d]
-                                         sm:w-[200px] sm:h-[200px] w-[170px] h-[170px]
-                                         p-4 sm:p-6 rounded-3xl flex flex-col justify-center items-center
-                                         transition-all duration-300 ease-in-out hover:border-blue-600 hover:shadow-lg hover:shadow-blue-900/50 toolsBox">
-                
-                                 <p class="font-semibold pb-3 text-lg">CSS</p>
-                
-                
-                                 <div class="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                 <img class="absolute size-7 bottom-2 right-2" src="../assets/images/tools-image/css.png" alt="">
-                             </div>
-                         </div>
+                                <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <img class="absolute size-7 bottom-2 right-2" src="../assets/images/tools-image/html.png" alt="">
+                            </div>
+                        </div>
+
+                        <!-- css -->
+                       <div class="hover:scale-110 duration-300">
+                            <div data-aos="flip-left"
+                                class="skill-card group relative overflow-hidden
+                                        bg-[#131414] border-1 border-[#3a3a3d]
+                                        sm:w-[200px] sm:h-[200px] w-[170px] h-[170px]
+                                        p-4 sm:p-6 rounded-3xl flex flex-col justify-center items-center
+                                        transition-all duration-300 ease-in-out hover:border-blue-600 hover:shadow-lg hover:shadow-blue-900/50 toolsBox">
+                            
+                                <p class="font-semibold pb-3 text-lg">CSS</p>
+                            
+                                <div class="flex flex-col items-center justify-center space-y-2">
+                                    <div class="relative items-center justify-center flex w-24 h-24 sm:w-28 sm:h-28">
+                                        <svg class="transform -rotate-90 w-full h-full" viewBox="0 0 100 100">
+                                        <circle
+                                            cx="50"
+                                            cy="50"
+                                            r="40"
+                                            class="text-[#131414]"
+                                            stroke-width="12"
+                                            stroke="currentColor"
+                                            fill="transparent"
+                                        />
+                                        <circle
+                                            cx="50"
+                                            cy="50"
+                                            r="40"
+                                            class="text-[#FFB400] transition-all duration-500 ease-out"
+                                            stroke-width="12"
+                                            stroke-dasharray="251.2"
+                                            stroke-dashoffset="0"
+                                            stroke-linecap="round"
+                                            stroke="currentColor"
+                                            fill="transparent"
+                                        />
+                                        </svg>
+                                        <span class="absolute text-xl font-bold text-white">100%</span>
+                                    </div>
+                                </div>
+                            
+                                <div class="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <img class="absolute size-7 bottom-2 right-2" src="../assets/images/tools-image/css.png" alt="">
+                            </div>
+                        </div>
                 </div>
-                        
+                    
+                <!-- tailwind css | javascript -->
                 <div class="flex gap-5">
+                    <!-- tailwind css -->
                     <div class="hover:scale-110 duration-300">
                         <div data-aos="flip-left" class="skill-card group relative overflow-hidden
                                     bg-[#131414] border-1 border-[#3a3a3d]
                                     sm:w-[200px] sm:h-[200px] w-[170px] h-[170px]
                                     p-4 sm:p-6 rounded-3xl flex flex-col justify-center items-center
                                     transition-all duration-300 ease-in-out hover:border-sky-500 hover:shadow-lg hover:shadow-sky-900/50 toolsBox">
-           
+                        
                             <p class="font-semibold pb-3 text-lg">TailwindCSS</p>
-           
+                        
+                            <div class="flex flex-col items-center justify-center space-y-2">
+                                <div class="relative items-center justify-center flex w-24 h-24 sm:w-28 sm:h-28">
+                                    <svg class="transform -rotate-90 w-full h-full" viewBox="0 0 100 100">
+                                    <circle
+                                        cx="50"
+                                        cy="50"
+                                        r="40"
+                                        class="text-[#131414]"
+                                        stroke-width="12"
+                                        stroke="currentColor"
+                                        fill="transparent"
+                                    />
+                                    <circle
+                                        cx="50"
+                                        cy="50"
+                                        r="40"
+                                        class="text-[#FFB400] transition-all duration-500 ease-out"
+                                        stroke-width="12"
+                                        stroke-dasharray="251.2"
+                                        stroke-dashoffset="15.07"
+                                        stroke-linecap="round"
+                                        stroke="currentColor"
+                                        fill="transparent"
+                                    />
+                                    </svg>
+                                    <span class="absolute text-xl font-bold text-white">94%</span>
+                                </div>
+                            </div>
+                        
                             <div class="absolute inset-0 bg-gradient-to-br from-sky-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <img class="absolute size-7 bottom-2 right-2" src="../assets/images/tools-image/tailwind.png" alt="">
                         </div>
                     </div>
 
+                    <!-- javascript -->
                     <div class="hover:scale-110 duration-300">
                         <div data-aos="flip-left"
                             class="skill-card group relative overflow-hidden
@@ -199,10 +291,38 @@
                                     sm:w-[200px] sm:h-[200px] w-[170px] h-[170px]
                                     p-4 sm:p-6 rounded-3xl flex flex-col justify-center items-center
                                     transition-all duration-300 ease-in-out hover:border-yellow-500 hover:shadow-lg hover:shadow-yellow-900/50 toolsBox">
-           
+                        
                             <p class="font-semibold pb-3 text-lg">JavaScript</p>
-           
-           
+                        
+                            <div class="flex flex-col items-center justify-center space-y-2">
+                                <div class="relative items-center justify-center flex w-24 h-24 sm:w-28 sm:h-28">
+                                    <svg class="transform -rotate-90 w-full h-full" viewBox="0 0 100 100">
+                                    <circle
+                                        cx="50"
+                                        cy="50"
+                                        r="40"
+                                        class="text-[#131414]"
+                                        stroke-width="12"
+                                        stroke="currentColor"
+                                        fill="transparent"
+                                    />
+                                    <circle
+                                        cx="50"
+                                        cy="50"
+                                        r="40"
+                                        class="text-[#FFB400] transition-all duration-500 ease-out"
+                                        stroke-width="12"
+                                        stroke-dasharray="251.2"
+                                        stroke-dashoffset="10.04"
+                                        stroke-linecap="round"
+                                        stroke="currentColor"
+                                        fill="transparent"
+                                    />
+                                    </svg>
+                                    <span class="absolute text-xl font-bold text-white">96%</span>
+                                </div>
+                            </div>
+                        
                             <div class="absolute inset-0 bg-gradient-to-br from-yellow-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <img class="absolute size-7 bottom-2 right-2" src="../assets/images/tools-image/js.png" alt="">
                         </div>
@@ -214,64 +334,177 @@
 
                 <div class="flex gap-5">
                     <div class="hover:scale-110 duration-300">
-                                <div data-aos="flip-left" class="skill-card group relative overflow-hidden
-                                                     bg-[#131414] border-1 border-[#3a3a3d]
-                                                     sm:w-[200px] sm:h-[200px] w-[170px] h-[170px]
-                                                     p-4 sm:p-6 rounded-3xl flex flex-col justify-center items-center
-                                                     transition-all duration-300 ease-in-out hover:border-teal-500 hover:shadow-lg hover:shadow-teal-900/50 toolsBox">
-                            
-                                             <p class="font-semibold pb-3 text-lg text-white">VUE</p>
-                            
-                                             <div class="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                    <img class="absolute size-7 bottom-3 right-3" src="../assets/images/tools-image/vue.png" alt="">
-                               </div>
+                        <div data-aos="flip-left" class="skill-card group relative overflow-hidden
+                                                        bg-[#131414] border-1 border-[#3a3a3d]
+                                                        sm:w-[200px] sm:h-[200px] w-[170px] h-[170px]
+                                                        p-4 sm:p-6 rounded-3xl flex flex-col justify-center items-center
+                                                        transition-all duration-300 ease-in-out hover:border-teal-500 hover:shadow-lg hover:shadow-teal-900/50 toolsBox">
+                                
+                            <p class="font-semibold pb-3 text-lg text-white">VUE</p>
+                                
+                            <div class="flex flex-col items-center justify-center space-y-2">
+                                <div class="relative items-center justify-center flex w-24 h-24 sm:w-28 sm:h-28">
+                                    <svg class="transform -rotate-90 w-full h-full" viewBox="0 0 100 100">
+                                    <circle
+                                        cx="50"
+                                        cy="50"
+                                        r="40"
+                                        class="text-[#131414]"
+                                        stroke-width="12"
+                                        stroke="currentColor"
+                                        fill="transparent"
+                                    />
+                                    <circle
+                                        cx="50"
+                                        cy="50"
+                                        r="40"
+                                        class="text-[#FFB400] transition-all duration-500 ease-out"
+                                        stroke-width="12"
+                                        stroke-dasharray="251.2"
+                                        stroke-dashoffset="25.12"
+                                        stroke-linecap="round"
+                                        stroke="currentColor"
+                                        fill="transparent"
+                                    />
+                                    </svg>
+                                    <span class="absolute text-xl font-bold text-white">90%</span>
+                                </div>
+                            </div>
+                                
+                            <div class="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <img class="absolute size-7 bottom-3 right-3" src="../assets/images/tools-image/vue.png" alt="">
+                        </div>
                     </div>
     
                     <div class="hover:scale-110 duration-300">
-                                 <div data-aos="flip-left" class="skill-card group relative overflow-hidden
-                                             bg-[#131414] border-1 border-[#3a3a3d]
-                                             sm:w-[200px] sm:h-[200px] w-[170px] h-[170px]
-                                             p-4 sm:p-6 rounded-3xl flex flex-col justify-center items-center
-                                             transition-all duration-300 ease-in-out hover:border-sky-500 hover:shadow-lg hover:shadow-sky-900/50 toolsBox">
-                    
-                                     <p class="font-semibold pb-3 text-lg">Vuetify</p>
-                    
-                    
-                                     <div class="absolute inset-0 bg-gradient-to-br from-sky-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                     <img class="absolute size-7 bottom-2 right-2" src="../assets/images/tools-image/vuetify.png" alt="">
-                                 </div>
+                        <div data-aos="flip-left" class="skill-card group relative overflow-hidden
+                                                        bg-[#131414] border-1 border-[#3a3a3d]
+                                                        sm:w-[200px] sm:h-[200px] w-[170px] h-[170px]
+                                                        p-4 sm:p-6 rounded-3xl flex flex-col justify-center items-center
+                                                        transition-all duration-300 ease-in-out hover:border-sky-500 hover:shadow-lg hover:shadow-sky-900/50 toolsBox">
+                                        
+                            <p class="font-semibold pb-3 text-lg">Vuetify</p>
+                                        
+                            <div class="flex flex-col items-center justify-center space-y-2">
+                                <div class="relative items-center justify-center flex w-24 h-24 sm:w-28 sm:h-28">
+                                    <svg class="transform -rotate-90 w-full h-full" viewBox="0 0 100 100">
+                                    <circle
+                                        cx="50"
+                                        cy="50"
+                                        r="40"
+                                        class="text-[#131414]"
+                                        stroke-width="12"
+                                        stroke="currentColor"
+                                        fill="transparent"
+                                    />
+                                    <circle
+                                        cx="50"
+                                        cy="50"
+                                        r="40"
+                                        class="text-[#FFB400] transition-all duration-500 ease-out"
+                                        stroke-width="12"
+                                        stroke-dasharray="251.2"
+                                        stroke-dashoffset="87.92"
+                                        stroke-linecap="round"
+                                        stroke="currentColor"
+                                        fill="transparent"
+                                    />
+                                    </svg>
+                                    <span class="absolute text-xl font-bold text-white">65%</span>
+                                </div>
+                            </div>
+                                        
+                            <div class="absolute inset-0 bg-gradient-to-br from-sky-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <img class="absolute size-7 bottom-2 right-2" src="../assets/images/tools-image/vuetify.png" alt="">
+                        </div>
                     </div>
                 </div>
 
                 <div class="flex gap-5">
                     <div class="hover:scale-110 duration-300">
-                                <div data-aos="flip-left" class="skill-card group relative overflow-hidden
-                                                     bg-[#131414] border-1 border-[#3a3a3d]
-                                                     sm:w-[200px] sm:h-[200px] w-[170px] h-[170px]
-                                                     p-4 sm:p-6 rounded-3xl flex flex-col justify-center items-center
-                                                     transition-all duration-300 ease-in-out hover:border-teal-500 hover:shadow-lg hover:shadow-teal-900/50 toolsBox">
-                            
-                                             <p class="font-semibold pb-3 text-lg text-white">Nuxt</p>
-                            
-                                             <div class="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                    <img class="absolute size-7 bottom-3 right-3" src="../assets/images/tools-image/nuxt.png" alt="">
-                               </div>
+                        <div data-aos="flip-left" class="skill-card group relative overflow-hidden
+                                                        bg-[#131414] border-1 border-[#3a3a3d]
+                                                        sm:w-[200px] sm:h-[200px] w-[170px] h-[170px]
+                                                        p-4 sm:p-6 rounded-3xl flex flex-col justify-center items-center
+                                                        transition-all duration-300 ease-in-out hover:border-teal-500 hover:shadow-lg hover:shadow-teal-900/50 toolsBox">
+                                
+                            <p class="font-semibold pb-3 text-lg text-white">Nuxt</p>
+                                
+                            <div class="flex flex-col items-center justify-center space-y-2">
+                                <div class="relative items-center justify-center flex w-24 h-24 sm:w-28 sm:h-28">
+                                    <svg class="transform -rotate-90 w-full h-full" viewBox="0 0 100 100">
+                                    <circle
+                                        cx="50"
+                                        cy="50"
+                                        r="40"
+                                        class="text-[#131414]"
+                                        stroke-width="12"
+                                        stroke="currentColor"
+                                        fill="transparent"
+                                    />
+                                    <circle
+                                        cx="50"
+                                        cy="50"
+                                        r="40"
+                                        class="text-[#FFB400] transition-all duration-500 ease-out"
+                                        stroke-width="12"
+                                        stroke-dasharray="251.2"
+                                        stroke-dashoffset="25.12"
+                                        stroke-linecap="round"
+                                        stroke="currentColor"
+                                        fill="transparent"
+                                    />
+                                    </svg>
+                                    <span class="absolute text-xl font-bold text-white">90%</span>
+                                </div>
+                            </div>
+                                
+                            <div class="absolute inset-0 bg-gradient-to-br from-teal-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <img class="absolute size-7 bottom-3 right-3" src="../assets/images/tools-image/nuxt.png" alt="">
+                        </div>
                     </div>
     
                     <div class="hover:scale-110 duration-300">
-                                 <div data-aos="flip-left"
-                                     class="skill-card group relative overflow-hidden
-                                             bg-[#131414] border-1 border-[#3a3a3d]
-                                             sm:w-[200px] sm:h-[200px] w-[170px] h-[170px]
-                                             p-4 sm:p-6 rounded-3xl flex flex-col justify-center items-center
-                                             transition-all duration-300 ease-in-out hover:border-blue-600 hover:shadow-lg hover:shadow-blue-900/50 toolsBox">
-                    
-                                     <p class="font-semibold pb-3 text-lg">Typescript</p>
-                    
-                    
-                                     <div class="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                     <img class="absolute size-6 bottom-3 right-3" src="../assets/images/tools-image/typescript.png" alt="">
-                                 </div>
+                        <div data-aos="flip-left" class="skill-card group relative overflow-hidden
+                                                        bg-[#131414] border-1 border-[#3a3a3d]
+                                                        sm:w-[200px] sm:h-[200px] w-[170px] h-[170px]
+                                                        p-4 sm:p-6 rounded-3xl flex flex-col justify-center items-center
+                                                        transition-all duration-300 ease-in-out hover:border-blue-600 hover:shadow-lg hover:shadow-blue-900/50 toolsBox">
+                                        
+                            <p class="font-semibold pb-3 text-lg">Typescript</p>
+                                        
+                            <div class="flex flex-col items-center justify-center space-y-2">
+                                <div class="relative items-center justify-center flex w-24 h-24 sm:w-28 sm:h-28">
+                                    <svg class="transform -rotate-90 w-full h-full" viewBox="0 0 100 100">
+                                    <circle
+                                        cx="50"
+                                        cy="50"
+                                        r="40"
+                                        class="text-[#131414]"
+                                        stroke-width="12"
+                                        stroke="currentColor"
+                                        fill="transparent"
+                                    />
+                                    <circle
+                                        cx="50"
+                                        cy="50"
+                                        r="40"
+                                        class="text-[#FFB400] transition-all duration-500 ease-out"
+                                        stroke-width="12"
+                                        stroke-dasharray="251.2"
+                                        stroke-dashoffset="37.68"
+                                        stroke-linecap="round"
+                                        stroke="currentColor"
+                                        fill="transparent"
+                                    />
+                                    </svg>
+                                    <span class="absolute text-xl font-bold text-white">85%</span>
+                                </div>
+                            </div>
+                                        
+                            <div class="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <img class="absolute size-6 bottom-3 right-3" src="../assets/images/tools-image/typescript.png" alt="">
+                        </div>
                     </div>
                 </div>
 
