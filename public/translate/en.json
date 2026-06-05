@@ -25,5 +25,11 @@
 "picEmail": "Email:",
 "picEmailValue": "mohammadmobinrezaee@gmail.com",
 "picLanguages": "Languages:",
-"picLanguagesValue": "Persian, English"
+"picLanguagesValue": "Persian, English",
+
+
+
+"readyToStartProject" : "Ready to start your project?",
+"letsBuild" : "Let's build something great together. I'm available for new projects",
+"talkToMe" : "Talk To me"
 }
