@@ -4,10 +4,6 @@
     <toggleLang />
 
     
-    <div class="blurry-circle circle-1 hidden sm:block"></div>
-    <div class="blurry-circle circle-2 hidden sm:block"></div>
-    <div class="blurry-circle circle-3 hidden sm:block"></div>
-
 
 <div class="flex w-full justify-center items-center h-screen">
 
