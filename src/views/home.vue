@@ -41,12 +41,12 @@
         class="flex flex-col h-full pt-4 md:pt-16 items-center md:justify-center md:fixed size-[50%] gap-x-10 left-[30%] top-[100px] md:top-[50px] w-full md:w-fit pb-36 overflow-visible">
     
         <h1 class="text-left leading-tight group duration-300">
-            <p id="mobin" class="uppercase duration-300 group-hover:-translate-x-5 group-hover:scale-95 font-black text-[#FFB400] text-3xl md:text-[30px] lg:text-[50px] relative /// before:absolute before:md:block before:hidden lg:before:w-10 before:h-1 before:bg-[#FFB400] before:rounded-2xl before:-left-10 before:bottom-6 before:w-7 lg:before:bottom-8 lg:before:-left-16" style="font-family: sans-serif,vazir;">{{ $t('imMobinRezaee') }}</p>
-            <p class="uppercase duration-300 group-hover:translate-x-10 text-left text-white text-[25px] lg:text-[39px] 
+            <p id="mobin" class="uppercase duration-300 group-hover:-translate-x-5 group-hover:scale-95 font-black text-[#FFB400] text-3xl md:text-[30px] lg:text-[4vw] relative /// before:absolute before:md:block before:hidden lg:before:w-10 before:h-1 before:bg-[#FFB400] before:rounded-2xl before:-left-10 before:bottom-6 before:w-7 lg:before:bottom-8 lg:before:-left-16" style="font-family: sans-serif,vazir;">{{ $t('imMobinRezaee') }}</p>
+            <p class="uppercase duration-300 group-hover:translate-x-10 text-left text-white text-[25px] lg:text-[2.5vw] 
             font-black" style="font-family: sans-serif,vazir;">{{ $t('webDeveloper') }}</p>
         </h1>
     
-        <p class="py-3 leading-loose hover:scale-105 duration-300 text-left md:text-center md:w-[60%] w-[70%] text-md" style="font-family: poppins, vazir;">{{ $t('imIranian') }}</p>
+        <p class="py-3 leading-loose hover:scale-105 duration-300 text-left md:text-center md:w-[60%] w-[70%] text-md lg:text-[1.1vw]" style="font-family: poppins, vazir;">{{ $t('imIranian') }}</p>
     
         <div class="flex flex-col md:flex-row w-[400px] md:w-fit h-[250px] md:h-[90px] gap-3 md:gap-x-5 items-center">
             <router-link :to="{ name:'about' }" id="moreAboutMeBtn" class="text-center md:ml-10 mt-4 py-4 pl-7 pr-20 rounded-full overflow-hidden ring-1 ring-[#FFB400] self-center relative z-20 /// before:absolute before:size-0 before:rounded-full before:-z-10 before:duration-300 before:bg-[#FFB400] hover:before:size-[300px] before:top-1/2 before:left-1/2 before:-translate-x-1/2 bg-[#222121] before:-translate-y-1/2 hover:scale-110 duration-300 cursor-none" style="font-family: poppins,vazir;">
