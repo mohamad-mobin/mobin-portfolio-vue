@@ -5,9 +5,9 @@ import about from '../views/about.vue'
 import projects from '@/views/projects.vue'
 
 const routes = [
-  { path: '/', component: home, name: 'home' },
-  { path: '/about', component: about, name: 'about' },
-  { path: '/projects', component: projects, name: 'projects' }
+  { path: '/', meta:{title: 'Home'}, component: home, name: 'home' },
+  { path: '/about', meta:{title: 'About'}, component: about, name: 'about' },
+  { path: '/projects', meta:{title: 'Projects'}, component: projects, name: 'projects' }
 ]
 
 const router = createRouter({
@@ -19,6 +19,10 @@ const router = createRouter({
         behavior: 'smooth'
     }
   }
+})
+
+router.afterEach((to) => {
+  document.title = to.meta.title
 })
 
 export default router
