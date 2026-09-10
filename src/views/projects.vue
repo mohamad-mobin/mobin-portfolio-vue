@@ -285,6 +285,9 @@ import nftLogo from '@/assets/images/logos/nftLogo.webp'
 import juniper from '@/assets/images/banner-images/juniper.webp'
 import juniperLogo from '@/assets/images/logos/juniperLogo.webp'
 
+import odoImage from '@/assets/images/banner-images/odo.webp'
+import odoLogo from '@/assets/images/banner-images/odoLogo.png'
+
 export default {
     data() {
         return {
@@ -360,6 +363,14 @@ export default {
                     hrefs:'https://vue-nft-marketplace.netlify.app/',
                     image:nftImage,             // عکس اصلی
                     descImage:nftLogo,
+                    star:5  
+                },
+                {
+                    name:'Odo file manager',
+                    desc:'file manager of odo',
+                    hrefs:'https://cloud.odoteam.ir',
+                    image:odoImage,             // عکس اصلی
+                    descImage:odoLogo,
                     star:5  
                 },
                 {
