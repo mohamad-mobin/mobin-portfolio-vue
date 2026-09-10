@@ -73,7 +73,7 @@
     </div>
     
     
-    <div class="flex gap-15 flex-wrap justify-center items-center gap-y-20 pt-16">
+    <div class="flex gap-15 flex-wrap pb-30 justify-center items-center gap-y-20 pt-16">
         <div v-for="(project, index) in bestProjects" :key="project.name" data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
         data-aos-offset="0"
