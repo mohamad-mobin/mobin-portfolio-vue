@@ -28,7 +28,7 @@
         data-aos-offset="0"
         data-aos-duration="1300" class="bg-[#1E1F26] select-none w-72 h-56 rounded-2xl relative duration-300 group text-white ring-1 ring-[#3a3a3d] shadow">
             <div class="absolute -left-5 -top-10 duration-300">
-                <a class="block overflow-hidden w-72 h-48 rounded-2xl cursor-none" :href="project.hrefs">
+                <a class="block overflow-hidden w-72 h-48 rounded-2xl cursor-none" target="_blank" :href="project.hrefs">
                     <img
                         draggable="false"
                         class=" size-full object-cover rounded-2xl ring-1 ring-[#3a3a3d] md:grayscale-100 group-hover:grayscale-0 duration-300 group-hover:scale-110 portofolio-item"
@@ -44,8 +44,8 @@
                         <img draggable="false" class="size-10 inline-block bg-white rounded-[5px] mr-3 mt-2" :src="project.descImage" alt="">
                     </div>
                     <div>
-                        <a href="https://mohamad-mobin.github.io/Jojo-Portfolio/public/index.html" class="block pt-2 font-bold duration-300 w-full">{{ project.name }}</a>
-                        <a href="https://mohamad-mobin.github.io/Jojo-Portfolio/public/index.html" class="block text-[#8d8d8d] text-xs duration-300 w-full">{{ project.desc }}</a>
+                        <a :href="project.hrefs" class="block pt-2 font-bold duration-300 w-full">{{ project.name }}</a>
+                        <a :href="project.hrefs" class="block text-[#8d8d8d] text-xs duration-300 w-full">{{ project.desc }}</a>
                     </div>
                 </div>
                 <ul class="flex relative top-3 text-yellow-300">
@@ -79,7 +79,7 @@
         data-aos-offset="0"
         data-aos-duration="1300" class="bg-[#1E1F26] select-none w-72 h-56 rounded-2xl relative duration-300 group text-white ring-1 ring-[#3a3a3d] shadow">
             <div class="absolute -left-5 -top-10 duration-300">
-                <a class="block overflow-hidden w-72 h-48 rounded-2xl cursor-none" :href="project.hrefs">
+                <a class="block overflow-hidden w-72 h-48 rounded-2xl cursor-none" target="_blank" :href="project.hrefs">
                     <img
                         draggable="false"
                         class=" size-full object-cover rounded-2xl ring-1 ring-[#3a3a3d] md:grayscale-100 group-hover:grayscale-0 duration-300 group-hover:scale-110 portofolio-item"
@@ -95,8 +95,8 @@
                         <img draggable="false" class="size-10 inline-block bg-white rounded-[5px] mr-3 mt-2" :src="project.descImage" alt="">
                     </div>
                     <div>
-                        <a href="https://mohamad-mobin.github.io/Jojo-Portfolio/public/index.html" class="block pt-2 font-bold duration-300 w-full">{{ project.name }}</a>
-                        <a href="https://mohamad-mobin.github.io/Jojo-Portfolio/public/index.html" class="block text-[#8d8d8d] text-xs duration-300 w-full">{{ project.desc }}</a>
+                        <a :href="project.hrefs" class="block pt-2 font-bold duration-300 w-full">{{ project.name }}</a>
+                        <a :href="project.hrefs" class="block text-[#8d8d8d] text-xs duration-300 w-full">{{ project.desc }}</a>
                     </div>
                 </div>
                 <ul class="flex relative top-3 text-yellow-300">
@@ -131,7 +131,7 @@
         data-aos-offset="0"
         data-aos-duration="1300" class="bg-[#1E1F26] select-none w-72 h-56 rounded-2xl relative duration-300 group text-white ring-1 ring-[#3a3a3d] shadow">
             <div class="absolute -left-5 -top-10 duration-300">
-                <a class="block overflow-hidden w-72 h-48 rounded-2xl cursor-none" :href="project.hrefs">
+                <a class="block overflow-hidden w-72 h-48 rounded-2xl cursor-none" target="_blank" :href="project.hrefs">
                     <img
                         draggable="false"
                         class=" size-full object-cover rounded-2xl ring-1 ring-[#3a3a3d] md:grayscale-100 group-hover:grayscale-0 duration-300 group-hover:scale-110 portofolio-item"
@@ -147,8 +147,8 @@
                         <img draggable="false" class="size-10 inline-block bg-white rounded-[5px] mr-3 mt-2" :src="project.descImage" alt="">
                     </div>
                     <div>
-                        <a href="https://mohamad-mobin.github.io/Jojo-Portfolio/public/index.html" class="block pt-2 font-bold duration-300 w-full">{{ project.name }}</a>
-                        <a href="https://mohamad-mobin.github.io/Jojo-Portfolio/public/index.html" class="block text-[#8d8d8d] text-xs duration-300 w-full">{{ project.desc }}</a>
+                        <a :href="project.hrefs" class="block pt-2 font-bold duration-300 w-full">{{ project.name }}</a>
+                        <a :href="project.hrefs" class="block text-[#8d8d8d] text-xs duration-300 w-full">{{ project.desc }}</a>
                     </div>
                 </div>
                 <ul class="flex relative top-3 text-yellow-300">
