@@ -13,8 +13,8 @@
     data-aos-easing="ease-out-cubic"
     data-aos-duration="2000" class="flex justify-center items-center pt-10">
         <div class="relative pb-26 text-center">
-            <p id="myProjects" class="absolute text-4xl md:text-5xl top-[19px] md:top-5 left-1/2 flex gap-x-2 transform -translate-x-1/2">
-                <span class="text-white bestParagraph">vue</span>
+            <p id="myProjects" class="absolute text-4xl md:text-5xl w-100 justify-center items-center top-[19px] md:top-5 left-1/2 flex gap-x-2 transform -translate-x-1/2">
+                <span class="text-white bestParagraph">Vue & Nuxt</span>
                 <span class="text-[#FFB400]">js</span>
             </p>
             <p id="myWorks" class="absolute text-7xl md:text-8xl text-[#222222] -z-10 left-1/2 transform -translate-x-1/2 md:opacity-70">Vue</p>
