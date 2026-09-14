@@ -21,37 +21,18 @@ The portfolio showcases my frontend projects, technologies, tools, and
 the skills I have developed throughout my journey as a frontend developer.
 
 ---
+## 🛠️ Technologies & Tools
 
-## 🛠️ Technologies
-
-### Frontend
-
-- HTML5
-- CSS3
-- JavaScript
-- Vue.js
-- Nuxt.js
-- TypeScript
-- Tailwind CSS
-- Vuetify
-
-### Libraries
-
-- Lenis
-- AOS
-- Rellax
-
----
-
-## 🔧 Tools
-
-- Git
-- GitHub
-- Vite
-- VS Code / VSCodium
-- Linux / Ubuntu
-
----
+| **Frontend** | **Libraries** | **Tools** |
+|:---:|:---:|:---:|
+| HTML5 | Lenis | Git |
+| CSS3 | AOS | GitHub |
+| JavaScript | Rellax | Vite |
+| Vue.js |  | VS Code / VSCodium |
+| Nuxt.js |  | Linux / Ubuntu |
+| TypeScript |  |  |
+| Tailwind CSS |  |  |
+| Vuetify |  |  |
 
 ## 📸 Preview
 
