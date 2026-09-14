@@ -546,7 +546,7 @@
                             </div>
                                 
                             <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            <img class="absolute size-7 bottom-3 right-3" src="../assets/images/tools-image/nuxt.png" alt="">
+                            <img class="absolute size-7 bottom-3 right-3" src="../assets/images/tools-image/git.png" alt="">
                         </div>
                     </div>
     
@@ -589,7 +589,7 @@
                             </div>
                                         
                             <div class="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            <img class="absolute size-6 bottom-3 right-3" src="../assets/images/tools-image/typescript.png" alt="">
+                            <img class="absolute size-6 bottom-3 right-3" src="../assets/images/tools-image/github.png" alt="">
                         </div>
                     </div>
                 </div>
