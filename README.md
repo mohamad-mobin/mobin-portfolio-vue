@@ -53,19 +53,6 @@ the skills I have developed throughout my journey as a frontend developer.
 
 ---
 
-## ✨ Features
-
-- Responsive design
-- Modern and minimal UI
-- Dark mode
-- Smooth scrolling
-- Scroll-based animations
-- Responsive project showcase
-- Clean and component-based architecture
-- Optimized user experience
-
----
-
 ## 📸 Preview
 
 <div align="center">
@@ -97,30 +84,4 @@ the skills I have developed throughout my journey as a frontend developer.
 </div>
 
 ---
-
-## 🎨 Design
-
-The portfolio follows a minimal and modern visual style with a strong focus
-on typography, spacing, motion, and usability.
-
-The primary accent color used throughout the interface is:
-
-`#FFB400`
-
----
-
-## 📂 Project Structure
-
-```text
-mobin-portfolio-vue/
-├── public/
-├── src/
-│   ├── assets/
-│   │   └── images/
-│   │       └── repo-images/
-│   ├── components/
-│   ├── views/
-│   └── ...
-├── index.html
-├── package.json
 └── README.md
