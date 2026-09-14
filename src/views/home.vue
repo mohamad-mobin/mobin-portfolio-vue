@@ -76,7 +76,7 @@
         <div
           class="md:fixed hidden md:flex justify-end items-center md:w-20 md:h-screen h-20 w-full right-5 top-0 font-poppins"
         >
-        <ul class="flex md:flex-col gap-y-10 font-poppins py-7 px-7 justify-center items-center shadow-xl rounded-2xl bg-[#222121] text-white h-fit">
+        <ul class="flex md:flex-col gap-y-10 font-poppins py-7 px-7 justify-center items-center shadow-xl rounded-4xl bg-[#222121] text-white h-fit">
             <router-link :to="{ name:'home' }" id="homeIcon" class="secondAboutIcon flex justify-center items-center bg-[#FFB400] hover:bg-[#FFB400] rounded-2xl duration-100 size-[50px] scale-130 text-[20px] z-50">
                 <i class="fa fa-home"></i>
             </router-link>
