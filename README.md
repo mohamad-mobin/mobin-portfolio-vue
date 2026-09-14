@@ -42,4 +42,3 @@ the skills I have developed throughout my journey as a frontend developer.
 </div>
 
 ---
-└── README.md
