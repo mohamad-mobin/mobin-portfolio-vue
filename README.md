@@ -4,8 +4,9 @@
 
 ### Frontend Developer • Vue.js & Nuxt.js Lover
 
-A modern and responsive personal portfolio built to showcase my projects,
-skills, experience, and frontend development journey.
+<a href="https://mobin-rezaee-cv.vercel.app/" target="_blank">
+  <img src="https://img.shields.io/badge/🌐%20View%20Live%20Portfolio-FFB400?style=for-the-badge&labelColor=181818" alt="View Live Portfolio">
+</a>
 
 </div>
 
