@@ -73,27 +73,21 @@
     
         </div>
     
-            <!-- Action Bar -->
-            <div class="md:fixed hidden md:flex justify-end items-center md:w-52 md:h-screen relative h-20 w-full right-5 top-0">
-                <div class="md:flex hidden justify-center items-center w-24 h-16 absolute right-16 mt-44 my-10 z-40 diagonal-rotate arrow">
-            <div class="relative bg-[#FFB400] w-14 border-2 border-white/50 h-8 rounded-full flex justify-center items-center">
-                <span class="relative bottom-[1px] text-[11px] font-bold select-none text-black projectsHint" style="font-family: poppins,vazir;">{{ $t('bounce') }}</span>
-                
-            </div>
-                <div class="absolute right-[6px] -rotate-[87deg] top-6 w-0 h-0 border-9 border-solid border-transparent border-t-[#FFB400]"></div>
-                </div>
-                <ul class="flex md:flex-col justify-end items-end gap-y-4 py-5 px-4 shadow-xl rounded-2xl bg-[#222121]" style="font-family: poppins;">
-                        <router-link :to="{ name:'home' }" id="homeIcon" class="firstHomeIcon flex justify-center items-center bg-[#FFB400] rounded-2xl duration-100 size-[50px] text-[20px] relative z-50">
-                            <i class="fa fa-home"></i>
-                        </router-link>
-                        <router-link :to="{ name:'about' }" id="homeIcon" class="flex justify-center items-center bg-[#2E2C29] hover:bg-[#FFB400] rounded-2xl duration-100 size-[50px] text-[20px] z-50 shadow-xs shadow-[#FFB400]">
-                            <i class="fa fa-user"></i>
-                        </router-link>
-                        <router-link :to="{ name:'projects' }" id="homeIcon" class="flex justify-center items-center bg-[#2E2C29] hover:bg-[#FFB400] rounded-2xl  duration-100 size-[50px] text-[20px] z-50 shadow-xs shadow-[#FFB400]">
-                        <i class="fa fa-briefcase"></i>
-                </router-link>
-                </ul>
-            </div>
+        <div
+          class="md:fixed hidden md:flex justify-end items-center md:w-20 md:h-screen h-20 w-full right-5 top-0 font-poppins"
+        >
+        <ul class="flex md:flex-col gap-y-10 font-poppins py-7 px-7 justify-center items-center shadow-xl rounded-2xl bg-[#222121] text-white h-fit">
+            <router-link :to="{ name:'home' }" id="homeIcon" class="secondAboutIcon flex justify-center items-center bg-[#FFB400] hover:bg-[#FFB400] rounded-2xl duration-100 size-[50px] scale-130 text-[20px] z-50">
+                <i class="fa fa-home"></i>
+            </router-link>
+            <router-link :to="{ name:'about' }" id="homeIcon" class="flex justify-center items-center bg-[#2E2C29] hover:bg-[#FFB400] rounded-2xl duration-100 size-[50px] scale-130 text-[20px] relative z-50 shadow-xs shadow-[#FFB400]">
+                <i class="fa fa-user"></i>
+            </router-link>
+            <router-link :to="{ name:'projects' }" id="homeIcon" class="flex justify-center items-center bg-[#2E2C29] hover:bg-[#FFB400] rounded-2xl duration-100 size-[50px] scale-130 text-[20px] relative z-50 shadow-xs shadow-[#FFB400]">
+                <i class="fa fa-briefcase"></i>
+            </router-link>
+        </ul>
+        </div>
     
     
         </div>
