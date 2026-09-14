@@ -23,16 +23,11 @@ the skills I have developed throughout my journey as a frontend developer.
 ---
 ## 🛠️ Technologies & Tools
 
-| **Frontend** | **Libraries** | **Tools** |
-|:---:|:---:|:---:|
-| HTML5 | Lenis | Git |
-| CSS3 | AOS | GitHub |
-| JavaScript | Rellax | Vite |
-| Vue.js |  | VS Code / VSCodium |
-| Nuxt.js |  | Linux / Ubuntu |
-| TypeScript |  |  |
-| Tailwind CSS |  |  |
-| Vuetify |  |  |
+| Frontend | Libraries | Tools |
+|:---|:---|:---|
+| HTML5 • CSS3 • JavaScript | Lenis • AOS • Rellax | Git • GitHub |
+| Vue.js • Nuxt.js | | Vite • VSCodium |
+| TypeScript • Tailwind CSS • Vuetify | | Linux • Ubuntu |
 
 ## 📸 Preview
 
