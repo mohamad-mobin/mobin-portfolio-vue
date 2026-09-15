@@ -3,13 +3,9 @@
 
 
 
-        <ClientOnly>
   <loadingBar @loaded="loadingFinished" />
-</ClientOnly>
 
-<ClientOnly>
   <Cursor :propsImageStatus="imageStatus" :propsCopyStatus="copyStatus"/>
-</ClientOnly>
 
 
         <toggleLang/>

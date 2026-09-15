@@ -1,12 +1,8 @@
 <template>
     <div class="wrapper">
-<ClientOnly>
   <loadingBar @loaded="loadingFinished" />
-</ClientOnly>
 
-<ClientOnly>
   <Cursor />
-</ClientOnly>
 
 
         <toggleLang/>

@@ -1,13 +1,8 @@
 <template>
 
-    <ClientOnly>
   <loadingBar @loaded="loadingFinished" />
-</ClientOnly>
-
-<ClientOnly>
   <Cursor :propsImageStatus="imageStatus"/>
-</ClientOnly>
-    <toggleLang />
+   <toggleLang />
 
     
 
