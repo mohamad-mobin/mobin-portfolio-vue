@@ -7,10 +7,10 @@
     "node": "^20.19.0 || >=22.12.0"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "nuxt dev",
+    "build": "nuxt build",
     "predeploy": "npm run build",
-    "preview": "vite preview"
+    "preview": "nuxt preview"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
