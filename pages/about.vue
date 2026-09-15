@@ -704,9 +704,8 @@
 import loadingBar from '@/utils/loadingBar.vue';
 import Cursor from '../utils/cursor.vue'
 import { initLenis, destroyLenis } from '@/utils/lenis.js'
-import Rellax from 'rellax';
 import AOS from 'aos';
-import { onMounted, onBeforeUnmount, onBeforeMount } from "vue"
+import { onMounted, onBeforeUnmount } from "vue"
 import toggleLang from '@/utils/toggleLang.vue';
 
 import { ref } from 'vue';
@@ -768,24 +767,23 @@ export default {
       copyEmailToClipboard(email);
     }
 
-        onBeforeMount(() => {
+        onMounted(() => {
             window.scrollTo(0, 0);
             document.body.style.overflow = 'hidden';
         });
 
-        onMounted(() => {
-            setTimeout(() => {
-                initLenis();
-                document.body.style.overflowY = 'visible'
-                document.body.style.overflowX = 'hidden'
-            }, 800);
+        onMounted(async () => {
+            const Rellax = (await import('rellax')).default
+
+            new Rellax('.rellax')
+
+            initLenis()
 
             AOS.init({
                 duration: 1000,
                 once: false,
-            });
-
-        });
+            })
+        })
 
         onBeforeUnmount(() => {
             destroyLenis()
