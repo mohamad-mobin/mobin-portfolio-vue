@@ -59,7 +59,7 @@ function animateLoading() {
 
     const elapsedTime = currentTime - startTime
 
-    // فاز اول: از 100 به 80
+    // Phase 1: from 100 to 80
     if (elapsedTime < firstPhaseDuration) {
       const progress = elapsedTime / firstPhaseDuration
 
@@ -74,7 +74,7 @@ function animateLoading() {
       requestAnimationFrame(step)
     }
 
-    // فاز دوم: از 80 به 0
+    // Phase 2: from 80 to 0
     else {
       const secondPhaseElapsedTime = elapsedTime - firstPhaseDuration
 
@@ -92,7 +92,7 @@ function animateLoading() {
         requestAnimationFrame(step)
       }
 
-      // پایان انیمیشن
+      // Animation finished
       else {
         anim.value.style.height = '0' + UNIT
         anim.value.style.pointerEvents = 'none'
@@ -111,16 +111,16 @@ function animateLoading() {
 onMounted(async () => {
   await nextTick()
 
-  // 1. کلاس اولیه رو بردار
+  // 1. Remove the initial class
   started.value = true
 
-  // 2. صبر کن Vue کلاس رو از DOM حذف کنه
+  // 2. Wait for Vue to remove the class from the DOM
   await nextTick()
 
-  // 3. ارتفاع رو دستی ست کن (چون کلاس حذف شده، دیگه CSS ارتفاع نمی‌ده)
+  // 3. Set the height manually (since the class is removed, CSS no longer provides height)
   anim.value.style.height = '100' + UNIT
 
-  // 4. یه فریم صبر کن تا مرورگر ارتفاع اولیه رو ثبت کنه
+  // 4. Wait one frame for the browser to register the initial height
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
       animateLoading()
@@ -139,7 +139,7 @@ onMounted(async () => {
   z-index: 9999 !important;
 }
 
-/* ارتفاع اولیه فقط از طریق این کلاس — تا JS آماده بشه */
+/* Initial height only from this class — until JS is ready */
 .anim-initial {
   height: 100dvh;
   min-height: 100vh;
