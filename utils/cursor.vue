@@ -19,9 +19,7 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-import { getLenis } from '@/utils/lenis.js';
 
-// تعریف props
 const props = defineProps({
   propsImageStatus: Boolean,
   propsCopyStatus: Boolean,
@@ -31,7 +29,8 @@ const cursor = ref(null);
 const follower = ref(null);
 const redCircle = ref(null);
 
-onMounted(() => {
+onMounted(async() => {
+    const { getLenis } = await import('@/utils/lenis.js')
   const isMobile = window.innerWidth <= 768;
   if (isMobile) {
     cursor.value.style.display = "none";
@@ -39,7 +38,6 @@ onMounted(() => {
     if (redCircle.value) redCircle.value.style.display = "none"; // ✅ توی موبایل مخفی بشه
     return;
   }
-
   const lenis = getLenis();
 
   let posX = 0, posY = 0;
