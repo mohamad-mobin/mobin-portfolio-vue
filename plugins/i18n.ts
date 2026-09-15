@@ -1,6 +1,6 @@
 import { createI18n } from 'vue-i18n'
 
-export default defineNuxtPlugin(() => {
+export default defineNuxtPlugin((nuxtApp) => {
   const i18n = createI18n({
     legacy: false,
     locale: 'en',
@@ -11,5 +11,5 @@ export default defineNuxtPlugin(() => {
     }
   })
 
-  console.log('i18n instance created:', !!i18n)
+  nuxtApp.vueApp.use(i18n)
 })
