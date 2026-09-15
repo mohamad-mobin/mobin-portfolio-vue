@@ -290,6 +290,8 @@ export default {
     setup() {
         onMounted(() => {
             window.scrollTo(0, 0);
+            document.documentElement.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
         });
 
         onMounted(async() => {
