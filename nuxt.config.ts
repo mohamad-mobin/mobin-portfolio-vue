@@ -3,6 +3,8 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineNuxtConfig({
   compatibilityDate: '2026-09-15',
 
+  modules: ['@nuxtjs/i18n'],
+
   css: [
     '~/assets/main.css',
     '~/assets/fonts.css',
@@ -14,6 +16,23 @@ export default defineNuxtConfig({
   vite: {
     plugins: [
       tailwindcss()
+    ]
+  },
+
+  i18n: {
+    defaultLocale: 'en',
+
+    locales: [
+      {
+        code: 'en',
+        name: 'English',
+        file: 'en.json'
+      },
+      {
+        code: 'fa',
+        name: 'فارسی',
+        file: 'fa.json'
+      }
     ]
   }
 })
