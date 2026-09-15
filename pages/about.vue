@@ -703,7 +703,6 @@
 <script>
 import loadingBar from '@/utils/loadingBar.vue';
 import Cursor from '../utils/cursor.vue'
-import { initLenis, destroyLenis } from '@/utils/lenis.js'
 import { onMounted, onBeforeUnmount } from "vue"
 import toggleLang from '@/utils/toggleLang.vue';
 
@@ -774,6 +773,7 @@ export default {
         onMounted(async () => {
             const AOS = (await import('aos')).default
             const Rellax = (await import('rellax')).default
+            const { initLenis } = await import('@/utils/lenis.js')
 
             new Rellax('.rellax')
 
@@ -786,7 +786,6 @@ export default {
         })
 
         onBeforeUnmount(() => {
-            destroyLenis()
         })
 
     return { isModalVisible, progress, openModal, handleClick };
