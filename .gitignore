@@ -34,3 +34,6 @@ dist-ssr/
 
 # TypeScript build info
 *.tsbuildinfo
+
+.nuxt/
+.output/

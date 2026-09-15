@@ -1,9 +1,0 @@
-//#region utils/cursor.vue?vue&type=style&index=0&inline&used&lang.css
-var cursor_vue_vue_type_style_index_0_inline_used_lang_default = "@font-face{font-family:poppins;src:url(" + __buildAssetsURL("Poppins-Regular.CTKNfV9P.ttf") + ")}*{box-sizing:border-box}body,html{cursor:none}.cursor{-webkit-user-select:none;user-select:none;pointer-events:none;z-index:50;justify-content:center;align-items:center;width:8px;height:8px;transition:transform .5s cubic-bezier(.75,-1.27,.3,2.33),opacity .2s cubic-bezier(.75,-1.27,.3,2.33);display:flex;transform:scale(.8);box-shadow:0 0 2px #fff}.cursor,.cursor:before{opacity:0;background:#fff;border-radius:100%;position:absolute}.cursor:before{content:\"\";width:100%;height:100%;display:block;top:0;left:0}.cursor.active{opacity:1;transform:scale(12)}.cursor.active:before{opacity:1}.cursor-follower{-webkit-user-select:none;user-select:none;pointer-events:none;opacity:0;z-index:40;background:#ffb3006c;border-radius:100%;width:40px;height:40px;transition:transform .6s cubic-bezier(.75,-1.27,.3,2.33),opacity .4s cubic-bezier(.75,-1.27,.3,2.33);position:absolute;transform:translate(4px,4px)}.cursor-follower.active{opacity:1;transform:scale(0)}#redCircle{pointer-events:none;width:0;height:0;transition:all .2s;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}#redCircle.active{width:80px;height:80px}@media screen and (width<=768px){body,html{cursor:auto!important}.cursor,.cursor-content,.cursor-follower,.cursor:before,.redCircle{opacity:0!important;pointer-events:none!important;display:none!important}}.cursor,.cursor-follower,.redCircle{z-index:999!important}";
-
-const cursorStyles_CqJV0Yso = [
-  cursor_vue_vue_type_style_index_0_inline_used_lang_default
-];
-
-export { cursorStyles_CqJV0Yso as default };
-//# sourceMappingURL=cursor-styles.CqJV0Yso.mjs.map

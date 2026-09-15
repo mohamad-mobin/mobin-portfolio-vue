@@ -19,7 +19,6 @@
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-import { defineProps } from 'vue'
 import { getLenis } from '@/utils/lenis.js';
 
 // تعریف props
