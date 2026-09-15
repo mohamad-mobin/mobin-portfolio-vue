@@ -1,6 +1,4 @@
 import { createI18n } from 'vue-i18n'
-import en from '~/i18n/locales/en.json'
-import fa from '~/i18n/locales/fa.json'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const i18n = createI18n({
@@ -8,12 +6,18 @@ export default defineNuxtPlugin((nuxtApp) => {
     locale: 'en',
     fallbackLocale: 'en',
     messages: {
-      en,
-      fa
+      en: {
+        imMobinRezaee: 'I am Mobin Rezaee',
+        webDeveloper: 'Web Developer',
+        imIranian: 'I am Iranian'
+      },
+      fa: {
+        imMobinRezaee: 'من مبین رضایی هستم',
+        webDeveloper: 'توسعه‌دهنده وب',
+        imIranian: 'من ایرانی هستم'
+      }
     }
   })
 
   nuxtApp.vueApp.use(i18n)
-
-  console.log('✅ Translations loaded')
 })
