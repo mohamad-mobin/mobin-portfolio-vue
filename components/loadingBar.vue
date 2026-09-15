@@ -2,7 +2,7 @@
   <div
     id="anim"
     ref="anim"
-    class="bg-[#222222] absolute h-full w-full bottom-0 z-50 rounded-tr-[30px] rounded-tl-[30px] flex justify-center items-center overflow-hidden border-t border-[#ffb400]"
+    class="bg-[#222222] fixed w-full bottom-0 left-0 z-50 rounded-tr-[30px] rounded-tl-[30px] flex justify-center items-center overflow-hidden border-t border-[#ffb400]"
   >
     <p
       ref="loadingText"
@@ -31,17 +31,20 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const emit = defineEmits(['loaded']);
+const emit = defineEmits(['loaded'])
 
 const anim = ref(null)
 const loadingText = ref(null)
+
+const UNIT = 'dvh'
 
 function animateLoading() {
   if (!anim.value || !loadingText.value) return
 
   let sum = 100
 
-  anim.value.style.height = sum + '%'
+  // مقدار اولیه: کل صفحه
+  anim.value.style.height = sum + UNIT
 
   const firstPhaseDuration = 500
   const secondPhaseDuration = 300
@@ -55,7 +58,7 @@ function animateLoading() {
 
     const elapsedTime = currentTime - startTime
 
-    // Phase 1
+    // فاز اول: از 100 به 80
     if (elapsedTime < firstPhaseDuration) {
       const progress = elapsedTime / firstPhaseDuration
 
@@ -65,19 +68,17 @@ function animateLoading() {
         sum = 80
       }
 
-      anim.value.style.height = sum + '%'
+      anim.value.style.height = sum + UNIT
 
       requestAnimationFrame(step)
     }
 
-    // Phase 2
+    // فاز دوم: از 80 به 0
     else {
-      const secondPhaseElapsedTime =
-        elapsedTime - firstPhaseDuration
+      const secondPhaseElapsedTime = elapsedTime - firstPhaseDuration
 
       if (secondPhaseElapsedTime < secondPhaseDuration) {
-        const progress =
-          secondPhaseElapsedTime / secondPhaseDuration
+        const progress = secondPhaseElapsedTime / secondPhaseDuration
 
         sum = 80 - 80 * progress
 
@@ -85,16 +86,14 @@ function animateLoading() {
           sum = 0
         }
 
-        anim.value.style.height = sum + '%'
+        anim.value.style.height = sum + UNIT
 
         requestAnimationFrame(step)
       }
 
-      // Animation finished
+      // پایان انیمیشن
       else {
-        sum = 0
-
-        anim.value.style.height = '0%'
+        anim.value.style.height = '0' + UNIT
         anim.value.style.pointerEvents = 'none'
         anim.value.style.borderTop = 'none'
 
@@ -121,5 +120,7 @@ onMounted(() => {
 
 #anim {
   z-index: 9999 !important;
+  /* height اینجا نگذار — JS مدیریت می‌کند */
+  /* top: 0 را حذف کن — با bottom: 0 تداخل دارد */
 }
 </style>
