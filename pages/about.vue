@@ -607,9 +607,9 @@
         </div>
     
         <div
-          class="md:fixed hidden md:flex justify-end items-center md:w-20 md:h-screen h-20 w-full right-5 top-0 font-poppins"
+          class="md:fixed hidden md:flex justify-end items-center md:w-20 md:h-screen h-20 w-full right-5 top-0 font-poppins z-50"
         >
-        <ul class="flex md:flex-col gap-y-10 font-poppins py-7 px-7 justify-center items-center shadow-xl rounded-4xl bg-[#222121] text-white h-fit">
+        <ul class="flex md:flex-col gap-y-10 font-poppins py-7 px-7 justify-center items-center shadow-xl rounded-4xl bg-[#222121] text-white h-fit z-50">
             <NuxtLink to="/" id="homeIcon" class="flex justify-center items-center bg-[#2E2C29] hover:bg-[#FFB400] rounded-2xl duration-100 size-[50px] scale-130 text-[20px] relative z-50 shadow-xs shadow-[#FFB400]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M3 10.25V20C3 20.5523 3.44771 21 4 21H8.42857C8.98086 21 9.42857 20.5523 9.42857 20V13.2857H14.5714V20C14.5714 20.5523 15.0191 21 15.5714 21H20C20.5523 21 21 20.5523 21 20V10.25C21 9.93524 20.8518 9.63885 20.6 9.45L12 3L3.4 9.45C3.14819 9.63885 3 9.93524 3 10.25Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -674,7 +674,7 @@
 
 
 
-      <div data-aos="zoom-in" class="relative flex items-center justify-center pt-10 pb-26 md:pb-10 md:py-20 px-5 md:px-20">
+      <div data-aos="zoom-in" class="relative flex z-10 items-center justify-center pt-10 pb-26 md:pb-10 md:py-20 px-5 md:px-20">
   
   <div class="relative w-full max-w-4xl overflow-hidden rounded-[2rem] border border-white/5 px-8 py-16 text-center backdrop-blur-md shadow-2xl">
     
