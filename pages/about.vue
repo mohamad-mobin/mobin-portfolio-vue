@@ -706,99 +706,87 @@
     </div>
 
 </template>
-<script>
-import { onMounted, onBeforeUnmount } from "vue"
+<script setup>
+import { onMounted, onBeforeUnmount, ref } from "vue"
 import { stopLenis, startLenis } from '@/utils/lenis.js'
 
-import { ref } from 'vue';
+const imageStatus = ref(false)
+const copyStatus = ref(false)
 
-export default {
-    data() {
-        return {
-            imageStatus : false,
-            copyStatus: false,
-        }
-    },
-    methods:{
-        async loadingFinished(){
+const loadingFinished = async () => {
     document.documentElement.style.overflow = '';
     document.body.style.overflow = '';
     startLenis()
-        },
-    FalseImageStatus(){
-        this.imageStatus = false
-            
-    },
-    TrueImageStatus(){
-        this.imageStatus = true
-    },
-    TrueCopyStatus(){
-        this.copyStatus = true
-    },
-    FalseCopyStatus(){
-        this.copyStatus = false
-    },
-},
+}
 
+const FalseImageStatus = () => {
+    imageStatus.value = false
+}
 
-  setup() {
-    const isModalVisible = ref(false);
-    const progress = ref(0);
-    let intervalId = null;
+const TrueImageStatus = () => {
+    imageStatus.value = true
+}
 
-    function openModal() {
-      isModalVisible.value = true;
-      progress.value = 0;
+const TrueCopyStatus = () => {
+    copyStatus.value = true
+}
 
-      if (intervalId) clearInterval(intervalId);
+const FalseCopyStatus = () => {
+    copyStatus.value = false
+}
 
-      intervalId = setInterval(() => {
-        progress.value += 2;
-        if (progress.value >= 100) {
-          clearInterval(intervalId);
-          setTimeout(() => {
-            isModalVisible.value = false;
-          }, 200);
-        }
-      }, 20);
+const isModalVisible = ref(false);
+const progress = ref(0);
+let intervalId = null;
+
+function openModal() {
+  isModalVisible.value = true;
+  progress.value = 0;
+
+  if (intervalId) clearInterval(intervalId);
+
+  intervalId = setInterval(() => {
+    progress.value += 2;
+    if (progress.value >= 100) {
+      clearInterval(intervalId);
+      setTimeout(() => {
+        isModalVisible.value = false;
+      }, 200);
     }
+  }, 20);
+}
 
-    function copyEmailToClipboard(email) {
-      navigator.clipboard.writeText(email).then(() => {
-        openModal();
-      });
-    }
+function copyEmailToClipboard(email) {
+  navigator.clipboard.writeText(email).then(() => {
+    openModal();
+  });
+}
 
-    function handleClick() {
-      const email = "mohammadmobinrezaee@gmail.com";
-      copyEmailToClipboard(email);
-    }
+function handleClick() {
+  const email = "mohammadmobinrezaee@gmail.com";
+  copyEmailToClipboard(email);
+}
 
-        onMounted(() => {
-            window.scrollTo(0, 0);
+onMounted(() => {
+    window.scrollTo(0, 0);
 
-            document.documentElement.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            stopLenis()
-        });
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    stopLenis()
+});
 
-        onMounted(async () => {
-            const AOS = (await import('aos')).default
-            const Rellax = (await import('rellax')).default
+onMounted(async () => {
+    const AOS = (await import('aos')).default
+    const Rellax = (await import('rellax')).default
 
-            new Rellax('.rellax')
-
-
-            AOS.init({
-                duration: 1000,
-                once: false,
-            })
-        })
+    new Rellax('.rellax')
 
 
-    return { isModalVisible, progress, openModal, handleClick };
-  },
-};
+    AOS.init({
+        duration: 1000,
+        once: false,
+    })
+})
 </script>
 
 <style>

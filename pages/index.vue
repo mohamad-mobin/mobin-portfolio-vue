@@ -123,80 +123,60 @@
         </div>
     </div>
 </template>
-<script>
+<script setup>
 import { onMounted, ref } from "vue"
 import { stopLenis, startLenis } from '@/utils/lenis.js'
 
-export default {
-    data() {
-    return {
-      loaded: false
-    }
-  },
-  methods:{
-        async loadingFinished(){
+const target = ref(null)
+const cinemaScreen = ref(null)
+const loaded = ref(false)
 
-            document.documentElement.style.overflow = '';
-            document.body.style.overflow = '';
-            startLenis()
+const loadingFinished = async () => {
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+    startLenis()
+}
 
-     
-        },
-  },
-  mounted() {
+onMounted(async () => {
     setTimeout(() => {
-      this.loaded = true
+        loaded.value = true
     }, 3000)
-  },
-  setup(){
-    const target = ref(null)
-    const cinemaScreen = ref(null)
 
-    onMounted(async() => {
-        window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
 
-            document.documentElement.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            stopLenis()
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    stopLenis()
 
     const AOS = (await import('aos')).default
 
-      window.scrollTo(0, 0)
+    window.scrollTo(0, 0)
 
-      AOS.init({
+    AOS.init({
         duration: 1000,
         once: false,
-      })
+    })
 
-      function CinemaScreenHandler (){
-        
+    function CinemaScreenHandler() {
         cinemaScreen.value.style.width = '100%'
         cinemaScreen.value.style.height = '100%'
 
         let newClassValue = 100
-        setTimeout(() => {            
+        setTimeout(() => {
             let interval = setInterval(() => {
                 newClassValue--
                 cinemaScreen.value.style.height = `${newClassValue}%`
-                
-                if(newClassValue <= 0){
+
+                if (newClassValue <= 0) {
                     clearInterval(interval)
                 }
                 console.log(newClassValue);
-                
+
             }, 10);
         }, 800);
-        
-      }
-      CinemaScreenHandler()
-    })
-
-    return {
-      target,
-      cinemaScreen
     }
-  }
-}
+    CinemaScreenHandler()
+})
 </script>
 
 <style>

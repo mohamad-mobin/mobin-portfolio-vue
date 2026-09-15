@@ -164,8 +164,8 @@
     </div>
 
 </template>
-<script>
-import { onMounted } from "vue"
+<script setup>
+import { onMounted, ref } from "vue"
 import { stopLenis, startLenis } from '@/utils/lenis.js'
 
 import JoJoImage from '@/assets/images/banner-images/jojo.webp'
@@ -189,109 +189,100 @@ import juniperLogo from '@/assets/images/logos/juniperLogo.webp'
 import odoImage from '@/assets/images/banner-images/odo.webp'
 import odoLogo from '@/assets/images/banner-images/odoLogo.png'
 
-export default {
-    data() {
-        return {
-            bestProjects: [
-                {
-                    name: 'JoJo Portfolio',
-                    desc: 'professional portfolio',
-                    hrefs: 'https://mohamad-mobin.github.io/Jojo-Portfolio/public/index.html',
-                    image: JoJoImage,
-                    descImage: JoJoDescImage,
-                    star: 5
-                },
-                {
-                    name: 'Food Delivery',
-                    desc: 'online mac donald',
-                    hrefs: 'https://mohamad-mobin.github.io/foods-delivery/',
-                    image: foodImage,
-                    descImage: foodDescImage,
-                    star: 5
-                },
-                {
-                    name: 'Style Shop',
-                    desc: 'online clothes shop',
-                    hrefs: 'https://mohamad-mobin.github.io/Style-Shop/public/index.html',
-                    image: styleImage,
-                    descImage: styleDescImage,
-                    star: 5
-                },
-                {
-                    name:'Limoo Site',
-                    desc:'iranian limoo site',
-                    hrefs:'https://mohamad-mobin.github.io/limoo-site/public/index.html',
-                    image:limooImage,
-                    descImage:limooDescImage,
-                    star:4
-                },
-            ],
-
-            vueProjects:[
-                {
-                    name:'NFT marketplace',
-                    desc:'the nft marketplace site',
-                    hrefs:'https://vue-nft-marketplace.netlify.app/',
-                    image:nftImage,             // عکس اصلی
-                    descImage:nftLogo,
-                    star:5  
-                },
-                {
-                    name:'Odo file manager',
-                    desc:'file manager of odo',
-                    hrefs:'https://cloud.odoteam.ir',
-                    image:odoImage,             // عکس اصلی
-                    descImage:odoLogo,
-                    star:5  
-                },
-                {
-                    name:'Juniper',
-                    desc:'weather site',
-                    hrefs:'https://junipers.netlify.app/',
-                    image:juniper,
-                    descImage:juniperLogo,
-                    star:4
-                },
-            ],
-            imageStatus : false
-        }
+const bestProjects = [
+    {
+        name: 'JoJo Portfolio',
+        desc: 'professional portfolio',
+        hrefs: 'https://mohamad-mobin.github.io/Jojo-Portfolio/public/index.html',
+        image: JoJoImage,
+        descImage: JoJoDescImage,
+        star: 5
     },
-    methods:{
-        async loadingFinished(){
-
-            document.documentElement.style.overflow = '';
-            document.body.style.overflow = '';
-            startLenis()
-
-     
-        },
-        FalseImageStatus(){
-            this.imageStatus = false
-            
-        },
-        TrueImageStatus(){
-            this.imageStatus = true
-        }
+    {
+        name: 'Food Delivery',
+        desc: 'online mac donald',
+        hrefs: 'https://mohamad-mobin.github.io/foods-delivery/',
+        image: foodImage,
+        descImage: foodDescImage,
+        star: 5
     },
-    setup() {
-        onMounted(() => {
-            window.scrollTo(0, 0);
-            document.documentElement.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            stopLenis()
-        });
+    {
+        name: 'Style Shop',
+        desc: 'online clothes shop',
+        hrefs: 'https://mohamad-mobin.github.io/Style-Shop/public/index.html',
+        image: styleImage,
+        descImage: styleDescImage,
+        star: 5
+    },
+    {
+        name:'Limoo Site',
+        desc:'iranian limoo site',
+        hrefs:'https://mohamad-mobin.github.io/limoo-site/public/index.html',
+        image:limooImage,
+        descImage:limooDescImage,
+        star:4
+    },
+]
 
-        onMounted(async() => {
-            const AOS = (await import('aos')).default
+const vueProjects = [
+    {
+        name:'NFT marketplace',
+        desc:'the nft marketplace site',
+        hrefs:'https://vue-nft-marketplace.netlify.app/',
+        image:nftImage,
+        descImage:nftLogo,
+        star:5  
+    },
+    {
+        name:'Odo file manager',
+        desc:'file manager of odo',
+        hrefs:'https://cloud.odoteam.ir',
+        image:odoImage,
+        descImage:odoLogo,
+        star:5  
+    },
+    {
+        name:'Juniper',
+        desc:'weather site',
+        hrefs:'https://junipers.netlify.app/',
+        image:juniper,
+        descImage:juniperLogo,
+        star:4
+    },
+]
 
-            AOS.init({
-                duration: 1000,
-                once: false,
-            });
+const imageStatus = ref(false)
 
-        });
-    }
+const loadingFinished = async () => {
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+    startLenis()
 }
+
+const FalseImageStatus = () => {
+    imageStatus.value = false
+}
+
+const TrueImageStatus = () => {
+    imageStatus.value = true
+}
+
+onMounted(() => {
+    window.scrollTo(0, 0);
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    stopLenis()
+});
+
+onMounted(async () => {
+    const AOS = (await import('aos')).default
+
+    AOS.init({
+        duration: 1000,
+        once: false,
+    });
+
+});
 </script>
 <style scoped>
 body,html{
