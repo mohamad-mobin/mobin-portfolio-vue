@@ -4,7 +4,7 @@ let lenis = null
 let rafId = null
 
 export function initLenis(options = {}) {
-  if (lenis) return lenis // دوباره initialize نشه
+  if (lenis) return lenis
 
   const isMobile = /Mobi|Android/i.test(navigator.userAgent)
 
@@ -15,29 +15,29 @@ export function initLenis(options = {}) {
     gestureDirection: "vertical",
     smooth: true,
     mouseMultiplier: 1.2,
-    smoothTouch: !isMobile,          // دسکتاپ: true, موبایل: false
+    smoothTouch: !isMobile,
     touchMultiplier: isMobile ? 1 : 2,
     infinite: false,
-    ...options, // اگه خواستی override کنی
+    ...options,
   })
 
   function raf(time) {
     lenis.raf(time)
     rafId = requestAnimationFrame(raf)
   }
+
   rafId = requestAnimationFrame(raf)
 
-  // anchor links
+  // Anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (e) => {
       e.preventDefault()
+
       const targetId = anchor.getAttribute("href")
 
       if (targetId === "#" || targetId === "") {
-        // ✅ بره بالای صفحه
         lenis.scrollTo(0)
       } else {
-        // ✅ بره به سکشن مورد نظر
         lenis.scrollTo(targetId)
       }
     })
@@ -46,10 +46,27 @@ export function initLenis(options = {}) {
   return lenis
 }
 
+export function stopLenis() {
+  if (lenis) {
+    lenis.stop()
+  }
+}
+
+export function startLenis() {
+  if (lenis) {
+    lenis.start()
+  }
+}
+
 export function destroyLenis() {
   if (lenis) {
     lenis.destroy()
-    cancelAnimationFrame(rafId)
+
+    if (rafId) {
+      cancelAnimationFrame(rafId)
+      rafId = null
+    }
+
     lenis = null
   }
 }

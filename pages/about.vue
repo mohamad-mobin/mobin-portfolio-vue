@@ -715,6 +715,7 @@ import loadingBar from '@/utils/loadingBar.vue';
 import Cursor from '../utils/cursor.vue'
 import { onMounted, onBeforeUnmount } from "vue"
 import toggleLang from '@/utils/toggleLang.vue';
+import { stopLenis, startLenis } from '@/utils/lenis.js'
 
 import { ref } from 'vue';
 
@@ -729,10 +730,7 @@ export default {
         async loadingFinished(){
     document.documentElement.style.overflow = '';
     document.body.style.overflow = '';
-
-    const { initLenis } = await import('@/utils/lenis.js')
-
-    initLenis()
+    startLenis()
         },
     FalseImageStatus(){
         this.imageStatus = false
@@ -788,6 +786,7 @@ export default {
 
             document.documentElement.style.overflow = 'hidden';
             document.body.style.overflow = 'hidden';
+            stopLenis()
         });
 
         onMounted(async () => {

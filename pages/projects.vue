@@ -170,7 +170,8 @@
 
 </template>
 <script>
-import { onMounted, onBeforeUnmount } from "vue"
+import { onMounted } from "vue"
+import { stopLenis, startLenis } from '@/utils/lenis.js'
 
 import loadingBar from '@/utils/loadingBar.vue';
 import Cursor from '../utils/cursor.vue'
@@ -269,10 +270,9 @@ export default {
 
             document.documentElement.style.overflow = '';
             document.body.style.overflow = '';
+            startLenis()
 
-        const { initLenis } = await import('@/utils/lenis.js')
-
-        initLenis()
+     
         },
         FalseImageStatus(){
             this.imageStatus = false
@@ -292,6 +292,7 @@ export default {
             window.scrollTo(0, 0);
             document.documentElement.style.overflow = 'hidden';
             document.body.style.overflow = 'hidden';
+            stopLenis()
         });
 
         onMounted(async() => {
