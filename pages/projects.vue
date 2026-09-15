@@ -307,6 +307,9 @@ export default {
 }
 </script>
 <style scoped>
+body,html{
+    overflow-x: hidden;
+}
 @font-face {
         font-family: poppins;
         src: url(../assets/fonts/Poppins-Regular.ttf);
