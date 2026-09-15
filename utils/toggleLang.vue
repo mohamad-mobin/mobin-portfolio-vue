@@ -101,21 +101,21 @@
 import { ref, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 
-const { locale } = useI18n()
+const { setLocale } = useI18n()
 
 const currentLang = ref('fa')
 const btn = ref(null)
 
-onMounted(() => {
+onMounted(async () => {
   const savedLang = localStorage.getItem('lang')
 
   if (savedLang === 'fa' || savedLang === 'en') {
     currentLang.value = savedLang
-    locale.value = savedLang
+    await setLocale(savedLang)
   } else {
     localStorage.setItem('lang', 'en')
     currentLang.value = 'en'
-    locale.value = 'en'
+    await setLocale('en')
   }
 
   setTimeout(() => {
@@ -123,10 +123,11 @@ onMounted(() => {
   }, 100)
 })
 
-function toggleLang() {
+async function toggleLang() {
   const newLang = currentLang.value === 'fa' ? 'en' : 'fa'
 
-  locale.value = newLang
+  await setLocale(newLang)
+
   currentLang.value = newLang
   localStorage.setItem('lang', newLang)
 }
