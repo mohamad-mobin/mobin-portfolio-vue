@@ -1,17 +1,12 @@
 <template>
   <div>
     <h1>Hello from index SSR</h1>
-
-    <p>{{ $t('imMobinRezaee') }}</p>
-    <p>{{ $t('webDeveloper') }}</p>
-    <p>{{ $t('imIranian') }}</p>
+    <p>Mobin</p>
+    <p>Frontend Developer</p>
+    <p>Hello</p>
   </div>
 </template>
 
 <script>
-export default {
-  setup() {
-    return {}
-  }
-}
+export default {}
 </script>
