@@ -164,9 +164,8 @@
 
 </template>
 <script>
-import { onMounted, onBeforeUnmount,onBeforeMount } from "vue"
+import { onMounted, onBeforeUnmount } from "vue"
 import { initLenis, destroyLenis } from '@/utils/lenis.js'
-import AOS from 'aos'
 
 import loadingBar from '@/utils/loadingBar.vue';
 import Cursor from '../utils/cursor.vue'
@@ -280,7 +279,8 @@ export default {
             document.body.style.overflow = 'hidden';
         });
 
-        onMounted(() => {
+        onMounted(async() => {
+            const AOS = (await import('aos')).default
             setTimeout(() => {
                     initLenis();
                     document.body.style.overflowY = 'visible'

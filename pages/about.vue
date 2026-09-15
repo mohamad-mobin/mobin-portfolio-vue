@@ -704,7 +704,6 @@
 import loadingBar from '@/utils/loadingBar.vue';
 import Cursor from '../utils/cursor.vue'
 import { initLenis, destroyLenis } from '@/utils/lenis.js'
-import AOS from 'aos';
 import { onMounted, onBeforeUnmount } from "vue"
 import toggleLang from '@/utils/toggleLang.vue';
 
@@ -773,6 +772,7 @@ export default {
         });
 
         onMounted(async () => {
+            const AOS = (await import('aos')).default
             const Rellax = (await import('rellax')).default
 
             new Rellax('.rellax')

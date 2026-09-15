@@ -125,7 +125,6 @@ import { onMounted, ref } from "vue"
 import loadingBar from '@/utils/loadingBar.vue';
 import toggleLang from "@/utils/toggleLang.vue";
 import Cursor from '../utils/cursor.vue'
-import AOS from 'aos'
 
 export default {
   components:{
@@ -147,7 +146,9 @@ export default {
     const target = ref(null)
     const cinemaScreen = ref(null)
 
-    onMounted(() => {
+    onMounted(async() => {
+    const AOS = (await import('aos')).default
+
       window.scrollTo(0, 0)
 
       AOS.init({
