@@ -2,7 +2,10 @@
   <div
     id="anim"
     ref="anim"
-    class="bg-[#222222] fixed w-full bottom-0 left-0 z-50 rounded-tr-[30px] rounded-tl-[30px] flex justify-center items-center overflow-hidden border-t border-[#ffb400]"
+    :class="[
+      'bg-[#222222] fixed w-full bottom-0 left-0 z-50 rounded-tr-[30px] rounded-tl-[30px] flex justify-center items-center overflow-hidden border-t border-[#ffb400]',
+      { 'anim-initial': !started }
+    ]"
   >
     <p
       ref="loadingText"
@@ -29,12 +32,13 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
 
 const emit = defineEmits(['loaded'])
 
 const anim = ref(null)
 const loadingText = ref(null)
+const started = ref(false)
 
 const UNIT = 'dvh'
 
@@ -42,9 +46,6 @@ function animateLoading() {
   if (!anim.value || !loadingText.value) return
 
   let sum = 100
-
-  // مقدار اولیه: کل صفحه
-  anim.value.style.height = sum + UNIT
 
   const firstPhaseDuration = 500
   const secondPhaseDuration = 300
@@ -107,8 +108,24 @@ function animateLoading() {
   requestAnimationFrame(step)
 }
 
-onMounted(() => {
-  animateLoading()
+onMounted(async () => {
+  await nextTick()
+
+  // 1. کلاس اولیه رو بردار
+  started.value = true
+
+  // 2. صبر کن Vue کلاس رو از DOM حذف کنه
+  await nextTick()
+
+  // 3. ارتفاع رو دستی ست کن (چون کلاس حذف شده، دیگه CSS ارتفاع نمی‌ده)
+  anim.value.style.height = '100' + UNIT
+
+  // 4. یه فریم صبر کن تا مرورگر ارتفاع اولیه رو ثبت کنه
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      animateLoading()
+    })
+  })
 })
 </script>
 
@@ -120,7 +137,11 @@ onMounted(() => {
 
 #anim {
   z-index: 9999 !important;
-  /* height اینجا نگذار — JS مدیریت می‌کند */
-  /* top: 0 را حذف کن — با bottom: 0 تداخل دارد */
+}
+
+/* ارتفاع اولیه فقط از طریق این کلاس — تا JS آماده بشه */
+.anim-initial {
+  height: 100dvh;
+  min-height: 100vh;
 }
 </style>
