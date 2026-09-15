@@ -4,7 +4,7 @@ import fa from '~/i18n/locales/fa.json'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const i18n = createI18n({
-    legacy: true,
+    legacy: false,
     locale: 'en',
     fallbackLocale: 'en',
     messages: {
