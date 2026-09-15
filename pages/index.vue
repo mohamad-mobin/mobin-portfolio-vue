@@ -125,17 +125,9 @@
 </template>
 <script>
 import { onMounted, ref } from "vue"
-import loadingBar from '@/utils/loadingBar.vue';
-import toggleLang from "@/utils/toggleLang.vue";
-import Cursor from '../utils/cursor.vue'
 import { stopLenis, startLenis } from '@/utils/lenis.js'
 
 export default {
-  components:{
-    Cursor,
-    loadingBar,
-    toggleLang
-  },
     data() {
     return {
       loaded: false

@@ -3,12 +3,12 @@
 
 
 
-  <loadingBar @loaded="loadingFinished" />
+  <LoadingBar @loaded="loadingFinished" />
 
   <Cursor :propsImageStatus="imageStatus" :propsCopyStatus="copyStatus"/>
 
 
-        <toggleLang/>
+        <ToggleLang/>
 
         <div class="container mx-auto pt-10">
             <div class="rellax" data-rellax-speed="3">
@@ -707,10 +707,7 @@
 
 </template>
 <script>
-import loadingBar from '@/utils/loadingBar.vue';
-import Cursor from '../utils/cursor.vue'
 import { onMounted, onBeforeUnmount } from "vue"
-import toggleLang from '@/utils/toggleLang.vue';
 import { stopLenis, startLenis } from '@/utils/lenis.js'
 
 import { ref } from 'vue';
@@ -801,11 +798,6 @@ export default {
 
     return { isModalVisible, progress, openModal, handleClick };
   },
-  components:{
-    Cursor,
-    loadingBar,
-    toggleLang
-  }
 };
 </script>
 

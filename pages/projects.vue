@@ -168,10 +168,6 @@
 import { onMounted } from "vue"
 import { stopLenis, startLenis } from '@/utils/lenis.js'
 
-import loadingBar from '@/utils/loadingBar.vue';
-import Cursor from '../utils/cursor.vue'
-import toggleLang from "@/utils/toggleLang.vue";
-
 import JoJoImage from '@/assets/images/banner-images/jojo.webp'
 import JoJoDescImage from '@/assets/images/logos/banner.webp'
 
@@ -276,11 +272,6 @@ export default {
         TrueImageStatus(){
             this.imageStatus = true
         }
-    },
-    components:{
-        Cursor,
-        loadingBar,
-        toggleLang,
     },
     setup() {
         onMounted(() => {
