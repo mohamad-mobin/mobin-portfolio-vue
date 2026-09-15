@@ -1,0 +1,29 @@
+import { createI18n } from 'vue-i18n'
+
+export default defineNuxtPlugin(async (nuxtApp) => {
+  const i18n = createI18n({
+    legacy: true,
+    locale: 'en',
+    fallbackLocale: 'en',
+    messages: {}
+  })
+
+  try {
+    const [enResponse, faResponse] = await Promise.all([
+      fetch('/translate/en.json'),
+      fetch('/translate/fa.json')
+    ])
+
+    const en = await enResponse.json()
+    const fa = await faResponse.json()
+
+    i18n.global.setLocaleMessage('en', en)
+    i18n.global.setLocaleMessage('fa', fa)
+
+    console.log('✅ Translations loaded')
+  } catch (error) {
+    console.error('❌ Failed to load translations:', error)
+  }
+
+  nuxtApp.vueApp.use(i18n)
+})
