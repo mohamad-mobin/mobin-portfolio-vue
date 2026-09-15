@@ -4,7 +4,7 @@
 
 
         <ClientOnly>
-  <loadingBar />
+  <loadingBar @loaded="loadingFinished" />
 </ClientOnly>
 
 <ClientOnly>
@@ -726,6 +726,14 @@ export default {
         }
     },
     methods:{
+        async loadingFinished(){
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+
+    const { initLenis } = await import('@/utils/lenis.js')
+
+    initLenis()
+        },
     FalseImageStatus(){
         this.imageStatus = false
             
@@ -777,17 +785,14 @@ export default {
 
         onMounted(() => {
             window.scrollTo(0, 0);
-            document.body.style.overflow = 'hidden';
         });
 
         onMounted(async () => {
             const AOS = (await import('aos')).default
             const Rellax = (await import('rellax')).default
-            const { initLenis } = await import('@/utils/lenis.js')
 
             new Rellax('.rellax')
 
-            initLenis()
 
             AOS.init({
                 duration: 1000,
@@ -795,8 +800,6 @@ export default {
             })
         })
 
-        onBeforeUnmount(() => {
-        })
 
     return { isModalVisible, progress, openModal, handleClick };
   },

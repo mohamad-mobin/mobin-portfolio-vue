@@ -1,7 +1,7 @@
 <template>
 
     <ClientOnly>
-  <loadingBar />
+  <loadingBar @loaded="loadingFinished" />
 </ClientOnly>
 
 <ClientOnly>
@@ -265,6 +265,15 @@ export default {
         }
     },
     methods:{
+        async loadingFinished(){
+
+            document.documentElement.style.overflow = '';
+            document.body.style.overflow = '';
+
+        const { initLenis } = await import('@/utils/lenis.js')
+
+        initLenis()
+        },
         FalseImageStatus(){
             this.imageStatus = false
             
@@ -281,17 +290,10 @@ export default {
     setup() {
         onMounted(() => {
             window.scrollTo(0, 0);
-            document.body.style.overflow = 'hidden';
         });
 
         onMounted(async() => {
             const AOS = (await import('aos')).default
-            const { initLenis } = await import('@/utils/lenis.js')
-            setTimeout(() => {
-                    initLenis();
-                    document.body.style.overflowY = 'visible'
-                    document.body.style.overflowX = 'hidden'
-            }, 800);
 
             AOS.init({
                 duration: 1000,
@@ -299,10 +301,6 @@ export default {
             });
 
         });
-
-        onBeforeUnmount(() => {
-            
-        })
     }
 }
 </script>

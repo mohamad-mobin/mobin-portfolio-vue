@@ -9,6 +9,7 @@
       class="text-[#FFB400] text-5xl font-poppins flex justify-center items-center gap-x-4"
     >
       LOADING
+
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -27,74 +28,95 @@
   </div>
 </template>
 
-<script>
-import { ref, onMounted } from 'vue';
+<script setup>
+import { ref, onMounted } from 'vue'
 
-export default {
-  name: 'LoadingBar',
-  setup() {
-    const anim = ref(null);
-    const loadingText = ref(null);
+const emit = defineEmits(['loaded']);
 
-    function animateLoading() {
-      if (!anim.value || !loadingText.value) return;
+const anim = ref(null)
+const loadingText = ref(null)
 
-      let sum = 100;
-      anim.value.style.height = sum + "%";
+function animateLoading() {
+  if (!anim.value || !loadingText.value) return
 
-      const firstPhaseDuration = 500;  // کاهش ارتفاع اولیه
-      const secondPhaseDuration = 300; // کاهش ارتفاع ثانویه
-      let startTime = null;
+  let sum = 100
 
-      function step(currentTime) {
-        if (!startTime) startTime = currentTime;
+  anim.value.style.height = sum + '%'
 
-        const elapsedTime = currentTime - startTime;
+  const firstPhaseDuration = 500
+  const secondPhaseDuration = 300
 
-        if (elapsedTime < firstPhaseDuration) {
-          const progress = elapsedTime / firstPhaseDuration;
-          sum = 100 - 20 * progress; // کمتر بالا پایین بشه
-          if (sum < 80) sum = 80;
-          anim.value.style.height = sum + "%";
-          requestAnimationFrame(step);
-        } else {
-          const secondPhaseElapsedTime = elapsedTime - firstPhaseDuration;
-          if (secondPhaseElapsedTime < secondPhaseDuration) {
-            const progress = secondPhaseElapsedTime / secondPhaseDuration;
-            sum = 80 - 80 * progress;
-            if (sum < 0) sum = 0;
-            anim.value.style.height = sum + "%";
-            requestAnimationFrame(step);
-          } else {
-            sum = 0;
-            anim.value.style.height = "0%";
-            anim.value.style.pointerEvents = "none";
-            anim.value.style.borderTop = "none"; // حذف border-top
-            loadingText.value.style.display = "none";
-          }
-        }
-      }
+  let startTime = null
 
-      requestAnimationFrame(step);
+  function step(currentTime) {
+    if (!startTime) {
+      startTime = currentTime
     }
 
-    onMounted(() => {
-      animateLoading();
-    });
+    const elapsedTime = currentTime - startTime
 
-    return {
-      anim,
-      loadingText,
-      animateLoading
-    };
+    // Phase 1
+    if (elapsedTime < firstPhaseDuration) {
+      const progress = elapsedTime / firstPhaseDuration
+
+      sum = 100 - 20 * progress
+
+      if (sum < 80) {
+        sum = 80
+      }
+
+      anim.value.style.height = sum + '%'
+
+      requestAnimationFrame(step)
+    }
+
+    // Phase 2
+    else {
+      const secondPhaseElapsedTime =
+        elapsedTime - firstPhaseDuration
+
+      if (secondPhaseElapsedTime < secondPhaseDuration) {
+        const progress =
+          secondPhaseElapsedTime / secondPhaseDuration
+
+        sum = 80 - 80 * progress
+
+        if (sum < 0) {
+          sum = 0
+        }
+
+        anim.value.style.height = sum + '%'
+
+        requestAnimationFrame(step)
+      }
+
+      // Animation finished
+      else {
+        sum = 0
+
+        anim.value.style.height = '0%'
+        anim.value.style.pointerEvents = 'none'
+        anim.value.style.borderTop = 'none'
+
+        loadingText.value.style.display = 'none'
+
+        emit('loaded')
+      }
+    }
   }
-};
+
+  requestAnimationFrame(step)
+}
+
+onMounted(() => {
+  animateLoading()
+})
 </script>
 
 <style scoped>
 @font-face {
   font-family: poppins;
-  src: url(../assets/fonts/Poppins-Regular.ttf);
+  src: url('../assets/fonts/Poppins-Regular.ttf');
 }
 
 #anim {
