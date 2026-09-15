@@ -1,12 +1,12 @@
 <template>
     <div class="wrapper">
-<ClientOnly>
-  <loadingBar />
-</ClientOnly>
-
 <!-- <ClientOnly>
-  <Cursor />
+  <loadingBar />
 </ClientOnly> -->
+
+<ClientOnly>
+  <Cursor />
+</ClientOnly>
 
 
         <toggleLang/>
