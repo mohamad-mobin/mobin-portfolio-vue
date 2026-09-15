@@ -100,45 +100,31 @@
 <script setup>
 import { ref, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { fetchTranslations } from '@/api'
 
-// i18n setup
-const { locale, setLocaleMessage } = useI18n()
+const { locale } = useI18n()
+
 const currentLang = ref('fa')
 const btn = ref(null)
 
-onMounted(async () => {
-    const savedLang = localStorage.getItem('lang')
+onMounted(() => {
+  const savedLang = localStorage.getItem('lang')
 
-    if (savedLang) {
-        currentLang.value = savedLang
-        locale.value = savedLang
+  if (savedLang === 'fa' || savedLang === 'en') {
+    currentLang.value = savedLang
+    locale.value = savedLang
+  } else {
+    localStorage.setItem('lang', 'en')
+    currentLang.value = 'en'
+    locale.value = 'en'
+  }
 
-        if (!setLocaleMessage[savedLang]) {
-            const data = await fetchTranslations(savedLang)
-            setLocaleMessage(savedLang, data)
-        }
-    } else {
-        localStorage.setItem('lang', 'en')
-        currentLang.value = 'en'
-        locale.value = 'en'
-
-        const data = await fetchTranslations('en')
-        setLocaleMessage('en', data)
-    }
-
-    setTimeout(() => {
-        btn.value.classList.add('duration-200')
-    }, 100);
+  setTimeout(() => {
+    btn.value?.classList.add('duration-200')
+  }, 100)
 })
 
-async function toggleLang() {
+function toggleLang() {
   const newLang = currentLang.value === 'fa' ? 'en' : 'fa'
-
-  if (!setLocaleMessage[newLang]) {
-    const data = await fetchTranslations(newLang)
-    setLocaleMessage(newLang, data)
-  }
 
   locale.value = newLang
   currentLang.value = newLang
