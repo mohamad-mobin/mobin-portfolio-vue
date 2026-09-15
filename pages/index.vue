@@ -180,6 +180,9 @@ onMounted(async () => {
 </script>
 
 <style>
+html,body{
+    overflow-x: hidden;
+}
     @font-face {
         font-family: poppins;
         src: url(../assets/fonts/Poppins-Regular.ttf);
