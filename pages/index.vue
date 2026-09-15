@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
 <ClientOnly>
-  <loadingBar />
+  <loadingBar @loaded="loadingFinished" />
 </ClientOnly>
 
 <ClientOnly>
@@ -132,6 +132,7 @@ import { onMounted, ref } from "vue"
 import loadingBar from '@/utils/loadingBar.vue';
 import toggleLang from "@/utils/toggleLang.vue";
 import Cursor from '../utils/cursor.vue'
+import { stopLenis, startLenis } from '@/utils/lenis.js'
 
 export default {
   components:{
@@ -144,6 +145,16 @@ export default {
       loaded: false
     }
   },
+  methods:{
+        async loadingFinished(){
+
+            document.documentElement.style.overflow = '';
+            document.body.style.overflow = '';
+            startLenis()
+
+     
+        },
+  },
   mounted() {
     setTimeout(() => {
       this.loaded = true
@@ -154,6 +165,12 @@ export default {
     const cinemaScreen = ref(null)
 
     onMounted(async() => {
+        window.scrollTo(0, 0);
+
+            document.documentElement.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            stopLenis()
+
     const AOS = (await import('aos')).default
 
       window.scrollTo(0, 0)
