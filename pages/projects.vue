@@ -1,6 +1,12 @@
 <template>
-    <Cursor :propsImageStatus="imageStatus"/>
-    <loadingBar/>
+
+    <ClientOnly>
+  <loadingBar />
+</ClientOnly>
+
+<ClientOnly>
+  <Cursor :propsImageStatus="imageStatus"/>
+</ClientOnly>
     <toggleLang />
 
     

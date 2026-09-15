@@ -1,7 +1,17 @@
 <template>
     <div class="wrapper">
-        <loadingBar/>
-        <Cursor :propsImageStatus="imageStatus" :propsCopyStatus="copyStatus"/>
+
+
+
+        <ClientOnly>
+  <loadingBar />
+</ClientOnly>
+
+<ClientOnly>
+  <Cursor :propsImageStatus="imageStatus" :propsCopyStatus="copyStatus"/>
+</ClientOnly>
+
+
         <toggleLang/>
 
         <div class="container mx-auto pt-10">
