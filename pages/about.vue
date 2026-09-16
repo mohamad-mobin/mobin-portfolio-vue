@@ -121,7 +121,7 @@
             </div>
         </div>
 
-        <TheTitle :titleContent="['My','Tools', 'Utensils']" />
+        <TheTitle :titleContent="['My','Techs', 'FrameWork']" />
 
         <div>
             <div style="font-family: poppins;" class="flex flex-wrap justify-center gap-5 px-5 pt-5 text-center text-white max-w-7xl mx-auto z-50">
@@ -260,17 +260,6 @@
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
 
       <div data-aos="zoom-in" class="relative flex z-10 items-center justify-center pt-10 pb-26 md:pb-10 md:py-20 px-5 md:px-20">
   
