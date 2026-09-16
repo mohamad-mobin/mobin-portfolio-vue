@@ -11,14 +11,15 @@
                                             
                                 <div class="flex flex-col items-center justify-center space-y-2">
                                     <div class="relative items-center justify-center flex w-24 h-24 sm:w-28 sm:h-28">
-                                        <span class="absolute text-xl font-bold text-white">{{ percent }}%</span>
+                                        <img class=" size-22 bottom-2 right-2" :src="props.imgSrc" alt="">
                                     </div>
                                 </div>
 
                                 <div 
                                 :class="boxGradiant"
                                 class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                <img class="absolute size-7 bottom-2 right-2" :src="props.imgSrc" alt="">
+                                        <span class="absolute text-[#FFB400] right-2 bottom-2 text-xl font-bold">{{ percent }}%</span>
+                                
                             </div>
 </template>
 
