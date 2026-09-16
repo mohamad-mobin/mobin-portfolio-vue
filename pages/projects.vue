@@ -8,19 +8,9 @@
 
 <div class="flex w-full justify-center items-center h-screen">
 
-    
+
     <div class="container absolute size-full flex flex-col lg:pl-16 xl::pl-20">
-    <div data-aos="flip-left"
-    data-aos-easing="ease-out-cubic"
-    data-aos-duration="2000" class="flex justify-center items-center pt-10">
-        <div class="relative pb-26 text-center">
-            <p id="myProjects" class="absolute text-4xl md:text-5xl w-100 justify-center items-center top-[19px] md:top-5 left-1/2 flex gap-x-2 transform -translate-x-1/2">
-                <span class="text-white bestParagraph">Vue & Nuxt</span>
-                <span class="text-[#FFB400]">js</span>
-            </p>
-            <p id="myWorks" class="absolute text-7xl md:text-8xl text-[#222222] -z-10 left-1/2 transform -translate-x-1/2 md:opacity-70">Vue</p>
-        </div>
-    </div>
+        <TheTitle :titleContent="['Vue & Nuxt','Js', 'Techs']" />
     
     
     <div class="flex gap-15 flex-wrap justify-center items-center gap-y-20 pt-16">
@@ -61,18 +51,7 @@
         </div>
     </div>
 
-    <div data-aos="flip-left"
-    data-aos-easing="ease-out-cubic"
-    data-aos-duration="2000" class="flex justify-center items-center pt-10">
-        <div class="relative pb-26 text-center">
-            <p id="myProjects" class="absolute text-4xl md:text-5xl top-[19px] md:top-5 left-1/2 flex gap-x-2 transform -translate-x-1/2">
-                <span class="text-white bestParagraph whitespace-nowrap">Best</span>
-                <span class="text-[#FFB400] whitespace-nowrap">Vanilla Js</span>
-            </p>
-            <p id="myWorks" class="absolute text-7xl md:text-8xl text-[#222222] -z-10 left-1/2 transform -translate-x-1/2 md:opacity-70">Vanilla</p>
-        </div>
-    </div>
-    
+        <TheTitle :titleContent="['Vanilla','Js', 'Vanilla']" />
     
     <div class="flex gap-15 flex-wrap pb-30 justify-center items-center gap-y-20 pt-16">
         <div v-for="(project, index) in bestProjects" :key="project.name" data-aos="fade-up"

@@ -12,15 +12,7 @@
 
         <div class="container mx-auto pt-10">
             <div class="rellax" data-rellax-speed="3">
-                <div data-aos="flip-left" data-aos-offset="0" data-aos-duration="2000" class="relative md:pb-36 pb-[100px] text-center">
-                    <p id="myProjects" class="absolute text-4xl md:text-5xl top-[19px] md:top-8 left-1/2 flex gap-x-2 transform -translate-x-1/2">
-                      <span class="text-white aboutParagraph">About</span>
-                      <span class="text-[#FFB400]">Me</span>
-                    </p>
-                    <p id="myWorks" class="absolute text-7xl md:text-8xl text-[#222222] -z-10 left-1/2 transform -translate-x-1/2">
-                      RESUME
-                    </p>
-                </div>
+                <TheTitle :titleContent="['About', 'Me','RESUME']"/>
                 <div class="text-white font-poppins flex flex-col lg:flex-row justify-center items-center">
                   <!-- personal infos -->
                 <div data-aos="fade-left" data-aos-duration="2000" style="font-family: poppins,vazir;" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl w-full px-5">
@@ -116,15 +108,8 @@
                 </div>
             </div>
 
-            <div data-aos="flip-left" data-aos-offset="0" data-aos-duration="2000" class="relative md:pb-36 mt-10 pb-[100px] text-center">
-                    <p id="myProjects" class="absolute text-4xl md:text-5xl top-[19px] md:top-8 left-1/2 flex gap-x-2 transform -translate-x-1/2">
-                      <span class="text-white aboutParagraph">My</span>
-                      <span class="text-[#FFB400]">Social</span>
-                    </p>
-                    <p id="myWorks" class="absolute text-7xl md:text-8xl text-[#222222] -z-10 left-1/2 transform -translate-x-1/2">
-                        Links
-                    </p>
-            </div>
+                <TheTitle :titleContent="['My', 'Social','Links']"/>
+
 
             <div class="relative flex gap-5 justify-center h-16">
                 <a target="_blank" class="bg-[#222121] group hover:animate-pulse hover:p-5 duration-700 rounded-full p-3 size-fit" href="https://github.com/mohamad-mobin">
@@ -135,15 +120,9 @@
                 </a>
             </div>
         </div>
-        <div data-aos="flip-left" data-aos-offset="0" data-aos-duration="2000" class="relative md:pb-36 mt-10 pb-[100px] text-center">
-                    <p id="myProjects" class="absolute text-4xl md:text-5xl top-[19px] md:top-8 left-1/2 flex gap-x-2 transform -translate-x-1/2">
-                      <span class="text-white aboutParagraph">My</span>
-                      <span class="text-[#FFB400]">Tools</span>
-                    </p>
-                    <p id="myWorks" class="absolute text-7xl md:text-8xl text-[#222222] -z-10 left-1/2 transform -translate-x-1/2">
-                      Utensils
-                    </p>
-        </div>
+
+        <TheTitle :titleContent="['My','Tools', 'Utensils']" />
+
         <div>
             <div style="font-family: poppins;" class="flex flex-wrap justify-center gap-5 px-5 pt-5 text-center text-white max-w-7xl mx-auto z-50">
              
@@ -670,6 +649,7 @@
 import { onMounted, onBeforeUnmount, ref } from "vue"
 import { stopLenis, startLenis } from '@/utils/lenis.js'
 import MiniSideBar from "../components/miniSideBar.vue"
+import TheTitle from "../components/theTitle.vue"
 
 const currentPageConst = "about"
 
