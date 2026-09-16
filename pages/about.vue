@@ -130,7 +130,7 @@
                 <div class="flex gap-5">
                     <!-- html -->
                         <div class="hover:scale-110 duration-300">
-                           <Tools
+                           <Tools&techs
                            hoverBorder="hover:border-orange-700"
                            boxGradiant="bg-gradient-to-br from-orange-500/10 to-transparent" 
                            :imgSrc="htmlImg" 
@@ -140,7 +140,7 @@
 
                         <!-- css -->
                        <div class="hover:scale-110 duration-300">
-                            <Tools
+                            <Tools&techs
                                 hoverBorder="hover:border-blue-600"
                                 boxGradiant="bg-gradient-to-br from-blue-600/10 to-transparent" 
                                 :imgSrc="cssImg" 
@@ -153,7 +153,7 @@
                 <div class="flex gap-5">
                     <!-- tailwind css -->
                     <div class="hover:scale-110 duration-300">
-                        <Tools
+                        <Tools&techs
                                 hoverBorder="hover:border-sky-500"
                                 boxGradiant="bg-gradient-to-br from-sky-500/10 to-transparent" 
                                 :imgSrc="tailwindImg" 
@@ -163,7 +163,7 @@
 
                     <!-- javascript -->
                     <div class="hover:scale-110 duration-300">
-                        <Tools
+                        <Tools&techs
                                 hoverBorder="hover:border-yellow-500"
                                 boxGradiant="bg-gradient-to-br from-yellow-500/10 to-transparent" 
                                 :imgSrc="javascriptImg" 
@@ -178,7 +178,7 @@
                 <div class="flex gap-5">
                     
                     <div class="hover:scale-110 duration-300">
-                        <Tools
+                        <Tools&techs
                                 hoverBorder="hover:border-teal-500"
                                 boxGradiant="bg-gradient-to-br from-teal-500/10 to-transparent" 
                                 :imgSrc="vueImg" 
@@ -187,7 +187,7 @@
                     </div>
     
                     <div class="hover:scale-110 duration-300">
-                        <Tools
+                        <Tools&techs
                                 hoverBorder="hover:border-sky-500"
                                 boxGradiant="bg-gradient-to-br from-sky-500/10 to-transparent" 
                                 :imgSrc="vuetifyImg" 
@@ -199,7 +199,7 @@
                 <div class="flex gap-5">
                     <div class="hover:scale-110 duration-300">
 
-                        <Tools
+                        <Tools&techs
                                 hoverBorder="hover:border-teal-500"
                                 boxGradiant="bg-gradient-to-br from-teal-500/10 to-transparent" 
                                 :imgSrc="nuxtImg" 
@@ -209,7 +209,7 @@
     
                     <div class="hover:scale-110 duration-300">
 
-                        <Tools
+                        <Tools&techs
                                 hoverBorder="hover:border-blue-600"
                                 boxGradiant="bg-gradient-to-br from-blue-600/10 to-transparent" 
                                 :imgSrc="typescriptImg" 
@@ -220,33 +220,42 @@
                 </div>
 
 
-                <div class="flex gap-5">
-                    <div class="hover:scale-110 duration-300">
-
-                        <Tools
-                                hoverBorder="hover:border-orange-700"
-                                boxGradiant="bg-gradient-to-br from-orange-500/10 to-transparent" 
-                                :imgSrc="gitImg" 
-                                :percent="90" 
-                                :techName="'Git'" />
-
-                    </div>
-    
-                    <div class="hover:scale-110 duration-300">
-
-                        <Tools
-                                hoverBorder="hover:border-blue-600"
-                                boxGradiant="bg-gradient-to-br from-blue-600/10 to-transparent" 
-                                :imgSrc="githubImg" 
-                                :percent="85" 
-                                :techName="'GitHub'" />
-                    </div>
-                </div>
-
-
+                
+                
             </div>
             
         </div>
+
+        <TheTitle :titleContent="['My','Tools', 'Utensils']" />
+
+
+        <div class="flex flex-wrap justify-center gap-5 px-5 pt-5 pb-28 md:pb-5 text-center text-white max-w-7xl mx-auto z-50">
+
+            
+                    <div class="flex gap-5">
+                        <div class="hover:scale-110 duration-300">
+            
+                            <Tools&techs
+                                    hoverBorder="hover:border-orange-700"
+                                    boxGradiant="bg-gradient-to-br from-orange-500/10 to-transparent" 
+                                    :imgSrc="gitImg" 
+                                    :percent="90" 
+                                    :techName="'Git'" />
+            
+                        </div>
+            
+                        <div class="hover:scale-110 duration-300">
+            
+                            <Tools&techs
+                                    hoverBorder="hover:border-blue-600"
+                                    boxGradiant="bg-gradient-to-br from-blue-600/10 to-transparent" 
+                                    :imgSrc="githubImg" 
+                                    :percent="85" 
+                                    :techName="'GitHub'" />
+                        </div>
+                    </div>
+        </div>
+
     
      
     
