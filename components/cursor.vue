@@ -1,5 +1,4 @@
 <template>
-  <!-- دایره قرمز ثابت -->
    
   <div id="redCircle" ref="redCircle"
   :class="[
@@ -11,7 +10,6 @@
     </p>
   </div>
 
-  <!-- موس -->
   <div ref="follower" class="cursor-follower z-40"></div>
   <div ref="cursor" class="cursor z-50"></div>
 </template>
@@ -35,7 +33,7 @@ onMounted(async() => {
   if (isMobile) {
     cursor.value.style.display = "none";
     follower.value.style.display = "none";
-    if (redCircle.value) redCircle.value.style.display = "none"; // ✅ توی موبایل مخفی بشه
+    if (redCircle.value) redCircle.value.style.display = "none";
     return;
   }
   const lenis = getLenis();
@@ -43,11 +41,11 @@ onMounted(async() => {
   let posX = 0, posY = 0;
   let mouseX = window.innerWidth / 2;
   let mouseY = window.scrollY;
-  let rawMouseY = 0; // موقعیت موس بدون اسکرول
+  let rawMouseY = 0;
   let hasMouseMoved = false;
 
   // -------------------------
-  // 🎯 انیمیشن cursor و follower
+  //  animation cursor و follower
   // -------------------------
   function animateCursor() {
     const scrollY = lenis ? lenis.scroll : window.scrollY;
@@ -84,7 +82,7 @@ onMounted(async() => {
     if (!hasMouseMoved) {
       cursor.value.style.opacity = "1";
       follower.value.style.opacity = "1";
-      if (redCircle.value) redCircle.value.style.opacity = "1"; // ✅ ظاهر بشه
+      if (redCircle.value) redCircle.value.style.opacity = "1";
       hasMouseMoved = true;
     }
   }
@@ -107,7 +105,6 @@ onMounted(async() => {
 }
 
 html, body {
-  /* فقط در دسکتاپ */
   cursor: none;
 }
 
@@ -186,7 +183,7 @@ position: absolute;
   height: 80px;
 }
 
-/* ✅ مخفی کردن کامل cursor در موبایل */
+/* hidding cursor in mobile */
 @media screen and (max-width: 768px) {
   html, body {
     cursor: auto !important;
