@@ -37,10 +37,21 @@
         data-aos-duration="1300" 
         class="flex flex-col h-full pt-4 md:pt-16 items-center md:justify-center md:fixed size-[50%] gap-x-10 left-[30%] top-25 md:top-12.5 w-full md:w-fit pb-36 overflow-visible">
     
-        <h1 class="text-left leading-tight group duration-300">
-            <p id="mobin" class="uppercase duration-300 group-hover:-translate-x-5 group-hover:scale-95 font-black text-[#FFB400] text-4xl md:text-[30px] lg:text-[4vw] relative before:absolute before:md:block before:hidden lg:before:w-10 before:h-1 before:bg-[#FFB400] before:rounded-2xl before:-left-10 before:bottom-6 before:w-7 lg:before:bottom-8 lg:before:-left-16 tracking-wider" style="font-family: lalezar;">{{ $t('imMobinRezaee') }}</p>
-            <p class="uppercase duration-300 group-hover:translate-x-10 text-left text-white text-[25px] lg:text-[2.5vw] 
-            font-black tracking-wider" style="font-family: lalezar;">{{ $t('webDeveloper') }}</p>
+        <h1 class="group duration-300 text-left leading-tight uppercase font-black tracking-wider">
+            <span
+                id="mobin"
+                class="block text-[#FFB400] text-4xl md:text-[30px] lg:text-[4vw] relative duration-300 group-hover:-translate-x-5 group-hover:scale-95
+                    before:absolute before:hidden md:before:block before:h-1 before:w-7 lg:before:w-10 before:bg-[#FFB400] before:rounded-2xl before:bottom-6 lg:before:bottom-8 before:-left-10 lg:before:-left-16"
+                style="font-family: lalezar;"
+            >
+                {{ $t('imMobinRezaee') }}
+            </span>
+            <span
+                class="block text-white text-[25px] lg:text-[2.5vw] duration-300 group-hover:translate-x-10"
+                style="font-family: lalezar;"
+            >
+                {{ $t('webDeveloper') }}
+            </span>
         </h1>
     
         <p class="py-3 leading-loose hover:scale-105 duration-300 text-left md:text-center md:w-[60%] w-[70%] text-md lg:text-[1.1vw]" style="font-family: poppins, vazir;">{{ $t('imIranian') }}</p>
