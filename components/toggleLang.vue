@@ -2,14 +2,14 @@
 <template>
   <div 
     id="container" 
-    class="w-[90px] hover:scale-110 fixed right-2 top-2 z-50 h-10 bg-gradient-to-r from-gray-700 border border-white/20 shadow-md shadow-white/20 to-gray-800
+    class="w-22.5 hover:scale-110 fixed right-2 top-2 z-50 h-10 bg-linear-to-r from-gray-700 border border-white/20 shadow-md shadow-white/20 to-gray-800
  rounded-3xl py-1 px-1 flex justify-between duration-300"
     @click="toggleLang"
   >
     <!-- icon سمت چپ -->
     <div class="flex items-center">
       <p class="absolute pl-1 text-white"> 
-<svg class="w-[25px]" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
+<svg class="w-6.25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" viewBox="0 0 512 512" xml:space="preserve">
                             <path style="fill:#F5F5F5;" d="M473.655,88.276H38.345C17.167,88.276,0,105.443,0,126.621V385.38  c0,21.177,17.167,38.345,38.345,38.345h435.31c21.177,0,38.345-17.167,38.345-38.345V126.621  C512,105.443,494.833,88.276,473.655,88.276z"></path>
                             <g>
                                 <path style="fill:#FF4B55;" d="M2.109,114.08H509.89c-5.196-15.017-19.452-25.804-36.235-25.804H38.345   C21.561,88.276,7.306,99.063,2.109,114.08z"></path>
