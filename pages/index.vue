@@ -187,18 +187,4 @@ html,body{
     .wrapper{
         overflow-x: hidden;
     }
-
-    .custom-skeleton::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgba(44,44,44,0.5) 25%, rgba(60,60,60,0.5) 50%, rgba(44,44,44,0.5) 75%);
-  animation: wave 1.5s infinite;
-}
-
-@keyframes wave {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-}
 </style>
