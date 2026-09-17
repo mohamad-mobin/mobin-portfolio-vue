@@ -21,7 +21,7 @@
       class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
     ></div>
 
-    <span class="absolute text-[#FFB400] right-2 bottom-2 text-xl font-bold">{{ percent }}%</span>
+    <span class="absolute text-[#FFB400] right-2 bottom-2 text-sm md:text-xl font-bold">{{ percent }}%</span>
   </div>
 </template>
 
