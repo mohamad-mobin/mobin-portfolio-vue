@@ -229,7 +229,7 @@
         <TheTitle :titleContent="['My','Tools', 'Utensils']" />
 
 
-        <div style="font-family: poppins;" class="flex flex-wrap justify-center gap-5 px-5 pt-5 pb-28 md:pb-5 text-center text-white max-w-7xl mx-auto z-50">
+        <div style="font-family: poppins;" class="flex flex-wrap justify-center gap-5 px-5 pt-5 md:pb-5 text-center text-white max-w-7xl mx-auto z-50">
 
             
                     <div class="flex gap-5">
@@ -278,7 +278,7 @@
         </div>
 
 
-        <div style="font-family: poppins;" class="flex flex-wrap justify-center gap-5 px-5 pt-5  md:pb-5 text-center text-white max-w-7xl mx-auto z-50">
+        <div style="font-family: poppins;" class="flex flex-wrap justify-center gap-5 px-5 md:pb-5 text-center text-white max-w-7xl mx-auto z-50">
 
             
                     <div class="flex gap-5">
