@@ -2,8 +2,8 @@
    <div data-aos="flip-left"
    :class="hoverBorder"
                                 class="skill-card group relative overflow-hidden
-                                        bg-[#131414] border-1 border-[#3a3a3d]
-                                        sm:w-[200px] sm:h-[200px] w-[170px] h-[170px]
+                                        bg-[#131414] border border-[#3a3a3d]
+                                        sm:w-50 sm:h-50 w-42.5 h-42.5
                                         sm:p-6 p-4 rounded-3xl flex flex-col justify-center items-center
                                         transition-all duration-300 hover:shadow-lg hover:shadow-orange-900/50 toolsBox">
                                                     
