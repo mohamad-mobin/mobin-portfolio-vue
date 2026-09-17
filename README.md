@@ -36,7 +36,7 @@ the skills I have developed throughout my journey as a frontend developer.
 
 | About Me | Projects | Technologies & Tools |
 |:---:|:---:|:---:|
-| <img src="./assets/images/repo-images/me.jpg" alt="About Me" width="300"> | <img src="./assets/images/repo-images/projects.jpg" alt="Projects" width="300"> | <img src="./assets/images/repo-images/tools.jpg" alt="Technologies & Tools" width="300"> |
+| <img src="./assets/images/repo-images/me.jpg" alt="About Me" width="300"> | <img src="./assets/images/repo-images/projects.jpg" alt="Projects" width="300"> | <img src="./assets/images/repo-images/tools.png" alt="Technologies & Tools" width="300"> |
 
 </div>
 
