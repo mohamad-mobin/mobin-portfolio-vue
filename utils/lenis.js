@@ -9,15 +9,16 @@ export function initLenis(options = {}) {
   const isMobile = /Mobi|Android/i.test(navigator.userAgent)
 
   lenis = new Lenis({
-    duration: 2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    duration: 3.5,
+    easing: (t) => 1 - Math.pow(1 - t, 5),
     direction: "vertical",
     gestureDirection: "vertical",
     smooth: true,
-    mouseMultiplier: 1.2,
+    wheelMultiplier: 0.7,
     smoothTouch: !isMobile,
-    touchMultiplier: isMobile ? 1 : 2,
+    touchMultiplier: isMobile ? 0.6 : 1,
     infinite: false,
+    lerp: 0.05,
     ...options,
   })
 
@@ -28,7 +29,6 @@ export function initLenis(options = {}) {
 
   rafId = requestAnimationFrame(raf)
 
-  // Anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (e) => {
       e.preventDefault()
