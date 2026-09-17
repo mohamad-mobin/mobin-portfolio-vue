@@ -1,7 +1,7 @@
 <template>
   <div
     id="container"
-    class="w-22.5 hover:scale-110 fixed right-2 top-2 z-50 h-10 bg-linear-to-r from-gray-700 border border-white/20 shadow-md shadow-white/20 to-gray-800
+    class="w-22.5 scale-125 lg:scale-150 lg:hover:scale-180 fixed right-3 top-3 lg:right-10 lg:top-10 z-50 h-10 bg-linear-to-r from-gray-700 border border-white/20 shadow-md shadow-white/20 to-gray-800
            rounded-3xl py-1 px-1 flex justify-between duration-300"
     @click="toggleLang"
   >
