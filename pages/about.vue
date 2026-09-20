@@ -157,7 +157,7 @@
                                 hoverBorder="hover:border-sky-500"
                                 boxGradiant="bg-gradient-to-br from-sky-500/10 to-transparent" 
                                 :imgSrc="tailwindImg" 
-                                :percent="95" 
+                                :percent="100" 
                                 :techName="'TailwindCss'" />
                     </div>
 
