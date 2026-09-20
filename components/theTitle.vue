@@ -10,7 +10,7 @@
                 <span class="text-[#FFB400]">{{ titleContent[1] }}</span>
             </p>
 
-            <p id="myWorks" class="absolute text-7xl md:text-8xl text-[#222222] -z-10 left-1/2 transform -translate-x-1/2">
+            <p id="myWorks" class="absolute text-6xl md:text-8xl text-[#222222] -z-10 left-1/2 transform -translate-x-1/2">
             {{ titleContent[2] }}
             </p>
 
