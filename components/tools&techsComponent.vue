@@ -254,7 +254,3 @@ import figmaImg from '~/assets/images/tools&techs-image/figma.png'
 import bashscriptImg from '~/assets/images/tools&techs-image/bashscript.png'
 import ffmpegImg from '~/assets/images/tools&techs-image/ffmpeg.png'
 </script>
-
-<style>
-
-</style>
