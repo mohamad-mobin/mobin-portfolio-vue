@@ -131,7 +131,8 @@
                     <!-- html -->
                         <div class="hover:scale-110 duration-300">
                            <Tools&techs
-                           hoverBorder="hover:border-orange-700"
+                            boxShadow="hover:shadow-orange-500/50"
+                           boxBorder="border-orange-700 md:border-white/10 md:hover:border-orange-700"
                            boxGradiant="bg-gradient-to-br from-orange-500/10 to-transparent" 
                            :imgSrc="htmlImg" 
                            :percent="100" 
@@ -141,7 +142,8 @@
                         <!-- css -->
                        <div class="hover:scale-110 duration-300">
                             <Tools&techs
-                                hoverBorder="hover:border-blue-600"
+                        boxShadow="hover:shadow-blue-500/50"
+                                boxBorder="border-blue-600 md:border-white/10 md:hover:border-blue-600"
                                 boxGradiant="bg-gradient-to-br from-blue-600/10 to-transparent" 
                                 :imgSrc="cssImg" 
                                 :percent="100" 
@@ -154,7 +156,8 @@
                     <!-- tailwind css -->
                     <div class="hover:scale-110 duration-300">
                         <Tools&techs
-                                hoverBorder="hover:border-sky-500"
+                        boxShadow="hover:shadow-sky-500/50"
+                                boxBorder="border-sky-500 md:border-white/10 md:hover:border-sky-500"
                                 boxGradiant="bg-gradient-to-br from-sky-500/10 to-transparent" 
                                 :imgSrc="tailwindImg" 
                                 :percent="100" 
@@ -164,7 +167,8 @@
                     <!-- javascript -->
                     <div class="hover:scale-110 duration-300">
                         <Tools&techs
-                                hoverBorder="hover:border-yellow-500"
+                        boxShadow="hover:shadow-yellow-500/50"
+                                boxBorder="border-yellow-500 md:border-white/10 md:hover:border-yellow-500"
                                 boxGradiant="bg-gradient-to-br from-yellow-500/10 to-transparent" 
                                 :imgSrc="javascriptImg" 
                                 :percent="95" 
@@ -179,7 +183,8 @@
                     
                     <div class="hover:scale-110 duration-300">
                         <Tools&techs
-                                hoverBorder="hover:border-teal-500"
+                        boxShadow="hover:shadow-teal-500/50"
+                                boxBorder="border-teal-500 md:border-white/10 md:hover:border-teal-500"
                                 boxGradiant="bg-gradient-to-br from-teal-500/10 to-transparent" 
                                 :imgSrc="vueImg" 
                                 :percent="90" 
@@ -188,7 +193,8 @@
     
                     <div class="hover:scale-110 duration-300">
                         <Tools&techs
-                                hoverBorder="hover:border-sky-500"
+                        boxShadow="hover:shadow-sky-500/50"
+                                boxBorder="border-sky-500 md:border-white/10 md:hover:border-sky-500"
                                 boxGradiant="bg-gradient-to-br from-sky-500/10 to-transparent" 
                                 :imgSrc="vuetifyImg" 
                                 :percent="65" 
@@ -200,7 +206,8 @@
                     <div class="hover:scale-110 duration-300">
 
                         <Tools&techs
-                                hoverBorder="hover:border-teal-500"
+                        boxShadow="hover:shadow-teal-500/50"
+                                boxBorder="border-teal-500 md:border-white/10 md:hover:border-teal-500"
                                 boxGradiant="bg-gradient-to-br from-teal-500/10 to-transparent" 
                                 :imgSrc="nuxtImg" 
                                 :percent="90" 
@@ -210,7 +217,8 @@
                     <div class="hover:scale-110 duration-300">
 
                         <Tools&techs
-                                hoverBorder="hover:border-blue-600"
+                        boxShadow="hover:shadow-blue-500/50"
+                                boxBorder="border-blue-600 md:border-white/10 md:hover:border-blue-600"
                                 boxGradiant="bg-gradient-to-br from-blue-600/10 to-transparent" 
                                 :imgSrc="typescriptImg" 
                                 :percent="85" 
@@ -236,7 +244,8 @@
                         <div class="hover:scale-110 duration-300">
             
                             <Tools&techs
-                                    hoverBorder="hover:border-orange-700"
+                            boxShadow="hover:shadow-orange-500/50"
+                                    boxBorder="border-orange-700 md:border-white/10 md:hover:border-orange-700"
                                     boxGradiant="bg-gradient-to-br from-orange-500/10 to-transparent" 
                                     :imgSrc="gitImg" 
                                     :percent="90" 
@@ -247,7 +256,8 @@
                         <div class="hover:scale-110 duration-300">
             
                             <Tools&techs
-                                    hoverBorder="hover:border-blue-600"
+                            boxShadow="hover:shadow-blue-500/50"
+                                    boxBorder="border-blue-600 md:border-white/10 md:hover:border-blue-600"
                                     boxGradiant="bg-gradient-to-br from-blue-600/10 to-transparent" 
                                     :imgSrc="githubImg" 
                                     :percent="85" 
@@ -258,7 +268,8 @@
                     <div class="flex gap-5">
                         <div class="hover:scale-110 duration-300">
                             <Tools&techs
-                                        hoverBorder="hover:border-white/70"
+                            boxShadow="hover:shadow-white/50"
+                                        boxBorder="border-white/70 md:border-white/10 md:hover:border-white/70"
                                         boxGradiant="bg-gradient-to-br from-white/10 to-transparent" 
                                         :imgSrc="linuxImg" 
                                         :percent="80" 
@@ -267,7 +278,8 @@
                         <div class="hover:scale-110 duration-300">
 
                             <Tools&techs
-                                        hoverBorder="hover:border-orange-400"
+                            boxShadow="hover:shadow-orange-500/50"
+                                        boxBorder="border-orange-400 md:border-white/10 md:hover:border-orange-400"
                                         boxGradiant="bg-gradient-to-br from-orange-300/10 to-transparent" 
                                         :imgSrc="ubuntuImg" 
                                         :percent="80" 
@@ -278,14 +290,15 @@
         </div>
 
 
-        <div style="font-family: poppins;" class="flex flex-wrap justify-center gap-5 px-5 md:pb-5 text-center text-white max-w-7xl mx-auto z-50">
+        <div style="font-family: poppins;" class="flex flex-wrap justify-center gap-5 px-5 pt-5 md:pt-0 text-center text-white max-w-7xl mx-auto z-50">
 
             
                     <div class="flex gap-5">
                         <div class="hover:scale-110 duration-300">
             
                             <Tools&techs
-                                    hoverBorder="hover:border-blue-500"
+                            boxShadow="hover:shadow-blue-500/50"
+                                    boxBorder="border-blue-500 md:border-white/10 md:hover:border-blue-500"
                                     boxGradiant="bg-gradient-to-br from-blue-500/10 to-transparent" 
                                     :imgSrc="vscodeImg" 
                                     :percent="100"
@@ -296,7 +309,8 @@
                         <div class="hover:scale-110 duration-300">
             
                             <Tools&techs
-                                    hoverBorder="hover:border-orange-400"
+                            boxShadow="hover:shadow-orange-500/50"
+                                    boxBorder="border-orange-400 md:border-white/10 md:hover:border-orange-400"
                                     boxGradiant="bg-gradient-to-br from-orange-500/10 to-transparent" 
                                     :imgSrc="postmanImg" 
                                     :percent="60" 
@@ -306,8 +320,8 @@
 
                     <div class="flex gap-5">
                         <div class="hover:scale-110 duration-300">
-                            <Tools&techs
-                                        hoverBorder="hover:border-green-500/70"
+                            <Tools&techs    boxShadow="hover:shadow-green-500/50"
+                                        boxBorder="border-green-400 md:border-white/10 md:hover:border-green-400"
                                         boxGradiant="bg-gradient-to-br from-green-500/10 to-transparent" 
                                         :imgSrc="figmaImg" 
                                         :percent="80" 
@@ -316,7 +330,8 @@
                         <div class="hover:scale-110 duration-300">
 
                             <Tools&techs
-                                        hoverBorder="hover:border-purple-400"
+                            boxShadow="hover:shadow-purple-500/50"
+                                        boxBorder="border-purple-400 md:border-white/10 md:hover:border-purple-400"
                                         boxGradiant="bg-gradient-to-br from-purple-500/10 to-transparent" 
                                         :imgSrc="bashscriptImg" 
                                         :percent="80" 
@@ -333,7 +348,8 @@
                         <div class="hover:scale-110 duration-300">
             
                             <Tools&techs
-                                    hoverBorder="hover:border-green-500"
+                            boxShadow="hover:shadow-green-500/50"
+                                    boxBorder="border-green-500 md:border-white/10 md:hover:border-green-500"
                                     boxGradiant="bg-gradient-to-br from-green-500/10 to-transparent" 
                                     :imgSrc="ffmpegImg" 
                                     :percent="88" 
