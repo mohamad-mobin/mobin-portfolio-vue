@@ -120,6 +120,10 @@
                 </a>
             </div>
         </div>
+
+
+        <Tools&techsComponent />
+
 <!-- 
         <TheTitle :titleContent="['My','Techs', 'FrameWork']" />
 
