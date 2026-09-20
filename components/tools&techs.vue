@@ -2,8 +2,8 @@
   <div
     data-aos="flip-left"
     :class="boxBorder, boxShadow"
-    class="skill-card group relative overflow-hidden
-           bg-[#131414] border border-[#3a3a3d]
+    class="group relative overflow-hidden
+           bg-[#131414] border
            sm:w-50 sm:h-50 w-40 h-40
            sm:p-6 p-4 rounded-3xl flex flex-col justify-center items-center
             hover:shadow-lg"
