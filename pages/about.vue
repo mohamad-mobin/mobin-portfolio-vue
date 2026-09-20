@@ -288,7 +288,7 @@
                                     hoverBorder="hover:border-blue-500"
                                     boxGradiant="bg-gradient-to-br from-blue-500/10 to-transparent" 
                                     :imgSrc="vscodeImg" 
-                                    :percent="98" 
+                                    :percent="100"
                                     :techName="'VS Code'" />
             
                         </div>
