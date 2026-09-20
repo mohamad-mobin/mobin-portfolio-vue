@@ -1,6 +1,6 @@
 <template>
   <div
-    data-aos="flip-left"
+    data-aos="zoom-in"
     :class="boxBorder, boxShadow"
     class="group relative overflow-hidden
            bg-[#131414] border
