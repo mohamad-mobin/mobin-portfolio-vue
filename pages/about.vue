@@ -374,7 +374,7 @@
         </div>
       </div>
 
-      <div data-aos="zoom-in" class="relative flex z-10 items-center justify-center pt-10 pb-26 md:pb-10 md:py-20 px-5 md:px-20">
+      <div data-aos="fade-right" class="relative flex z-10 items-center justify-center pt-10 pb-26 md:pb-10 md:py-20 px-5 md:px-20">
   
   <div class="relative w-full max-w-4xl overflow-hidden rounded-4xl border border-white/5 px-8 py-16 text-center backdrop-blur-md shadow-2xl">
     
