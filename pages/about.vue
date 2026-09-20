@@ -137,7 +137,7 @@
 
       
       <ReadyToStart />
-      
+
     </div>
 
     <MiniSideBar :currentPage="currentPageConst" />
@@ -159,14 +159,6 @@ const loadingFinished = async () => {
     document.documentElement.style.overflow = '';
     document.body.style.overflow = '';
     startLenis()
-}
-
-const FalseImageStatus = () => {
-    imageStatus.value = false
-}
-
-const TrueImageStatus = () => {
-    imageStatus.value = true
 }
 
 const TrueCopyStatus = () => {
