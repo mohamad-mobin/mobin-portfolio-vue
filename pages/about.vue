@@ -50,12 +50,6 @@ onMounted(() => {
     stopLenis()
 });
 
-onMounted(async () => {
-    const Rellax = (await import('rellax')).default
-
-    new Rellax('.rellax')
-
-})
 const imageStatus = ref(false)
 
 </script>
