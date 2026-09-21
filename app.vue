@@ -15,16 +15,19 @@
     @font-face {
         font-family: "Lalezar";
         src: url("/fonts/Lalezar-Regular.woff2") format("woff2");
+        font-display: swap;
     }
 
     @font-face {
         font-family: "Poppins";
         src: url("/fonts/Poppins-Regular.woff2") format("woff2");
+        font-display: swap;
     }
 
     @font-face {
         font-family: "Vazir";
         src: url("/fonts/Vazir-Regular.woff2") format("woff2");
+        font-display: swap;
     }
 
     .wrapper {
