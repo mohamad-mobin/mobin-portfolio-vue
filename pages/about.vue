@@ -37,9 +37,6 @@
 <script setup>
 import { onMounted, ref } from "vue"
 import { stopLenis, startLenis } from '@/utils/lenis.js'
-import MiniSideBar from "../components/miniSideBar.vue"
-import TheTitle from "../components/theTitle.vue"
-import AboutMe from "../components/about/aboutMe.vue"
 
 const currentPageConst = "about"
 
