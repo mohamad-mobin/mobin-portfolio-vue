@@ -166,7 +166,7 @@ const vueProjects = [
     {
         name:'Juniper',
         desc:'weather site',
-        hrefs:'https://junipers.netlify.app/',
+        hrefs:'https://vue-juniper-project.vercel.app/',
         image:juniper,
         descImage:juniperLogo,
         star:4
