@@ -31,7 +31,7 @@
             
     
             <!-- about me content -->
-            <div ref="target" data-aos="fade-up"
+            <div data-aos="fade-up"
         data-aos-anchor-placement="top-bottom"
         data-aos-offset="0"
         data-aos-duration="1300" 
@@ -98,7 +98,7 @@
 
     </div>
 </template>
-<script setup>
+<script lang="ts" setup>
 import { onMounted, ref } from "vue"
 import { stopLenis, startLenis } from '@/utils/lenis.js'
 import MiniSideBar from "../components/miniSideBar.vue"
@@ -107,8 +107,7 @@ useHead({
 })
 const currentPageConst = "home"
 
-const target = ref(null)
-const cinemaScreen = ref(null)
+const cinemaScreen= ref<HTMLElement | null>(null)
 const loaded = ref(false)
 
 const loadingFinished = async () => {
@@ -138,12 +137,17 @@ onMounted(async () => {
     })
 
     function CinemaScreenHandler() {
+        
+        if (!cinemaScreen.value) return
+
         cinemaScreen.value.style.width = '100%'
         cinemaScreen.value.style.height = '100%'
 
         let newClassValue = 100
         setTimeout(() => {
             let interval = setInterval(() => {
+                if (!cinemaScreen.value) return
+
                 newClassValue--
                 cinemaScreen.value.style.height = `${newClassValue}%`
 
