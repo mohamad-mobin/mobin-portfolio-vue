@@ -148,7 +148,6 @@ import { onMounted, ref } from "vue"
 import { stopLenis, startLenis } from '@/utils/lenis.js'
 import MiniSideBar from "../components/miniSideBar.vue"
 import TheTitle from "../components/theTitle.vue"
-import ReadyToStart from "../components/readyToStart.vue"
 
 const currentPageConst = "about"
 
