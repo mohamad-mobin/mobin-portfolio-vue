@@ -13,18 +13,18 @@
     }
 
     @font-face {
-        font-family: poppins;
-        src: url("../assets/fonts/Poppins-Regular.ttf");
+        font-family: "Lalezar";
+        src: url("/fonts/Lalezar-Regular.ttf") format("truetype");
     }
 
     @font-face {
-        font-family: lalezar;
-        src: url("/fonts/Lalezar-Regular.ttf");
+        font-family: "Poppins";
+        src: url("/fonts/Poppins-Regular.ttf") format("truetype");
     }
 
     @font-face {
-        font-family: vazir;
-        src: url("../assets/fonts/Vazir-Regular.ttf");
+        font-family: "Vazir";
+        src: url("/fonts/Vazir-Regular.ttf") format("truetype");
     }
 
     .wrapper {
