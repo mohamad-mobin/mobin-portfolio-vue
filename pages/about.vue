@@ -27,6 +27,10 @@
 import { onMounted, ref } from "vue"
 import { stopLenis, startLenis } from '@/utils/lenis.js'
 
+useHead({
+    title: "About",
+})
+
 const currentPageConst = "about"
 
 const copyStatus = ref(false)

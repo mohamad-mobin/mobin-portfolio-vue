@@ -102,7 +102,9 @@
 import { onMounted, ref } from "vue"
 import { stopLenis, startLenis } from '@/utils/lenis.js'
 import MiniSideBar from "../components/miniSideBar.vue"
-
+useHead({
+    title: "Home",
+})
 const currentPageConst = "home"
 
 const target = ref(null)

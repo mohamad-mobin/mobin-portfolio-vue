@@ -21,6 +21,9 @@
 import { onMounted, ref } from "vue"
 import { stopLenis, startLenis } from '@/utils/lenis.js'
 
+useHead({
+    title: "Projects",
+})
 const currentPageConst = "projects"
 
 const loadingFinished = async () => {
