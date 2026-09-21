@@ -1,20 +1,16 @@
 <template>
-
-  <loadingBar @loaded="loadingFinished" />
-   <toggleLang />
-
     
+  <LoadingBar @loaded="loadingFinished" />
 
-<div class="flex w-full justify-center items-center h-screen">
+  <ToggleLang />
 
+  <div class="flex h-screen w-full items-center justify-center">
     <Cursor :propsImageStatus="imageStatus" />
 
     <ProjectsElements @imageStatusEmit="imageStatus = $event" />
-    
-    <MiniSideBar :currentPage="currentPageConst"/>
 
-</div>
-
+    <MiniSideBar :currentPage="currentPageConst" />
+  </div>
 
 </template>
 <script lang="ts" setup>

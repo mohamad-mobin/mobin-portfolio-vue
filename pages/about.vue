@@ -1,26 +1,20 @@
 <template>
-    <div class="wrapper">
+    
+  <div class="wrapper">
+    <LoadingBar @loaded="loadingFinished" />
 
+    <Cursor :propsCopyStatus="copyStatus" />
 
+    <ToggleLang />
 
-  <LoadingBar @loaded="loadingFinished" />
+    <AboutMe @copyStatusEmit="copyStatus = $event" />
 
-  <Cursor :propsCopyStatus="copyStatus"/>
+    <Tools&techsComponent />
 
+    <ReadyToStart />
+  </div>
 
-        <ToggleLang/>
-
-        <AboutMe @copyStatusEmit="copyStatus = $event" />
-
-
-        <Tools&techsComponent />
-
-      
-      <ReadyToStart />
-
-    </div>
-
-    <MiniSideBar :currentPage="currentPageConst" />
+  <MiniSideBar :currentPage="currentPageConst" />
 
 </template>
 <script lang="ts" setup>
