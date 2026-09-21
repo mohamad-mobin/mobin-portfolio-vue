@@ -35,19 +35,10 @@ const currentPageConst = "about"
 
 const copyStatus = ref(false)
 
-const loadingFinished = async () => {
-    document.documentElement.style.overflow = '';
-    document.body.style.overflow = '';
-    startLenis()
-}
-
+const { loadingStarted, loadingFinished } = useLockScroll()
 
 onMounted(() => {
-    window.scrollTo(0, 0);
-
-    document.documentElement.style.overflow = 'hidden';
-    document.body.style.overflow = 'hidden';
-    stopLenis()
+    loadingFinished()
+    loadingStarted()
 });
-
 </script>

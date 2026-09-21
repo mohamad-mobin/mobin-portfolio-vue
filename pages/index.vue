@@ -100,7 +100,6 @@
 </template>
 <script lang="ts" setup>
 import { onMounted, ref } from "vue"
-import { stopLenis, startLenis } from '@/plugins/lenis.client.js'
 
 useHead({
     title: "Home",
@@ -110,24 +109,18 @@ const currentPageConst = "home"
 const cinemaScreen= ref<HTMLElement | null>(null)
 const loaded = ref(false)
 
-const loadingFinished = async () => {
-    document.documentElement.style.overflow = '';
-    document.body.style.overflow = '';
-    startLenis()
-}
+const { loadingStarted, loadingFinished } = useLockScroll()
+
+onMounted(() => {
+    loadingFinished()
+    loadingStarted()
+});
 
 onMounted(async () => {
     setTimeout(() => {
         loaded.value = true
     }, 3000)
 
-    window.scrollTo(0, 0);
-
-    document.documentElement.style.overflow = 'hidden';
-    document.body.style.overflow = 'hidden';
-    stopLenis()
-
-    window.scrollTo(0, 0)
 
     function CinemaScreenHandler() {
         

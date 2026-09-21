@@ -19,7 +19,6 @@
 </template>
 <script setup>
 import { onMounted, ref } from "vue"
-import { stopLenis, startLenis } from '@/plugins/lenis.client.js'
 
 const imageStatus = ref(false)
 
@@ -28,18 +27,11 @@ useHead({
 })
 const currentPageConst = "projects"
 
-const loadingFinished = async () => {
-    document.documentElement.style.overflow = '';
-    document.body.style.overflow = '';
-    startLenis()
-}
-
+const { loadingStarted, loadingFinished } = useLockScroll()
 
 onMounted(() => {
-    window.scrollTo(0, 0);
-    document.documentElement.style.overflow = 'hidden';
-    document.body.style.overflow = 'hidden';
-    stopLenis()
+    loadingFinished()
+    loadingStarted()
 });
 
 </script>
