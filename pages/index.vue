@@ -127,14 +127,7 @@ onMounted(async () => {
     document.body.style.overflow = 'hidden';
     stopLenis()
 
-    const AOS = (await import('aos')).default
-
     window.scrollTo(0, 0)
-
-    AOS.init({
-        duration: 1000,
-        once: false,
-    })
 
     function CinemaScreenHandler() {
         

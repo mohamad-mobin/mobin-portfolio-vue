@@ -51,16 +51,10 @@ onMounted(() => {
 });
 
 onMounted(async () => {
-    const AOS = (await import('aos')).default
     const Rellax = (await import('rellax')).default
 
     new Rellax('.rellax')
 
-
-    AOS.init({
-        duration: 1000,
-        once: false,
-    })
 })
 const imageStatus = ref(false)
 

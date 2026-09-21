@@ -42,13 +42,4 @@ onMounted(() => {
     stopLenis()
 });
 
-onMounted(async () => {
-    const AOS = (await import('aos')).default
-
-    AOS.init({
-        duration: 1000,
-        once: false,
-    });
-
-});
 </script>
