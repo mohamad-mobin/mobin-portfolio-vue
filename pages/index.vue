@@ -100,7 +100,7 @@
 </template>
 <script lang="ts" setup>
 import { onMounted, ref } from "vue"
-import { stopLenis, startLenis } from '@/utils/lenis.js'
+import { stopLenis, startLenis } from '@/plugins/lenis.client.js'
 import MiniSideBar from "../components/miniSideBar.vue"
 useHead({
     title: "Home",
