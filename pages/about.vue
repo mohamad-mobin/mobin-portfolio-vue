@@ -23,7 +23,7 @@
     <MiniSideBar :currentPage="currentPageConst" />
 
 </template>
-<script setup>
+<script lang="ts" setup>
 import { onMounted, ref } from "vue"
 import { stopLenis, startLenis } from '@/plugins/lenis.client.js'
 
@@ -31,9 +31,9 @@ useHead({
     title: "About",
 })
 
-const currentPageConst = "about"
+const currentPageConst : string = "about"
 
-const copyStatus = ref(false)
+const copyStatus = ref<boolean>(false)
 
 const { loadingStarted, loadingFinished } = useLockScroll()
 
