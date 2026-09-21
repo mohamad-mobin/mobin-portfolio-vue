@@ -17,15 +17,15 @@
 
 
 </template>
-<script setup>
+<script lang="ts" setup>
 import { onMounted, ref } from "vue"
 
-const imageStatus = ref(false)
+const imageStatus = ref<boolean>(false)
 
 useHead({
     title: "Projects",
 })
-const currentPageConst = "projects"
+const currentPageConst : string = "projects"
 
 const { loadingStarted, loadingFinished } = useLockScroll()
 
