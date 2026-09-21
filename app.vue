@@ -14,7 +14,7 @@
 
     @font-face {
         font-family: "Lalezar";
-        src: url("/fonts/Lalezar-Regular.ttf") format("truetype");
+        src: url("/fonts/Lalezar-Regular.woff2") format("woff2");
     }
 
     @font-face {
