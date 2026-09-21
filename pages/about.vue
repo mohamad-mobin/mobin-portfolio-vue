@@ -25,7 +25,6 @@
 </template>
 <script lang="ts" setup>
 import { onMounted, ref } from "vue"
-import { stopLenis, startLenis } from '@/plugins/lenis.client.js'
 
 useHead({
     title: "About",
