@@ -160,6 +160,18 @@ function openModal() {
     }
   }, 20);
 }
+const emit = defineEmits(['copyStatusEmit'])
+
+const FalseCopyStatus = () => {
+    copyStatus.value = false
+    emit('copyStatusEmit', copyStatus.value)
+}
+
+const TrueCopyStatus = () => {
+    copyStatus.value = true
+    emit('copyStatusEmit', copyStatus.value)
+}
+const copyStatus = ref(false)
 </script>
 
 <style>

@@ -10,7 +10,7 @@
 
         <ToggleLang/>
 
-        <AboutMe />
+        <AboutMe @copyStatusEmit="copyStatus = $event" />
 
 
         <Tools&techsComponent />
@@ -62,6 +62,8 @@ onMounted(async () => {
         once: false,
     })
 })
+const imageStatus = ref(false)
+
 </script>
 
 <style>

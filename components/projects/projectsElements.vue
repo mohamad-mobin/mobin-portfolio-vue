@@ -1,7 +1,5 @@
 <template>
 
-  <Cursor :propsImageStatus="imageStatus"/>
-
         <div class="container absolute size-full flex flex-col lg:pl-16 xl::pl-20">
         <TheTitle :titleContent="['Vue & Nuxt','Js', 'Techs']" />
     
@@ -174,13 +172,16 @@ const vueProjects = [
         star:4
     },
 ]
+const emit = defineEmits(['imageStatusEmit'])
+
 const FalseImageStatus = () => {
     imageStatus.value = false
+    emit('imageStatusEmit', imageStatus.value)
 }
 
 const TrueImageStatus = () => {
     imageStatus.value = true
-    emit('imageStatusEmit', true)
+    emit('imageStatusEmit', imageStatus.value)
 }
 const imageStatus = ref(false)
 

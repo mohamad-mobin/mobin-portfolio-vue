@@ -7,9 +7,9 @@
 
 <div class="flex w-full justify-center items-center h-screen">
 
+    <Cursor :propsImageStatus="imageStatus" />
 
-
-    <ProjectsElements />
+    <ProjectsElements @imageStatusEmit="imageStatus = $event" />
     
     <MiniSideBar :currentPage="currentPageConst"/>
 
@@ -20,6 +20,8 @@
 <script setup>
 import { onMounted, ref } from "vue"
 import { stopLenis, startLenis } from '@/utils/lenis.js'
+
+const imageStatus = ref(false)
 
 useHead({
     title: "Projects",
