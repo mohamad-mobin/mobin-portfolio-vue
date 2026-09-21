@@ -19,12 +19,12 @@
 
     @font-face {
         font-family: "Poppins";
-        src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+        src: url("/fonts/Poppins-Regular.woff2") format("woff2");
     }
 
     @font-face {
         font-family: "Vazir";
-        src: url("/fonts/Vazir-Regular.ttf") format("truetype");
+        src: url("/fonts/Vazir-Regular.woff2") format("woff2");
     }
 
     .wrapper {
