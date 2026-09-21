@@ -5,7 +5,7 @@
 
   <LoadingBar @loaded="loadingFinished" />
 
-  <Cursor :propsImageStatus="imageStatus" :propsCopyStatus="copyStatus"/>
+  <Cursor :propsCopyStatus="copyStatus"/>
 
 
         <ToggleLang/>
