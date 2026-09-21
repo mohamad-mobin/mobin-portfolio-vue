@@ -161,3 +161,19 @@ function openModal() {
   }, 20);
 }
 </script>
+
+<style>
+    .box-shadow-soft-3d {
+            box-shadow: -2px -2px 4px rgba(50, 50, 50, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: all 300ms;
+            border-top: 1px solid rgba(0, 0, 0, 0);
+            border-left: 1px solid rgba(0, 0, 0, 0);
+
+        }
+        .box-shadow-soft-3d:hover {
+            box-shadow: -8px -8px 16px rgba(50, 50, 50, 0.1),8px 8px 16px rgba(0, 0, 0, 0.7);
+            transform: translateY(-5px);
+            z-index: 10;
+            
+}
+</style>
