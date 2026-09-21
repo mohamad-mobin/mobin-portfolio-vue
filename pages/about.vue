@@ -65,33 +65,3 @@ onMounted(async () => {
 const imageStatus = ref(false)
 
 </script>
-
-<style>
-@font-face {
-    font-family: vazir;
-    src: url(../assets/fonts/Vazir-Regular.ttf);
-}
-@font-face {
-    font-family: poppins;
-    src: url(../assets/fonts/Poppins-Regular.ttf);
-}
-    body{
-        background-color: #131417;
-        color: white;
-    }
-    #myProjects{
-    font-weight: 800;
-
-}
-#myWorks{
-    font-weight: 800;
-}
-body::selection{
-    background-color: #FFB400;
-    color: black;
-}
-.wrapper{
-    overflow-x: hidden;
-}
-
-</style>

@@ -52,28 +52,3 @@ onMounted(async () => {
 
 });
 </script>
-<style scoped>
-body,html{
-    overflow-x: hidden;
-}
-@font-face {
-        font-family: poppins;
-        src: url(../assets/fonts/Poppins-Regular.ttf);
-    }
-    body{
-        background-color: #131417;
-        color: white;
-    }
-#myProjects{
-    font-weight: 800;
-
-}
-#myWorks{
-    font-weight: 800;
-}
-
-body::selection{
-    background-color: #FFB400;
-    color: black;
-}
-</style>
