@@ -28,7 +28,7 @@ const follower = ref(null);
 const redCircle = ref(null);
 
 onMounted(async() => {
-    const { getLenis } = await import('@/utils/lenis.js')
+    const { getLenis } = await import('@/plugins/lenis.client.js')
   const isMobile = window.innerWidth <= 768;
   if (isMobile) {
     cursor.value.style.display = "none";

@@ -19,7 +19,7 @@
 </template>
 <script setup>
 import { onMounted, ref } from "vue"
-import { stopLenis, startLenis } from '@/utils/lenis.js'
+import { stopLenis, startLenis } from '@/plugins/lenis.client.js'
 
 const imageStatus = ref(false)
 
