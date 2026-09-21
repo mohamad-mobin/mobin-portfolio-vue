@@ -2,7 +2,7 @@
    
   <div id="redCircle" ref="redCircle"
   :class="[
-    'bg-[#ffb300] rounded-full absolute flex justify-center items-center top-40 left-40 z-40',
+    'bg-[#ffb300] animate-pulse rounded-full absolute flex justify-center items-center top-40 left-40 z-40',
     { active: props.propsImageStatus || props.propsCopyStatus, border: props.propsCopyStatus || props.propsImageStatus }
   ]">
     <p v-if="props.propsImageStatus || props.propsCopyStatus" class="text-shadow-lg" style="font-family: poppins;">
@@ -179,8 +179,8 @@ position: absolute;
 }
 
 #redCircle.active {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
 }
 
 /* hidding cursor in mobile */
