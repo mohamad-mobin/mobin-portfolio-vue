@@ -37,5 +37,16 @@ export default defineNuxtConfig({
         file: 'fa.json'
       }
     ]
-  }
+  },
+
+
+  components: {
+  dirs: [
+    {
+      path: "~/components",
+      pathPrefix: false,
+    },
+  ],
+},
+
 })
