@@ -19,7 +19,7 @@
 
     @font-face {
         font-family: lalezar;
-        src: url("../assets/fonts/Lalezar-Regular.ttf");
+        src: url("../assets/fonts/Lalezar-Regular.ttf")format("truetype");;
     }
 
     @font-face {
