@@ -150,7 +150,7 @@ const vueProjects = [
     {
         name:'NFT marketplace',
         desc:'the nft marketplace site',
-        hrefs:'https://vue-nft-marketplace.netlify.app/',
+        hrefs:'https://vue-nft-marketplace.vercel.app/',
         image:nftImage,
         descImage:nftLogo,
         star:5  
