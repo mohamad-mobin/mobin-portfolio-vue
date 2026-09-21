@@ -10,7 +10,7 @@
                 <span style="font-family: lalezar;" class="text-[#FFB400] tracking-wide text-6xl">{{ titleContent[1] }}</span>
             </p>
 
-            <p class="absolute text-6xl md:text-8xl text-[#222222] -z-10 left-1/2 transform -translate-x-1/2">
+            <p style="font-family: poppins;" class="absolute text-6xl md:text-8xl text-[#222222] -z-10 left-1/2 transform -translate-x-1/2">
             {{ titleContent[2] }}
             </p>
 
