@@ -8,7 +8,16 @@ export const useLockScroll = () => {
     }
     
     const loadingStarted = () => {
-        window.scrollTo(0, 0);
+
+        requestAnimationFrame(() => {
+            window.scrollTo(0, 0)
+
+            requestAnimationFrame(() => {
+                window.scrollTo(0, 0)
+            })
+        })
+
+
         document.documentElement.style.overflow = 'hidden';
         document.body.style.overflow = 'hidden';
         stopLenis()
