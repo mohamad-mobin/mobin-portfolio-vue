@@ -14,17 +14,6 @@
 
 
         <Tools&techsComponent />
-    
-        <div v-if="isModalVisible" class="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-        <div class="bg-gray-900 rounded-lg w-72 p-5 relative">
-          <p class="text-white text-center font-semibold mb-3">Copied to clipboard!</p>
-    
-          <!-- نوار پر شدن -->
-          <div class="h-2 bg-gray-700 rounded overflow-hidden">
-            <div class="h-full bg-teal-400 transition-all" :style="{ width: progress + '%' }"></div>
-          </div>
-        </div>
-      </div>
 
       
       <ReadyToStart />
