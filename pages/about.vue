@@ -50,6 +50,4 @@ onMounted(() => {
     stopLenis()
 });
 
-const imageStatus = ref(false)
-
 </script>
