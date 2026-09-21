@@ -29,7 +29,6 @@ import { stopLenis, startLenis } from '@/utils/lenis.js'
 
 const currentPageConst = "about"
 
-const imageStatus = ref(false)
 const copyStatus = ref(false)
 
 const loadingFinished = async () => {
