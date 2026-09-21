@@ -14,17 +14,17 @@
 
     @font-face {
         font-family: poppins;
-        src: url("../assets/fonts/Poppins-Regular.ttf");
+        src: url("assets/fonts/Poppins-Regular.ttf");
     }
 
     @font-face {
         font-family: lalezar;
-        src: url("../assets/fonts/Lalezar-Regular.ttf");
+        src: url("assets/fonts/Lalezar-Regular.ttf");
     }
 
     @font-face {
         font-family: vazir;
-        src: url("../assets/fonts/Vazir-Regular.ttf");
+        src: url("assets/fonts/Vazir-Regular.ttf");
     }
 
     .wrapper {
