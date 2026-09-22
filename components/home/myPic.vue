@@ -1,9 +1,7 @@
 <template>
   <div>
                      <div data-aos="fade-up"
-                 data-aos-anchor-placement="top-bottom"
-                 data-aos-offset="0"
-                 data-aos-duration="1300"
+                 data-aos-delay="700"
                  class="rounded-3xl overflow-hidden md:fixed md:left-[5%] w-75 md:w-[30%] h-100 md:h-[90%] top-[5%] shadow-md ring-[1px] ring-[#3a3a3d] z-40 relative" id="ManImage">
                     <div class="absolute bg-[#3a3a3d] flex z-50 justify-center items-center overflow-hidden" ref="cinemaScreen">
 
