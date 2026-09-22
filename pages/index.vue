@@ -43,10 +43,6 @@
 </template>
 <script lang="ts" setup>
 import { onMounted, ref } from "vue"
-import MyPic from "../components/home/myPic.vue"
-import MyDescription from "../components/home/myDescription.vue"
-import CallToAction from "../components/home/callToAction.vue"
-import ProjectsHint from "../components/home/projectsHint.vue"
 
 useHead({
     title: "Home",
