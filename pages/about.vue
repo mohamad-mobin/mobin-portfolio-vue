@@ -9,9 +9,9 @@
 
     <AboutMe @copyStatusEmit="copyStatus = $event" />
 
-    <Tools&techsComponent />
+    <LazyTools&techsComponent />
 
-    <ReadyToStart />
+    <LazyReadyToStart />
   </div>
 
   <MiniSideBar :currentPage="currentPageConst" />
