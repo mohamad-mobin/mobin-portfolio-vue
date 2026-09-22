@@ -5,7 +5,7 @@
            rounded-3xl py-1 px-1 flex justify-between duration-300"
     @click="toggleLang"
   >
-    <!-- icon سمت چپ -->
+    <!-- left icon -->
     <div class="flex items-center">
       <p class="absolute pl-1 text-white">
         <america-svg />
@@ -19,7 +19,7 @@
       :style="{ marginLeft: currentLang === 'fa' ? '50px' : '-50px' }"
     ></button>
 
-    <!-- icon سمت راست -->
+    <!-- right icon -->
     <div class="flex items-center">
       <p class="text-white pr-2 absolute right-0">
         <iranSvg />
