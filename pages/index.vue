@@ -35,12 +35,12 @@
     
         </div>
 
-    <div class="flex justify-center items-center w-fit h-16 fixed bottom-5 left-[60%] my-10 z-40 md:hidden flashy-bounce arrow">
+    <div class="flex justify-center z-50 items-center w-fit h-16 fixed bottom-5 left-[60%] md:left-auto md:right-28 md:top-[52%] my-10 flashy-bounce arrow">
             <div class="relative bg-[#FFB400] w-14 border-2 border-white/50 h-8 rounded-full flex justify-center items-center">
                 <span class="relative bottom-px text-[11px] font-bold select-none text-black projectsHint" style="font-family: poppins,vazir;">{{ $t('bounce') }}</span>
                 
             </div>
-                <div class="absolute right-4.25 rotate-60 -bottom-px w-0 h-0 border-[9px] border-solid border-transparent border-t-[#FFB400]"></div>
+               
     </div>
 
         <MiniSideBar :currentPage="currentPageConst"/>
