@@ -10,7 +10,7 @@
                 </button>
             </NuxtLink>
     
-            <p class="text-2xl md:mx-2 or hover:animate-spin">{{ $t('Or') }}</p>
+            <p class="text-2xl md:mx-2 hover:scale-200 duration-300 hover:animate-spin">{{ $t('Or') }}</p>
     
             <NuxtLink to="/projects" id="moreAboutMeBtn" class="text-center mt-4 py-4 pl-7 pr-20 rounded-full overflow-hidden ring-1 ring-[#FFB400] self-center relative z-20 before:absolute before:size-0 before:rounded-full before:duration-300 before:bg-[#FFB400] hover:before:size-75 before:top-1/2 before:left-1/2 bg-[#222121] before:-translate-x-1/2 before:-translate-y-1/2 before:-z-10 animate-bounce hover:scale-110 duration-300 cursor-none" style="font-family: poppins,vazir;">
                 {{ $t('myProjects') }}
