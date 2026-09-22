@@ -13,8 +13,8 @@
             <div data-aos="zoom-in" data-aos-delay="600" class="flex justify-center items-center">
                 
                 <ActionButton
-                to="/about"
-                :label="$t('aboutMe')"
+                to="/projects"
+                :label="$t('myProjects')"
                 />
 
             </div>
