@@ -26,7 +26,7 @@
     
         <MainTitle />
     
-        <p class="py-3 leading-loose hover:scale-105 duration-300 text-left md:text-center md:w-[60%] w-[70%] text-md lg:text-[1.1vw]" style="font-family: poppins, vazir;">{{ $t('imIranian') }}</p>
+        <MyDescription />
     
         <div class="flex flex-col md:flex-row w-100 md:w-fit h-62.5 md:h-22.5 gap-3 md:gap-x-5 items-center">
             <NuxtLink to="/about" id="moreAboutMeBtn" class="text-center md:ml-10 mt-4 py-4 pl-7 pr-20 rounded-full overflow-hidden ring-1 ring-[#FFB400] self-center relative z-20 before:absolute before:size-0 before:rounded-full before:-z-10 before:duration-300 before:bg-[#FFB400] hover:before:size-75 before:top-1/2 before:left-1/2 before:-translate-x-1/2 bg-[#222121] before:-translate-y-1/2 hover:scale-110 duration-300 cursor-none" style="font-family: poppins,vazir;">
@@ -73,6 +73,7 @@
 <script lang="ts" setup>
 import { onMounted, ref } from "vue"
 import MyPic from "../components/home/myPic.vue"
+import MyDescription from "../components/home/myDescription.vue"
 
 useHead({
     title: "Home",
