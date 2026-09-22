@@ -9,7 +9,7 @@
                 {{ $t('imMobinRezaee') }}
             </span>
             <span
-                class="block text-white text-[25px] lg:text-[3vw] duration-300 group-hover:translate-x-10"
+                class="block text-white text-[25px] lg:text-[3vw] duration-500 group-hover:translate-x-10 md:group-hover:translate-x-30"
                 style="font-family: lalezar;"
             >
                 {{ $t('webDeveloper') }}
