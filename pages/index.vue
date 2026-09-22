@@ -33,6 +33,7 @@
 </template>
 <script lang="ts" setup>
 import { onMounted, ref } from "vue"
+import { useHead } from "nuxt/app"
 
 useHead({
     title: "Home",
