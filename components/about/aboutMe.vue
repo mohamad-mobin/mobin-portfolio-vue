@@ -5,7 +5,7 @@
                 <TheTitle :titleContent="['About', 'Me','RESUME']"/>
                 <div class="text-white font-poppins flex flex-col lg:flex-row justify-center items-center">
                   <!-- personal infos -->
-                <div data-aos="fade-left" data-aos-duration="2000" style="font-family: poppins,vazir;" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl w-full px-5">
+                <div data-aos="fade-left" data-aos-duration="2000" style="font-family: poppins,vazir;" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl w-full px-5">
                       <div class="rounded-xl bg-[#131417] p-4 flex items-center space-x-3 h-25 box-shadow-soft-3d">
                       <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-orange-600/5">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-orange-400/50">
@@ -14,7 +14,7 @@
                       </div>
                       <div class="flex flex-col text-left">
                           <p class="text-gray-400 text-base">{{ $t('picName') }}</p>
-                          <p class="text-white text-xl aboutText">{{ $t('picNameValue') }}</p>
+                          <p class="text-white text-sm md:text-xl aboutText">{{ $t('picNameValue') }}</p>
                       </div>
                   </div>
               
@@ -24,7 +24,7 @@
                           </div>
                           <div class="flex flex-col text-left">
                               <p class="text-gray-400 text-base">{{ $t('picNationality') }}</p>
-                              <p class="text-white text-xl aboutText">{{ $t('picNationalityValue') }}</p>
+                              <p class="text-white text-sm md:text-xl aboutText">{{ $t('picNationalityValue') }}</p>
                           </div>
                       </div>
               
@@ -34,7 +34,7 @@
                           </div>
                           <div class="flex flex-col text-left">
                               <p class="text-gray-400 text-base">{{ $t('picAge') }}</p>
-                              <p class="text-white text-xl aboutText">{{ $t('picAgeValue') }}</p>
+                              <p class="text-white text-sm md:text-xl aboutText">{{ $t('picAgeValue') }}</p>
                           </div>
                       </div>
               
@@ -44,32 +44,32 @@
                           </div>
                           <div class="flex flex-col text-left">
                               <p class="text-gray-400 text-base">{{ $t('picAddress') }}</p>
-                              <p class="text-white text-xl aboutText">{{ $t('picAddressValue') }}</p>
+                              <p class="text-white text-sm md:text-xl aboutText">{{ $t('picAddressValue') }}</p>
                           </div>
                       </div>
               
-                      <div class="rounded-xl bg-[#131417] p-4 flex items-center space-x-3 h-25 box-shadow-soft-3d">
+                      <div class="rounded-xl bg-[#131417] p-4 flex items-center space-x-3 h-25 box-shadow-soft-3d col-span-2 md:col-span-1">
                           <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-green-500/10">
                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-green-500"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
                           </div>
                           <div class="flex flex-col text-left">
                               <p class="text-gray-400 text-base">{{ $t('picFreelance') }}</p>
-                              <p class="text-[#5BE85B] text-xl">{{ $t('picFreelanceValue') }}</p>
+                              <p class="text-[#5BE85B] text-sm md:text-xl">{{ $t('picFreelanceValue') }}</p>
                           </div>
                       </div>
               
-                      <div class="relative rounded-xl bg-[#131417] p-4 flex items-center space-x-3 h-25 box-shadow-soft-3d">
+                      <div class="relative rounded-xl bg-[#131417] p-4 flex col-span-2 md:col-span-1 items-center space-x-3 h-25 box-shadow-soft-3d">
                           <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-purple-500/10">
                               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5 text-purple-500"><path d="M11.7 2.805a.75.75 0 0 1 .6 0A60.65 60.65 0 0 1 22.83 8.72a.75.75 0 0 1-.231 1.337 49.948 49.948 0 0 0-9.902 3.912l-.003.002c-.114.06-.227.119-.34.18a.75.75 0 0 1-.707 0A50.88 50.88 0 0 0 7.5 12.173v-.224c0-.131.067-.248.172-.311a54.615 54.615 0 0 1 4.653-2.52.75.75 0 0 0-.65-1.352 56.123 56.123 0 0 0-4.78 2.589 1.858 1.858 0 0 0-.859 1.228 49.803 49.803 0 0 0-4.634-1.527.75.75 0 0 1-.231-1.337A60.653 60.653 0 0 1 11.7 2.805Z" /><path d="M13.06 15.473a48.45 48.45 0 0 1 7.666-3.282c.134 1.414.22 2.843.255 4.284a.75.75 0 0 1-.46.711 47.87 47.87 0 0 0-8.105 4.342.75.75 0 0 1-.832 0 47.87 47.87 0 0 0-8.104-4.342.75.75 0 0 1-.461-.71c.035-1.442.121-2.87.255-4.286.921.304 1.83.634 2.726.99v1.27a1.5 1.5 0 0 0-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.66a6.727 6.727 0 0 0 .551-1.607 1.5 1.5 0 0 0 .14-2.67v-.645a48.549 48.549 0 0 1 3.44 1.667 2.25 2.25 0 0 0 2.12 0Z" /><path d="M4.462 19.462c.42-.419.753-.89 1-1.395.453.214.902.435 1.347.662a6.742 6.742 0 0 1-1.286 1.794.75.75 0 0 1-1.06-1.06Z" /></svg>
     
                           </div>
                           <div class="flex flex-col text-left">
                               <p class="text-gray-400 text-base">{{ $t('picEducation') }}</p>
-                              <p class="text-white text-base lg:text-xl whitespace-nowrap aboutText">{{ $t('picEducationValue') }}</p>
+                              <p class="text-white text-sm break-all md:text-xl aboutText">{{ $t('picEducationValue') }}</p>
                           </div>
                       </div>
               
-                      <div @click="handleClick" class="relative col-span-1 sm:col-span-2 rounded-xl bg-[#131417] p-4 flex items-center space-x-2 sm:space-x-3 h-25 box-shadow-soft-3d portofolio-item"
+                      <div @click="handleClick" class="relative col-span-2 rounded-xl bg-[#131417] p-4 flex items-center space-x-2 sm:space-x-3 h-25 box-shadow-soft-3d portofolio-item"
                         @mouseenter="TrueCopyStatus"
                         @mouseleave="FalseCopyStatus"
                       >
@@ -77,20 +77,20 @@
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-blue-500"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"></path></svg>
                   </div>
                   <div class="flex flex-col text-left grow"> <p class="text-gray-400 text-base">{{ $t('picEmail') }}</p>
-                      <p class="text-white text-xs sm:text-xl break-all aboutText">mohammadmobinrezaee@gmail.com</p> </div>
+                      <p class="text-white text-xs sm text-sm:md:text-xl break-all aboutText">mohammadmobinrezaee@gmail.com</p> </div>
               
                   <button class="absolute top-2 right-2 copySvg">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z"></path></svg>
                   </button>
                       </div>
               
-                      <div class="rounded-xl bg-[#131417] p-4 flex items-center space-x-3 h-25 box-shadow-soft-3d">
+                      <div class="rounded-xl bg-[#131417] p-4 flex col-span-2 md:col-span-1 items-center space-x-3 h-25 box-shadow-soft-3d">
                           <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-orange-600/5">
                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-orange-600"><path stroke-linecap="round" stroke-linejoin="round" d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802" /></svg>
                           </div>
                           <div class="flex flex-col text-left">
                               <p class="text-gray-400 text-base">{{ $t('picLanguages') }}</p>
-                              <p class="text-white text-xl aboutText">{{ $t('picLanguagesValue') }}</p>
+                              <p class="text-white text-sm md:text-xl aboutText">{{ $t('picLanguagesValue') }}</p>
                           </div>
                       </div>
               
