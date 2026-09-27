@@ -3,7 +3,7 @@
             <TheTitle :titleContent="['My','Techs', 'FrameWork']" />
 
         <div>
-            <div style="font-family: poppins;" class="flex flex-wrap justify-center gap-5 px-5 pt-5 text-center text-white max-w-7xl mx-auto z-50">
+            <div style="font-family: poppins;" class="toolsAndtechsContainer">
              
                 <div class="flex gap-5">
                         <div class="hover:scale-110 duration-300">
@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <div style="font-family: poppins;" class="flex flex-wrap justify-center gap-5 px-5 pt-5 pb-28 md:pb-5 text-center text-white max-w-7xl mx-auto z-50">
+            <div style="font-family: poppins;" class="toolsAndtechsContainer pb-28 md:pb-5">
 
                 <div class="flex gap-5">
                     
@@ -111,7 +111,7 @@
 
         
 
-        <div style="font-family: poppins;" class="flex flex-wrap justify-center gap-5 px-5 pt-5 md:pb-5 text-center text-white max-w-7xl mx-auto z-50">
+        <div style="font-family: poppins;" class="toolsAndtechsContainer md:pb-5">
 
             
                     <div class="flex gap-5">
@@ -164,7 +164,7 @@
         </div>
 
 
-        <div style="font-family: poppins;" class="flex flex-wrap justify-center gap-5 px-5 pt-5 md:pt-0 text-center text-white max-w-7xl mx-auto z-50">
+        <div style="font-family: poppins;" class="toolsAndtechsContainer md:pt-0">
 
             
                     <div class="flex gap-5">
@@ -215,7 +215,7 @@
                     </div>
         </div>
 
-         <div style="font-family: poppins;" class="flex flex-wrap justify-center gap-5 px-5 pt-5 pb-28 md:pb-5 text-center text-white max-w-7xl mx-auto z-50">
+         <div style="font-family: poppins;" class="toolsAndtechsContainer pb-28 md:pb-5">
 
             
                     <div class="flex gap-5">
@@ -254,3 +254,11 @@ import figmaImg from '~/assets/images/tools&techs-image/figma.png'
 import bashscriptImg from '~/assets/images/tools&techs-image/bashscript.png'
 import ffmpegImg from '~/assets/images/tools&techs-image/ffmpeg.png'
 </script>
+
+<style>
+@reference "~/assets/main.css";
+
+.toolsAndtechsContainer {
+   @apply flex flex-wrap justify-center gap-5 px-5 pt-5 text-center text-white max-w-7xl mx-auto z-50;
+}
+</style>
