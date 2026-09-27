@@ -6,7 +6,7 @@
             <div style="font-family: poppins;" class="toolsAndtechsContainer">
              
                 <div class="flex gap-5">
-                        <div class="hover:scale-110 duration-300">
+                        <div class="toolsAndTechsHoverEffect">
                            <Tools&techs
                             boxShadow="hover:shadow-orange-500/50"
                            boxBorder="border-orange-700 md:border-white/10 md:hover:border-orange-700"
@@ -16,7 +16,7 @@
                            :techName="'Html'" />
                         </div>
 
-                       <div class="hover:scale-110 duration-300">
+                       <div class="toolsAndTechsHoverEffect">
                             <Tools&techs
                         boxShadow="hover:shadow-blue-500/50"
                                 boxBorder="border-blue-600 md:border-white/10 md:hover:border-blue-600"
@@ -28,7 +28,7 @@
                 </div>
                     
                 <div class="flex gap-5">
-                    <div class="hover:scale-110 duration-300">
+                    <div class="toolsAndTechsHoverEffect">
                         <Tools&techs
                         boxShadow="hover:shadow-sky-500/50"
                                 boxBorder="border-sky-500 md:border-white/10 md:hover:border-sky-500"
@@ -38,7 +38,7 @@
                                 :techName="'TailwindCss'" />
                     </div>
 
-                    <div class="hover:scale-110 duration-300">
+                    <div class="toolsAndTechsHoverEffect">
                         <Tools&techs
                         boxShadow="hover:shadow-yellow-500/50"
                                 boxBorder="border-yellow-500 md:border-white/10 md:hover:border-yellow-500"
@@ -54,7 +54,7 @@
 
                 <div class="flex gap-5">
                     
-                    <div class="hover:scale-110 duration-300">
+                    <div class="toolsAndTechsHoverEffect">
                         <Tools&techs
                         boxShadow="hover:shadow-teal-500/50"
                                 boxBorder="border-teal-500 md:border-white/10 md:hover:border-teal-500"
@@ -64,7 +64,7 @@
                                 :techName="'Vue'" />
                     </div>
     
-                    <div class="hover:scale-110 duration-300">
+                    <div class="toolsAndTechsHoverEffect">
                         <Tools&techs
                         boxShadow="hover:shadow-sky-500/50"
                                 boxBorder="border-sky-500 md:border-white/10 md:hover:border-sky-500"
@@ -76,7 +76,7 @@
                 </div>
 
                 <div class="flex gap-5">
-                    <div class="hover:scale-110 duration-300">
+                    <div class="toolsAndTechsHoverEffect">
 
                         <Tools&techs
                         boxShadow="hover:shadow-teal-500/50"
@@ -87,7 +87,7 @@
                                 :techName="'Nuxt'" />
                     </div>
     
-                    <div class="hover:scale-110 duration-300">
+                    <div class="toolsAndTechsHoverEffect">
 
                         <Tools&techs
                         boxShadow="hover:shadow-blue-500/50"
@@ -115,7 +115,7 @@
 
             
                     <div class="flex gap-5">
-                        <div class="hover:scale-110 duration-300">
+                        <div class="toolsAndTechsHoverEffect">
             
                             <Tools&techs
                             boxShadow="hover:shadow-orange-500/50"
@@ -127,7 +127,7 @@
             
                         </div>
             
-                        <div class="hover:scale-110 duration-300">
+                        <div class="toolsAndTechsHoverEffect">
             
                             <Tools&techs
                             boxShadow="hover:shadow-blue-500/50"
@@ -140,7 +140,7 @@
                     </div>
 
                     <div class="flex gap-5">
-                        <div class="hover:scale-110 duration-300">
+                        <div class="toolsAndTechsHoverEffect">
                             <Tools&techs
                             boxShadow="hover:shadow-white/50"
                                         boxBorder="border-white/70 md:border-white/10 md:hover:border-white/70"
@@ -149,7 +149,7 @@
                                         :percent="80" 
                                         :techName="'Linux'" />
                         </div>
-                        <div class="hover:scale-110 duration-300">
+                        <div class="toolsAndTechsHoverEffect">
 
                             <Tools&techs
                             boxShadow="hover:shadow-orange-500/50"
@@ -168,7 +168,7 @@
 
             
                     <div class="flex gap-5">
-                        <div class="hover:scale-110 duration-300">
+                        <div class="toolsAndTechsHoverEffect">
             
                             <Tools&techs
                             boxShadow="hover:shadow-blue-500/50"
@@ -180,7 +180,7 @@
             
                         </div>
             
-                        <div class="hover:scale-110 duration-300">
+                        <div class="toolsAndTechsHoverEffect">
             
                             <Tools&techs
                             boxShadow="hover:shadow-orange-500/50"
@@ -193,7 +193,7 @@
                     </div>
 
                     <div class="flex gap-5">
-                        <div class="hover:scale-110 duration-300">
+                        <div class="toolsAndTechsHoverEffect">
                             <Tools&techs    boxShadow="hover:shadow-green-500/50"
                                         boxBorder="border-green-400 md:border-white/10 md:hover:border-green-400"
                                         boxGradiant="bg-gradient-to-br from-green-500/10 to-transparent" 
@@ -201,7 +201,7 @@
                                         :percent="80" 
                                         :techName="'Figma'" />
                         </div>
-                        <div class="hover:scale-110 duration-300">
+                        <div class="toolsAndTechsHoverEffect">
 
                             <Tools&techs
                             boxShadow="hover:shadow-purple-500/50"
@@ -219,7 +219,7 @@
 
             
                     <div class="flex gap-5">
-                        <div class="hover:scale-110 duration-300">
+                        <div class="toolsAndTechsHoverEffect">
             
                             <Tools&techs
                             boxShadow="hover:shadow-green-500/50"
@@ -260,5 +260,8 @@ import ffmpegImg from '~/assets/images/tools&techs-image/ffmpeg.png'
 
 .toolsAndtechsContainer {
    @apply flex flex-wrap justify-center gap-5 px-5 pt-5 text-center text-white max-w-7xl mx-auto z-50;
+}
+.toolsAndTechsHoverEffect {
+    @apply hover:scale-110 duration-300;
 }
 </style>
