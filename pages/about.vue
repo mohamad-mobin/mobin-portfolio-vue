@@ -6,14 +6,16 @@
     <Cursor :propsCopyStatus="copyStatus" />
 
     <ToggleLang />
-
+ 
     <AboutMe @copyStatusEmit="copyStatus = $event" />
 
     <LazyTools&techsComponent />
 
     <LazyReadyToStart />
+    
   </div>
 
+  <ProjectsHint />
   <MiniSideBar :currentPage="currentPageConst" />
 
 </template>
