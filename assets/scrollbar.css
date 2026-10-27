@@ -12,12 +12,12 @@ body::-webkit-scrollbar-track {
 
 /* دستگیره (Thumb) نوار اسکرول */
 body::-webkit-scrollbar-thumb {
-  background-color: #FFB400; /* رنگ زرد مورد نظر شما */
+  background-color: var(--app-primary); /* رنگ زرد مورد نظر شما */
   border-radius: 10px; /* گرد کردن لبه‌های دستگیره */
   border: 3px solid #202020; /* اضافه کردن حاشیه برای کوچکتر دیده شدن دستگیره */
 }
 
 /* تغییر رنگ دستگیره هنگام هاور (اختیاری) */
 body::-webkit-scrollbar-thumb:hover {
-  background-color: #e6a300; /* کمی تیره‌تر */
+  background-color: #e6a5009e; /* کمی تیره‌تر */
 }

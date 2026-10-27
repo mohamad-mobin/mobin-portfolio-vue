@@ -79,7 +79,7 @@ if (import.meta.client) {
     }
 
     ::selection {
-        background-color: #FFB400;
+        background-color: var(--app-primary);
         color: black;
     }
 </style>
