@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+:root{
+
+    --app-primary: #FFB400
+}
+
+@theme inline {
+  --color-primary: var(--app-primary);
+}

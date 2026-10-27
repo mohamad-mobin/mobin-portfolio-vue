@@ -7,7 +7,7 @@
         <NuxtLink
           to="/"
           id="homeIcon"
-          :class="props.currentPage === 'home' ? 'bg-[#FFB400]' : 'bg-[#2E2C29]'"
+          :class="props.currentPage === 'home' ? 'bg-primary' : 'bg-[#2E2C29]'"
           class="desktop-nav-button"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -18,7 +18,7 @@
         <NuxtLink
           to="/about"
           id="homeIcon"
-          :class="props.currentPage === 'about' ? 'bg-[#FFB400]' : 'bg-[#2E2C29]'"
+          :class="props.currentPage === 'about' ? 'bg-primary' : 'bg-[#2E2C29]'"
           class="desktop-nav-button"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -29,7 +29,7 @@
         <NuxtLink
           to="/projects"
           id="homeIcon"
-          :class="props.currentPage === 'projects' ? 'bg-[#FFB400]' : 'bg-[#2E2C29]'"
+          :class="props.currentPage === 'projects' ? 'bg-primary' : 'bg-[#2E2C29]'"
           class="desktop-nav-button"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -46,7 +46,7 @@
             <NuxtLink
               to="/"
               id="homeIcon"
-              :class="props.currentPage === 'home' ? 'bg-[#FFB400]' : 'bg-[#2E2C29]'"
+              :class="props.currentPage === 'home' ? 'bg-primary' : 'bg-[#2E2C29]'"
               class="mobile-nav-button"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -57,7 +57,7 @@
             <NuxtLink
               to="/about"
               id="homeIcon"
-              :class="props.currentPage === 'about' ? 'bg-[#FFB400]' : 'bg-[#2E2C29]'"
+              :class="props.currentPage === 'about' ? 'bg-primary' : 'bg-[#2E2C29]'"
               class="mobile-nav-button"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -68,7 +68,7 @@
             <NuxtLink
               to="/projects"
               id="homeIcon"
-              :class="props.currentPage === 'projects' ? 'bg-[#FFB400]' : 'bg-[#2E2C29]'"
+              :class="props.currentPage === 'projects' ? 'bg-primary' : 'bg-[#2E2C29]'"
               class="mobile-nav-button"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -102,10 +102,10 @@ onMounted(()=>{
 @reference "~/assets/main.css";
 
 .desktop-nav-button {
-    @apply flex justify-center items-center hover:bg-[#FFB400] rounded-2xl duration-100 size-12.5 scale-130 text-[20px] relative z-50 shadow-xs shadow-[#FFB400];
+    @apply flex justify-center items-center hover:bg-primary rounded-2xl duration-100 size-12.5 scale-130 text-[20px] relative z-50 shadow-xs shadow-primary;
 }
 .mobile-nav-button {
-    @apply flex justify-center items-center hover:bg-[#FFB400] rounded-2xl duration-100 size-12.5 text-[20px] z-50 shadow-xs shadow-[#FFB400];
+    @apply flex justify-center items-center hover:bg-primary rounded-2xl duration-100 size-12.5 text-[20px] z-50 shadow-xs shadow-primary;
 }
 
 </style>

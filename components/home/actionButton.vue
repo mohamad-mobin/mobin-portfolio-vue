@@ -31,7 +31,7 @@ defineProps<{
 .action-button {
   @apply bg-[#222121];
   @apply relative z-20 mt-4 overflow-hidden rounded-full py-4 pl-7 pr-20;
-  @apply ring-1 ring-[#FFB400];
+  @apply ring-1 ring-primary;
   @apply cursor-none duration-300 hover:scale-115;
 
   font-family: poppins, vazir;
@@ -41,7 +41,7 @@ defineProps<{
   content: '';
   @apply absolute left-1/2 top-1/2 -z-10 size-0;
   @apply -translate-x-1/2 -translate-y-1/2;
-  @apply rounded-full bg-[#FFB400] duration-300;
+  @apply rounded-full bg-primary duration-300;
 }
 
 .action-button:hover::before {
@@ -50,7 +50,7 @@ defineProps<{
 
 .action-button__icon {
   @apply absolute right-0 top-px;
-  @apply overflow-hidden rounded-full bg-[#FFB400] p-3.25;
+  @apply overflow-hidden rounded-full bg-primary p-3.25;
   @apply cursor-none;
 }
 </style>
