@@ -3,13 +3,13 @@
     id="anim"
     ref="anim"
     :class="[
-      'bg-[#222222] fixed w-full bottom-0 left-0 z-50 rounded-tr-[30px] rounded-tl-[30px] flex justify-center items-center overflow-hidden border-t border-[#ffb400]',
+      'bg-[#222222] fixed w-full bottom-0 left-0 z-50 rounded-tr-[30px] rounded-tl-[30px] flex justify-center items-center overflow-hidden border-t border-primary',
       { 'anim-initial': !started }
     ]"
   >
     <p
       ref="loadingText"
-      class="text-[#FFB400] text-5xl font-poppins flex justify-center items-center gap-x-4"
+      class="text-primary text-5xl font-poppins flex justify-center items-center gap-x-4"
     >
       LOADING
 
