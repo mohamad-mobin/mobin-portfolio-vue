@@ -4,7 +4,7 @@
     :class="boxBorder, boxShadow"
     class="group relative overflow-hidden
            bg-[#131414] border
-           sm:w-50 sm:h-50 w-40 h-40
+            w-1/2 md:w-full mx-auto h-full 
            sm:p-6 p-4 rounded-3xl flex flex-col justify-center items-center
             hover:shadow-lg"
   >
@@ -21,7 +21,7 @@
       class="absolute inset-0 opacity-100 transition-opacity duration-300"
     ></div>
 
-    <span class="absolute text-primary right-2 bottom-2 text-sm md:text-xl font-bold">{{ percent }}%</span>
+    <span class="absolute text-primary right-4 bottom-4 text-sm md:text-xl font-bold">{{ percent }}%</span>
   </div>
 </template>
 
@@ -37,11 +37,6 @@ const props = defineProps({
     boxShadow:String
 })
 
-
-onMounted(()=>{
-    console.log(props.imgSrc);
-    
-})
 </script>
 
 <style>
