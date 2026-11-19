@@ -124,7 +124,7 @@ const techs = [
   {
     imgSrc: tailwindImg,
     percent: 100,
-    techName: 'Tailwind CSS',
+    techName: 'Tailwind',
     boxShadow: 'hover:shadow-sky-500/50',
     boxBorder: 'border-sky-500 md:border-white/10 md:hover:border-sky-500',
     boxGradiant: 'bg-gradient-to-br from-sky-500/10 to-transparent'
