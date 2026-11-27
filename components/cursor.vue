@@ -150,7 +150,7 @@ html, body {
 
 .cursor-follower {
   position: absolute;
-  background: #ffb3006c;
+  background: color-mix(in srgb, var(--color-primary) 40%, transparent);
   width: 40px;
   height: 40px;
   border-radius: 100%;
