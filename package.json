@@ -20,7 +20,7 @@
     "rellax": "^1.12.1",
     "swiper": "^14.4.0",
     "vue": "^3.5.18",
-    "vue-i18n": "^11.1.12"
+    "vue-i18n": "11.4.10"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",

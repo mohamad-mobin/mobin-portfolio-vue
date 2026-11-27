@@ -31,7 +31,6 @@
 
 <script setup>
 import { ref, onMounted, watch } from 'vue'
-import { useI18n } from 'vue-i18n'
 
 const { setLocale } = useI18n()
 
