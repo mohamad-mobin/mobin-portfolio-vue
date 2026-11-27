@@ -6,6 +6,7 @@
     <Cursor :propsCopyStatus="copyStatus" />
 
     <ToggleLang />
+    <toggleTheme/>
  
     <AboutMe @copyStatusEmit="copyStatus = $event" />
 

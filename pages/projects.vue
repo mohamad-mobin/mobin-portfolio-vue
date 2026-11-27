@@ -1,8 +1,9 @@
 <template>
     
   <LoadingBar @loaded="loadingFinished" />
-
   <ToggleLang />
+  <toggleTheme/>
+
 
   <div class="flex h-screen w-full items-center justify-center">
     <Cursor :propsImageStatus="imageStatus" />
