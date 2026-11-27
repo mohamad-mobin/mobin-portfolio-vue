@@ -3,7 +3,7 @@
             <div class="container mx-auto pt-10">
             <div class="rellax" data-rellax-speed="3">
                 <TheTitle :titleContent="['About', 'Me','RESUME']"/>
-                <div class="text-white font-poppins flex flex-col lg:flex-row justify-center items-center">
+                <div class="text-primary-light font-poppins flex flex-col lg:flex-row justify-center items-center">
                   <!-- personal infos -->
                 <div data-aos="fade-left" data-aos-duration="2000" style="font-family: poppins,vazir;" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl w-full px-5">
                       <div class="about-section">
@@ -14,7 +14,7 @@
                       </div>
                       <div class="about-section__text">
                           <p class="about-section__titleText">{{ $t('picName') }}</p>
-                          <p class="text-white text-sm md:text-xl aboutText">{{ $t('picNameValue') }}</p>
+                          <p class="text-primary-light text-sm md:text-xl aboutText">{{ $t('picNameValue') }}</p>
                       </div>
                   </div>
               
@@ -24,7 +24,7 @@
                           </div>
                           <div class="about-section__text">
                               <p class="about-section__titleText">{{ $t('picNationality') }}</p>
-                              <p class="text-white text-sm md:text-xl aboutText">{{ $t('picNationalityValue') }}</p>
+                              <p class="text-primary-light text-sm md:text-xl aboutText">{{ $t('picNationalityValue') }}</p>
                           </div>
                       </div>
               
@@ -34,7 +34,7 @@
                           </div>
                           <div class="about-section__text">
                               <p class="about-section__titleText">{{ $t('picAge') }}</p>
-                              <p class="text-white text-sm md:text-xl aboutText">{{ $t('picAgeValue') }}</p>
+                              <p class="text-primary-light text-sm md:text-xl aboutText">{{ $t('picAgeValue') }}</p>
                           </div>
                       </div>
               
@@ -44,7 +44,7 @@
                           </div>
                           <div class="about-section__text">
                               <p class="about-section__titleText">{{ $t('picAddress') }}</p>
-                              <p class="text-white text-sm md:text-xl aboutText">{{ $t('picAddressValue') }}</p>
+                              <p class="text-primary-light text-sm md:text-xl aboutText">{{ $t('picAddressValue') }}</p>
                           </div>
                       </div>
               
@@ -65,7 +65,7 @@
                           </div>
                           <div class="about-section__text">
                               <p class="about-section__titleText">{{ $t('picEducation') }}</p>
-                              <p class="text-white text-xs break-all md:text-xl aboutText">{{ $t('picEducationValue') }}</p>
+                              <p class="text-primary-light text-xs break-all md:text-xl aboutText">{{ $t('picEducationValue') }}</p>
                           </div>
                       </div>
               
@@ -80,7 +80,7 @@
                     <p class="about-section__titleText">
                     {{ $t('picEmail') }}
                     </p>
-                      <colp class="text-white text-sm sm:text-xl break-all aboutText">mohammadmobinrezaee@gmail.com</colp> </div>
+                      <colp class="text-primary-light text-sm sm:text-xl break-all aboutText">mohammadmobinrezaee@gmail.com</colp> </div>
               
                   <button class="absolute top-2 right-2 copySvg">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z"></path></svg>
@@ -93,7 +93,7 @@
                           </div>
                           <div class="about-section__text ">
                               <p class="about-section__titleText">{{ $t('picLanguages') }}</p>
-                              <p class="text-white text-sm md:text-xl aboutText">{{ $t('picLanguagesValue') }}</p>
+                              <p class="text-primary-light text-sm md:text-xl aboutText">{{ $t('picLanguagesValue') }}</p>
                           </div>
                       </div>
               
@@ -118,7 +118,7 @@
 
           <div v-if="isModalVisible" class="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
         <div class="bg-gray-900 rounded-lg w-72 p-5 relative">
-          <p class="text-white text-center font-semibold mb-3">Copied to clipboard!</p>
+          <p class="text-primary-light text-center font-semibold mb-3">Copied to clipboard!</p>
     
           <!-- نوار پر شدن -->
           <div class="h-2 bg-gray-700 rounded overflow-hidden">
@@ -183,13 +183,11 @@ const copyStatus = ref(false)
 
  .about-section {
 
-    @apply rounded-xl bg-[#131417] p-4 flex flex-col gap-y-4 items-center h-35;
+    @apply rounded-xl bg-[#131417] p-4 flex flex-col gap-y-4 items-center h-35 border-transparent border-l-2;
     @apply sm:flex-row sm:justify-start sm:space-x-3 sm:h-25;
 
     box-shadow: -2px -2px 4px rgba(50, 50, 50, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.5);
     transition: all 300ms;
-    border-top: 1px solid rgba(0, 0, 0, 0);
-    border-left: 1px solid rgba(0, 0, 0, 0);
         
 }
 .about-section__titleText {
@@ -203,6 +201,7 @@ const copyStatus = ref(false)
 }
 
 .about-section:hover {
+    @apply  border-l-2 border-primary-light duration-1000;
     box-shadow: -8px -8px 16px rgba(50, 50, 50, 0.1),8px 8px 16px rgba(0, 0, 0, 0.7);
     transform: translateY(-5px);
     z-index: 10;

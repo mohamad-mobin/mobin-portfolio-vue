@@ -14,4 +14,5 @@
 
 @theme inline {
   --color-primary: var(--app-primary);
+  --color-primary-light: color-mix(in srgb, var(--app-primary) 45%, white);
 }
