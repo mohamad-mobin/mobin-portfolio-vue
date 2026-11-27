@@ -17,7 +17,7 @@
      
          <PopoverPortal>
      
-             <PopoverContent :side-offset="5" class="w-45 h-20 rounded-2xl bg-gray-800 shadow-md shadow-white/30">
+             <PopoverContent :side-offset="5" class="w-45 h-20 rounded-2xl bg-gray-800 shadow-md shadow-white/30 z-9999">
      
      
                      <div class="w-full absolute px-2 h-full flex justify-center items-center">
