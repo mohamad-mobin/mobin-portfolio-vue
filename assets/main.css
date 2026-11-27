@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
+@property --app-primary {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #FFB400;
+}
+
 :root{
 
-    --app-primary: #FFB400
+    --app-primary: #FFB400;
+    transition: --app-primary 400ms ease-in-out;
 }
 
 @theme inline {
