@@ -2,7 +2,7 @@
     <div class="fixed top-0 right-27 scale-80 lg:scale-100 lg:right-45 lg:top-7 z-50">
 
         <PopoverRoot>
-         <PopoverTrigger class="bg-linear-to-r from-gray-700 to-gray-800 flex duration-300 gap-4 px-5 py-4 shadow-md shadow-white/20 rounded-full border-primary/30 hover:border-primary border-2 cursor-pointer">
+         <PopoverTrigger class="bg-linear-to-r hover:scale-120 from-gray-700 to-gray-800 flex duration-300 gap-4 px-5 py-4 shadow-md shadow-white/20 rounded-full border-primary/30 hover:border-primary border-2 cursor-pointer">
      
             
              <div>
@@ -17,10 +17,10 @@
      
          <PopoverPortal>
      
-             <PopoverContent :side-offset="5" class="w-45 h-40 rounded-2xl bg-gray-800 shadow-md shadow-white/30">
+             <PopoverContent :side-offset="5" class="w-45 h-20 rounded-2xl bg-gray-800 shadow-md shadow-white/30">
      
      
-                     <div class="w-full absolute py-10 px-2 h-full flex justify-center items-center">
+                     <div class="w-full absolute px-2 h-full flex justify-center items-center">
      
                          <div class="flex flex-wrap w-fit justify-center items-center gap-4 h-full">
          
@@ -34,7 +34,7 @@
                                          outlineColor: selectedColor === color.color ? color.color : 'transparent'
                                           
                                          }" 
-                                         class="bg-red-500 size-10 rounded-full cursor-pointer">
+                                         class="hover:scale-120 duration-400 size-10 rounded-full cursor-pointer">
      
                              </div>
                              
@@ -43,9 +43,7 @@
      
                  <PopoverArrow class="fill-gray-700/60 w-5 h-3"/>
      
-                 <PopoverClose class="cursor-pointer hover:rotate-90 duration-400 hover:scale-120 p-2 right-0 absolute">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x preview-icon"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-                 </PopoverClose>
+            
      
              </PopoverContent>
      
