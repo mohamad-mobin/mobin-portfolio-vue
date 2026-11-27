@@ -41,7 +41,7 @@
                          </div>
                      </div>
      
-                 <PopoverArrow class="fill-gray-700/60 w-5 h-3"/>
+                 <PopoverArrow class="fill-gray-800 w-5 h-3"/>
      
             
      
