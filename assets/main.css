@@ -3,12 +3,12 @@
 @property --app-primary {
   syntax: "<color>";
   inherits: true;
-  initial-value: #FFB400;
+  initial-value: #22C55E;
 }
 
 :root{
 
-    --app-primary: #FFB400;
+    --app-primary: #22C55E;
     transition: --app-primary 400ms ease-in-out;
 }
 

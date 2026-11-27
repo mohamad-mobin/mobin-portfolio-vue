@@ -58,7 +58,7 @@
 const selectedColor = ref('red')
 
 onMounted(() => {
-    const savedColor = localStorage.getItem('themeColor') || '#FFB400'
+    const savedColor = localStorage.getItem('themeColor') || '#22C55E'
 
     selectedColor.value = savedColor
 
