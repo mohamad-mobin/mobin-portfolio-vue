@@ -81,7 +81,7 @@ const changeTheme = (color) => {
 
 const colors = ref([
     { name: 'Amber', color: '#FFB400' },
-    { name: 'Blue', color: '#3B82F6' },
+    { name: 'Blue', color: '#5394fc' },
     { name: 'Green', color: '#22C55E' },
 ])
 
