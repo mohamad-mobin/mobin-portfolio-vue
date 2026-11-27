@@ -2,7 +2,7 @@
     <div class="fixed top-0 right-27 scale-80 lg:scale-100 lg:right-45 lg:top-7 z-50">
 
         <PopoverRoot>
-         <PopoverTrigger class="bg-linear-to-r hover:scale-120 from-gray-700 to-gray-800 flex duration-300 gap-4 px-5 py-4 shadow-md shadow-white/20 rounded-full border-primary/30 hover:border-primary border-2 cursor-pointer">
+         <PopoverTrigger class="bg-linear-to-r lg:hover:scale-120 from-gray-700 to-gray-800 flex duration-300 gap-4 px-5 py-4 shadow-md shadow-white/20 rounded-full border-primary/30 hover:border-primary border-2 cursor-pointer">
      
             
              <div>
