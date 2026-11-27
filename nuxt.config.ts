@@ -1,9 +1,34 @@
+
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-09-15',
 
-  modules: ['@nuxtjs/i18n'],
+  app: {
+    head: {
+      script: [
+        {
+          innerHTML: `
+            try {
+              const color = localStorage.getItem('themeColor')
+
+              if (color) {
+                document.documentElement.style.setProperty(
+                  '--app-primary',
+                  color
+                )
+              }
+            } catch (e) {}
+          `,
+        }
+      ]
+    }
+  },
+
+  modules: [
+    '@nuxtjs/i18n',
+    'reka-ui/nuxt'
+  ],
 
   css: [
     '~/assets/main.css',
@@ -21,9 +46,7 @@ export default defineNuxtConfig({
 
   i18n: {
     defaultLocale: 'en',
-
     strategy: 'no_prefix',
-
 
     locales: [
       {
@@ -39,14 +62,12 @@ export default defineNuxtConfig({
     ]
   },
 
-
   components: {
-  dirs: [
-    {
-      path: "~/components",
-      pathPrefix: false,
-    },
-  ],
-},
-
+    dirs: [
+      {
+        path: '~/components',
+        pathPrefix: false,
+      },
+    ],
+  },
 })
